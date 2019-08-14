@@ -1914,8 +1914,10 @@ __webpack_require__.r(__webpack_exports__);
     createUser: function createUser() {
       var _this5 = this;
 
-      this.$Progress.start();
+      this.$Progress.start(); //console.log(this.form);
+
       this.form.post('api/user').then(function () {
+        //console.log(this.form);
         Fire.$emit('afterCreate');
         $('#addNew').modal('hide');
         toast.fire({
@@ -2553,7 +2555,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2613,6 +2614,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
+    //setNull
     setNullTwo: function setNullTwo($values) {
       if ($values != null) {
         this.form.two.extra = null;
@@ -2642,6 +2644,23 @@ __webpack_require__.r(__webpack_exports__);
       if ($values != null) {
         this.form.sixteen.extra = null;
       }
+    },
+    //formCreate
+    store: function store() {
+      var _this = this;
+
+      this.$Progress.start();
+      console.log(this.form);
+      this.form.post('api/form-one', this.form).then(function () {
+        $('#addNew').modal('hide');
+        toast.fire({
+          type: 'success',
+          title: 'Created successfully'
+        });
+
+        _this.$Progress.finish(); //  .then(({ data }) => { console.log(data) });
+
+      })["catch"](function () {});
     }
   },
   mounted: function mounted() {
@@ -63171,7 +63190,7 @@ var render = function() {
             on: {
               submit: function($event) {
                 $event.preventDefault()
-                return _vm.store($event)
+                return _vm.store()
               }
             }
           },
@@ -63583,14 +63602,12 @@ var render = function() {
               ])
             ]),
             _vm._v(" "),
-            _vm._m(10),
-            _vm._v(" "),
             _c("div", { staticClass: "form-body" }, [
               _c("div", { staticClass: "card-body" }, [
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-md-4" }, [
                     _c("div", { staticClass: "form-group" }, [
-                      _vm._m(11),
+                      _vm._m(10),
                       _vm._v(" "),
                       _c("br"),
                       _vm._v(" "),
@@ -63632,7 +63649,7 @@ var render = function() {
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-md-12" }, [
                     _c("div", { staticClass: "form-group" }, [
-                      _vm._m(12),
+                      _vm._m(11),
                       _vm._v(" "),
                       _c("br"),
                       _vm._v(" "),
@@ -63748,7 +63765,7 @@ var render = function() {
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-md-12" }, [
                     _c("div", { staticClass: "form-group" }, [
-                      _vm._m(13),
+                      _vm._m(12),
                       _vm._v(" "),
                       _c("div", { staticClass: "row" }, [
                         _c("br"),
@@ -63886,7 +63903,7 @@ var render = function() {
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-md-12" }, [
                     _c("div", { staticClass: "form-group" }, [
-                      _vm._m(14),
+                      _vm._m(13),
                       _vm._v(" "),
                       _c("div", { staticClass: "row" }, [
                         _c("br"),
@@ -64085,7 +64102,7 @@ var render = function() {
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-md-12" }, [
                     _c("div", { staticClass: "form-group" }, [
-                      _vm._m(15),
+                      _vm._m(14),
                       _vm._v(" "),
                       _c("div", { staticClass: "row" }, [
                         _c("br"),
@@ -64223,7 +64240,7 @@ var render = function() {
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-md-12" }, [
                     _c("div", { staticClass: "form-group" }, [
-                      _vm._m(16),
+                      _vm._m(15),
                       _vm._v(" "),
                       _c("div", { staticClass: "row" }, [
                         _c("br"),
@@ -64403,7 +64420,7 @@ var render = function() {
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-md-12" }, [
                     _c("div", { staticClass: "form-group" }, [
-                      _vm._m(17),
+                      _vm._m(16),
                       _vm._v(" "),
                       _c("br"),
                       _vm._v(" "),
@@ -64471,7 +64488,7 @@ var render = function() {
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-md-12" }, [
                     _c("div", { staticClass: "form-group" }, [
-                      _vm._m(18),
+                      _vm._m(17),
                       _vm._v(" "),
                       _c("div", { staticClass: "row" }, [
                         _c("br"),
@@ -64609,7 +64626,7 @@ var render = function() {
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-md-12" }, [
                     _c("div", { staticClass: "form-group" }, [
-                      _vm._m(19),
+                      _vm._m(18),
                       _vm._v(" "),
                       _c("div", { staticClass: "row" }, [
                         _c("br"),
@@ -64759,7 +64776,7 @@ var render = function() {
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-md-12" }, [
                     _c("div", { staticClass: "form-group" }, [
-                      _vm._m(20),
+                      _vm._m(19),
                       _vm._v(" "),
                       _c("div", { staticClass: "row" }, [
                         _c("br"),
@@ -64955,7 +64972,7 @@ var render = function() {
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-md-4" }, [
                     _c("div", { staticClass: "form-group" }, [
-                      _vm._m(21),
+                      _vm._m(20),
                       _vm._v(" "),
                       _c("input", {
                         directives: [
@@ -64985,7 +65002,7 @@ var render = function() {
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-md-12" }, [
                     _c("div", { staticClass: "form-group" }, [
-                      _vm._m(22),
+                      _vm._m(21),
                       _vm._v(" "),
                       _c("div", { staticClass: "row" }, [
                         _c("br"),
@@ -65228,7 +65245,7 @@ var render = function() {
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-md-12" }, [
                     _c("div", { staticClass: "form-group" }, [
-                      _vm._m(23),
+                      _vm._m(22),
                       _vm._v(" "),
                       _c("br"),
                       _vm._v(" "),
@@ -65354,7 +65371,7 @@ var render = function() {
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-md-12" }, [
                     _c("div", { staticClass: "form-group" }, [
-                      _vm._m(24),
+                      _vm._m(23),
                       _vm._v(" "),
                       _c("div", { staticClass: "row" }, [
                         _c("br"),
@@ -65555,7 +65572,7 @@ var render = function() {
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-md-4" }, [
                     _c("div", { staticClass: "form-group" }, [
-                      _vm._m(25),
+                      _vm._m(24),
                       _vm._v(" "),
                       _c("br"),
                       _vm._v(" "),
@@ -65597,7 +65614,7 @@ var render = function() {
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-md-12" }, [
                     _c("div", { staticClass: "form-group" }, [
-                      _vm._m(26),
+                      _vm._m(25),
                       _vm._v(" "),
                       _c("br"),
                       _vm._v(" "),
@@ -65710,7 +65727,9 @@ var render = function() {
                         : _vm._e()
                     ])
                   ])
-                ])
+                ]),
+                _vm._v(" "),
+                _vm._m(26)
               ])
             ])
           ]
@@ -65811,30 +65830,6 @@ var staticRenderFns = [
     return _c("label", [
       _vm._v("Bussiness Year"),
       _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-2" }, [
-        _c("div", { staticClass: "form-group" }, [
-          _c("div", { staticClass: "form-actions pull-right" }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-success btn-min-width mr-1 mb-1",
-                attrs: { type: "submit pull-right" }
-              },
-              [
-                _c("i", { staticClass: "fa fa-check" }),
-                _vm._v(" Save\n                                        ")
-              ]
-            )
-          ])
-        ])
-      ])
     ])
   },
   function() {
@@ -65991,6 +65986,30 @@ var staticRenderFns = [
         "16.Do you have any suggestion in improve the quality of Hi-Vally product"
       ),
       _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-2" }, [
+        _c("div", { staticClass: "form-group" }, [
+          _c("div", { staticClass: "form-actions pull-right" }, [
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-success btn-min-width mr-1 mb-1",
+                attrs: { type: "submit pull-right" }
+              },
+              [
+                _c("i", { staticClass: "fa fa-check" }),
+                _vm._v(" Save\n                                            ")
+              ]
+            )
+          ])
+        ])
+      ])
     ])
   }
 ]

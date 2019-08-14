@@ -201,8 +201,10 @@
             },
             createUser(){
                 this.$Progress.start();
+                 //console.log(this.form);
                   this.form.post('api/user')
                  .then(() => {
+                     //console.log(this.form);
                   Fire.$emit('afterCreate');
                   $('#addNew').modal('hide')
                   toast.fire({

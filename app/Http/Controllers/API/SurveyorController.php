@@ -7,6 +7,10 @@ use App\Http\Controllers\Controller;
 
 class SurveyorController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth:api');
+    }
    
     public function index()
     {
@@ -19,10 +23,12 @@ class SurveyorController extends Controller
         //
     }
 
-    /
+    
     public function store(Request $request)
     {
-        //
+        
+        
+     
     }
 
    

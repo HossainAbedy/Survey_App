@@ -6,7 +6,7 @@
 		<div class="card-content collapse show">
 			<div class="card-body">
 <!--form start-->
-				<form method="POST"  v-on:submit.prevent="store" id="addComponent">
+				<form method="POST"  v-on:submit.prevent="store()" id="addComponent">
 					<div class="form-body">
                         <div class="card-body">
                             <div class="row">
@@ -87,18 +87,6 @@
                             </div>
                         </div>
                     </div>
-
-                        <div class="row">
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <div class="form-actions pull-right">
-                                        <button type="submit pull-right" class="btn btn-success btn-min-width mr-1 mb-1">
-                                                <i class="fa fa-check"></i> Save
-                                        </button>
-                                    </div>
-                                </div>
-		                    </div>
-	                    </div>
 <!--one-->  
                     <div class="form-body">
                         <div class="card-body">
@@ -523,7 +511,18 @@
                                     </div>
                                 </div>
                             </div>
-<!--Sixtenn-->                          
+<!--Sixtenn-->                    
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <div class="form-actions pull-right">
+                                            <button type="submit pull-right" class="btn btn-success btn-min-width mr-1 mb-1">
+                                                    <i class="fa fa-check"></i> Save
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>          
                         </div>
 	                </div>
 				</form>
@@ -593,6 +592,7 @@
         },
 
         methods:{
+            //setNull
             setNullTwo($values){
                  if($values != null){
                     this.form.two.extra=null;
@@ -622,6 +622,22 @@
                  if($values != null){
                     this.form.sixteen.extra=null;
                     }
+            },
+            //formCreate
+            store(){
+                this.$Progress.start();
+                 console.log(this.form);
+                  this.form.post('api/form-one',this.form)
+                 .then(() => {
+                  $('#addNew').modal('hide')
+                  toast.fire({
+                    type: 'success',
+                    title: 'Created successfully'
+                    });
+                  this.$Progress.finish();
+                //  .then(({ data }) => { console.log(data) });
+                }).catch( () => {
+                })
             },
         },
 
