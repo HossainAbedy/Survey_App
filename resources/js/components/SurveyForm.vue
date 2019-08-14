@@ -127,13 +127,13 @@
                                                 <input v-if="form.two.data == 'yes'" type="text" class="form-control" placeholder="If yes,please specifies" v-model="form.two.extra">
                                             </div>
                                             <div class="col-md-6">
-                                                <input type="radio" id="no" value="no" v-model="form.two.data">
+                                                <input type="radio" id="no" value="no" v-model="form.two.data" @click="setNullTwo(form.two.extra)">
                                                 <label for="no">No</label>
                                             </div>
                                         </div>
                                         <br>
                                         <span v-if="form.two.data" class="red"><strong>Picked: {{ form.two.data }} </strong></span>
-                                        <span v-if="form.two.extra" class="red"><strong> Specifies {{ form.two.extra }}</strong></span>
+                                        <span v-if="form.two.extra" class="red"><strong>---> {{ form.two.extra }}</strong></span>
                                     </div>
                                 </div>
                             </div>
@@ -176,15 +176,15 @@
                                         <div class="row">
                                             <br>
                                             <div class="col-md-3">
-                                                <input type="radio" id="Design" value="Design" v-model="form.four.data">
+                                                <input type="radio" id="Design" value="Design" v-model="form.four.data" @click="setNullFour(form.four.extra)">
                                                 <label for="Design">Design</label>
                                             </div>
                                             <div class="col-md-3">   
-                                                <input type="radio" id="Speed" value="Speed" v-model="form.four.data">
+                                                <input type="radio" id="Speed" value="Speed" v-model="form.four.data" @click="setNullFour(form.four.extra)">
                                                 <label for="Speed">Speed</label>
                                             </div>
                                             <div class="col-md-3">    
-                                                <input type="radio" id="Power Consumption" value="Power Consumption" v-model="form.four.data">
+                                                <input type="radio" id="Power Consumption" value="Power Consumption" v-model="form.four.data" @click="setNullFour(form.four.extra)">
                                                 <label for="Power Consumption">Power Consumption</label>
                                             </div>
                                             <div class="col-md-3">
@@ -352,15 +352,15 @@
                                         <div class="row">
                                             <br>
                                             <div class="col-md-3">
-                                                <input type="radio" id="Promotional Sale" value="Promotional Sale" v-model="form.ten.data">
+                                                <input type="radio" id="Promotional Sale" value="Promotional Sale" v-model="form.ten.data" @click="setNullTen(form.ten.extra)">
                                                 <label for="Promotional Sale">Promotional Sale</label>
                                             </div>
                                             <div class="col-md-3">   
-                                                <input type="radio" id="Follow-Up" value="Follow-Up" v-model="form.ten.data">
+                                                <input type="radio" id="Follow-Up" value="Follow-Up" v-model="form.ten.data" @click="setNullTen(form.ten.extra)">
                                                 <label for="Follow-Up">Follow-Up</label>
                                             </div>
                                             <div class="col-md-3">    
-                                                <input type="radio" id="Schele" value="Schele" v-model="form.ten.data">
+                                                <input type="radio" id="Schele" value="Schele" v-model="form.ten.data" @click="setNullTen(form.ten.extra)">
                                                 <label for="Schele">Schele</label>
                                             </div>
                                             <div class="col-md-3">
@@ -398,7 +398,7 @@
                                                 <label for="yes">Yes</label>
                                             </div>
                                             <div class="col-md-3">   
-                                                <input type="radio" id="no" value="no" v-model="form.twelve.data">
+                                                <input type="radio" id="no" value="no" v-model="form.twelve.data" @click="setNullTwelve(form.twelve.extra)">
                                                 <label for="no">No</label>
                                             </div>
                                         </div>
@@ -439,7 +439,7 @@
                                         <br>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <input type="radio" id="yes" value="yes" v-model="form.thirteen.data">
+                                                <input type="radio" id="yes" value="yes" v-model="form.thirteen.data" @click="setNullThirteen(form.thirteen.extra)">
                                                 <label for="yes">Yes</label>   
                                             </div>
                                             <div class="col-md-6">
@@ -487,8 +487,43 @@
                                 </div>
                             </div>
 <!--Forteen-->
-<!--Fiftenn-->                              
-
+<!--Fiftenn-->              
+                             <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>15.Last Balance<span class="requiredField red">*</span></label>
+                                        <br>
+                                        <input type="text" class="form-control" placeholder="Last Balance" v-model="form.fifteen">
+                                        <br>
+                                        <span v-if="form.fifteen" class="red"><strong>Picked: {{ form.fifteen }}</strong></span>
+                                    </div>
+                                </div>
+                            </div>                
+<!--Fiftenn-->
+<!--Sixtenn-->
+                        <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>16.Do you have any suggestion in improve the quality of Hi-Vally product<span class="requiredField red">*</span></label>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <input type="radio" id="yes" value="yes" v-model="form.sixteen.data">
+                                                <label for="yes">Yes</label>
+                                                <input v-if="form.sixteen.data == 'yes'" type="text" class="form-control" placeholder="If yes,please specifies" v-model="form.sixteen.extra">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="radio" id="no" value="no" v-model="form.sixteen.data" @click="setNullSixteen(form.sixteen.extra)">
+                                                <label for="no">No</label>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <span v-if="form.sixteen.data" class="red"><strong>Picked: {{ form.sixteen.data }} </strong></span>
+                                        <span v-if="form.sixteen.extra" class="red"><strong>---> {{ form.sixteen.extra }}</strong></span>
+                                    </div>
+                                </div>
+                            </div>
+<!--Sixtenn-->                          
                         </div>
 	                </div>
 				</form>
@@ -553,8 +588,43 @@
                     },
                 }),
                 errors: {},
+                nullify:false,
             }
         },
+
+        methods:{
+            setNullTwo($values){
+                 if($values != null){
+                    this.form.two.extra=null;
+                    }
+            },
+            setNullFour($values){
+                 if($values != null){
+                    this.form.four.extra=null;
+                    }
+            },
+            setNullTen($values){
+                 if($values != null){
+                    this.form.ten.extra=null;
+                    }
+            },
+            setNullTwelve($values){
+                 if($values != null){
+                    this.form.twelve.extra=null;
+                    }
+            },
+            setNullThirteen($values){
+                 if($values != null){
+                    this.form.thirteen.extra=null;
+                    }
+            },
+            setNullSixteen($values){
+                 if($values != null){
+                    this.form.sixteen.extra=null;
+                    }
+            },
+        },
+
         mounted() {
             console.log('Component mounted.')
         }

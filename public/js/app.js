@@ -2519,6 +2519,41 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2573,8 +2608,41 @@ __webpack_require__.r(__webpack_exports__);
           extra: ''
         }
       }),
-      errors: {}
+      errors: {},
+      nullify: false
     };
+  },
+  methods: {
+    setNullTwo: function setNullTwo($values) {
+      if ($values != null) {
+        this.form.two.extra = null;
+      }
+    },
+    setNullFour: function setNullFour($values) {
+      if ($values != null) {
+        this.form.four.extra = null;
+      }
+    },
+    setNullTen: function setNullTen($values) {
+      if ($values != null) {
+        this.form.ten.extra = null;
+      }
+    },
+    setNullTwelve: function setNullTwelve($values) {
+      if ($values != null) {
+        this.form.twelve.extra = null;
+      }
+    },
+    setNullThirteen: function setNullThirteen($values) {
+      if ($values != null) {
+        this.form.thirteen.extra = null;
+      }
+    },
+    setNullSixteen: function setNullSixteen($values) {
+      if ($values != null) {
+        this.form.sixteen.extra = null;
+      }
+    }
   },
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -63641,6 +63709,9 @@ var render = function() {
                               checked: _vm._q(_vm.form.two.data, "no")
                             },
                             on: {
+                              click: function($event) {
+                                return _vm.setNullTwo(_vm.form.two.extra)
+                              },
                               change: function($event) {
                                 return _vm.$set(_vm.form.two, "data", "no")
                               }
@@ -63666,7 +63737,7 @@ var render = function() {
                       _vm.form.two.extra
                         ? _c("span", { staticClass: "red" }, [
                             _c("strong", [
-                              _vm._v(" Specifies " + _vm._s(_vm.form.two.extra))
+                              _vm._v("---> " + _vm._s(_vm.form.two.extra))
                             ])
                           ])
                         : _vm._e()
@@ -63839,6 +63910,9 @@ var render = function() {
                               checked: _vm._q(_vm.form.four.data, "Design")
                             },
                             on: {
+                              click: function($event) {
+                                return _vm.setNullFour(_vm.form.four.extra)
+                              },
                               change: function($event) {
                                 return _vm.$set(_vm.form.four, "data", "Design")
                               }
@@ -63869,6 +63943,9 @@ var render = function() {
                               checked: _vm._q(_vm.form.four.data, "Speed")
                             },
                             on: {
+                              click: function($event) {
+                                return _vm.setNullFour(_vm.form.four.extra)
+                              },
                               change: function($event) {
                                 return _vm.$set(_vm.form.four, "data", "Speed")
                               }
@@ -63902,6 +63979,9 @@ var render = function() {
                               )
                             },
                             on: {
+                              click: function($event) {
+                                return _vm.setNullFour(_vm.form.four.extra)
+                              },
                               change: function($event) {
                                 return _vm.$set(
                                   _vm.form.four,
@@ -64706,6 +64786,9 @@ var render = function() {
                               )
                             },
                             on: {
+                              click: function($event) {
+                                return _vm.setNullTen(_vm.form.ten.extra)
+                              },
                               change: function($event) {
                                 return _vm.$set(
                                   _vm.form.ten,
@@ -64740,6 +64823,9 @@ var render = function() {
                               checked: _vm._q(_vm.form.ten.data, "Follow-Up")
                             },
                             on: {
+                              click: function($event) {
+                                return _vm.setNullTen(_vm.form.ten.extra)
+                              },
                               change: function($event) {
                                 return _vm.$set(
                                   _vm.form.ten,
@@ -64774,6 +64860,9 @@ var render = function() {
                               checked: _vm._q(_vm.form.ten.data, "Schele")
                             },
                             on: {
+                              click: function($event) {
+                                return _vm.setNullTen(_vm.form.ten.extra)
+                              },
                               change: function($event) {
                                 return _vm.$set(_vm.form.ten, "data", "Schele")
                               }
@@ -64942,6 +65031,9 @@ var render = function() {
                               checked: _vm._q(_vm.form.twelve.data, "no")
                             },
                             on: {
+                              click: function($event) {
+                                return _vm.setNullTwelve(_vm.form.twelve.extra)
+                              },
                               change: function($event) {
                                 return _vm.$set(_vm.form.twelve, "data", "no")
                               }
@@ -65156,6 +65248,11 @@ var render = function() {
                               checked: _vm._q(_vm.form.thirteen.data, "yes")
                             },
                             on: {
+                              click: function($event) {
+                                return _vm.setNullThirteen(
+                                  _vm.form.thirteen.extra
+                                )
+                              },
                               change: function($event) {
                                 return _vm.$set(
                                   _vm.form.thirteen,
@@ -65453,6 +65550,166 @@ var render = function() {
                         : _vm._e()
                     ])
                   ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _vm._m(25),
+                      _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.form.fifteen,
+                            expression: "form.fifteen"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "text", placeholder: "Last Balance" },
+                        domProps: { value: _vm.form.fifteen },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.form, "fifteen", $event.target.value)
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
+                      _vm.form.fifteen
+                        ? _c("span", { staticClass: "red" }, [
+                            _c("strong", [
+                              _vm._v("Picked: " + _vm._s(_vm.form.fifteen))
+                            ])
+                          ])
+                        : _vm._e()
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-12" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _vm._m(26),
+                      _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "row" }, [
+                        _c("div", { staticClass: "col-md-6" }, [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.form.sixteen.data,
+                                expression: "form.sixteen.data"
+                              }
+                            ],
+                            attrs: { type: "radio", id: "yes", value: "yes" },
+                            domProps: {
+                              checked: _vm._q(_vm.form.sixteen.data, "yes")
+                            },
+                            on: {
+                              change: function($event) {
+                                return _vm.$set(_vm.form.sixteen, "data", "yes")
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("label", { attrs: { for: "yes" } }, [
+                            _vm._v("Yes")
+                          ]),
+                          _vm._v(" "),
+                          _vm.form.sixteen.data == "yes"
+                            ? _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.form.sixteen.extra,
+                                    expression: "form.sixteen.extra"
+                                  }
+                                ],
+                                staticClass: "form-control",
+                                attrs: {
+                                  type: "text",
+                                  placeholder: "If yes,please specifies"
+                                },
+                                domProps: { value: _vm.form.sixteen.extra },
+                                on: {
+                                  input: function($event) {
+                                    if ($event.target.composing) {
+                                      return
+                                    }
+                                    _vm.$set(
+                                      _vm.form.sixteen,
+                                      "extra",
+                                      $event.target.value
+                                    )
+                                  }
+                                }
+                              })
+                            : _vm._e()
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-md-6" }, [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.form.sixteen.data,
+                                expression: "form.sixteen.data"
+                              }
+                            ],
+                            attrs: { type: "radio", id: "no", value: "no" },
+                            domProps: {
+                              checked: _vm._q(_vm.form.sixteen.data, "no")
+                            },
+                            on: {
+                              click: function($event) {
+                                return _vm.setNullSixteen(
+                                  _vm.form.sixteen.extra
+                                )
+                              },
+                              change: function($event) {
+                                return _vm.$set(_vm.form.sixteen, "data", "no")
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("label", { attrs: { for: "no" } }, [_vm._v("No")])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
+                      _vm.form.sixteen.data
+                        ? _c("span", { staticClass: "red" }, [
+                            _c("strong", [
+                              _vm._v(
+                                "Picked: " + _vm._s(_vm.form.sixteen.data) + " "
+                              )
+                            ])
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.form.sixteen.extra
+                        ? _c("span", { staticClass: "red" }, [
+                            _c("strong", [
+                              _vm._v("---> " + _vm._s(_vm.form.sixteen.extra))
+                            ])
+                          ])
+                        : _vm._e()
+                    ])
+                  ])
                 ])
               ])
             ])
@@ -65713,6 +65970,26 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("label", [
       _vm._v("14.What do you feel about after Sales Service Given y Hi-Vally?"),
+      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", [
+      _vm._v("15.Last Balance"),
+      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", [
+      _vm._v(
+        "16.Do you have any suggestion in improve the quality of Hi-Vally product"
+      ),
       _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
     ])
   }
