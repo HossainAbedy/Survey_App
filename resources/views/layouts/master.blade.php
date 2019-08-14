@@ -9,9 +9,7 @@
 
         <title>Survey App</title>
 
-        <link rel="stylesheet" href="/css/app.css">
-        
-    
+        <link rel="stylesheet" href="/css/app.css"> 
     </head>
     <body class="hold-transition sidebar-mini">
         <div class="wrapper" id="app">
@@ -30,6 +28,7 @@
                 <a href="#" class="nav-link">Contact</a>
             </li>
             </ul>
+
 
             <!-- SEARCH FORM -->
             <form class="form-inline ml-3">
@@ -158,55 +157,82 @@
                 <a href="#" class="d-block">{{Auth::user()->first_name}} {{Auth::user()->last_name}}</a>
                 </div>
             </div>
-
             <!-- Sidebar Menu -->
             <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                     with font-awesome or any other icon font library -->
                     <li class="nav-item">
-                            <router-link to="/dashboard" class="nav-link">
+                        <router-link to="/dashboard" class="nav-link">
                             <i class="nav-icon fa fa-th yellow"></i>
                             <p>
                                 Dashboard
                                 <span class="right badge badge-danger">New</span>
                             </p>
-                            </router-link>
-                        </li>
+                        </router-link>
+                    </li>
                    
                     <li class="nav-item has-treeview menu-open">
                         <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-cog green"></i>
-                        <p>
-                            Management
-                            <i class="right fa fa-angle-left"></i>
-                        </p>
+                            <i class="nav-icon fas fa-cog green"></i>
+                            <p>
+                                Management
+                                <i class="right fa fa-angle-left"></i>
+                            </p>
                         </a>
+
                         @can('isAdmin')
                         <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <router-link to="/admin" class="nav-link">
-                            <i class="nav-icon fas fa-users orange"></i>
-                            <p>Admin</p>
-                            </router-link>
-                        </li>
+                            <li class="nav-item">
+                                <router-link to="/developer" class="nav-link">
+                                    <i class="nav-icon fas fa-cogs red"></i>
+                                        <p>
+                                            Developer
+        
+                                        </p>
+                                    </router-link>
+                            </li>
+                            <li class="nav-item">
+                                <router-link to="/admin" class="nav-link">
+                                    <i class="nav-icon fas fa-user-plus orange"></i>
+                                    <p>
+                                        Admin
+
+                                    </p>
+                                </router-link>
+                            </li>
                         </ul>
                         @endcan
-                    <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                        <router-link to="/surveyor" class="nav-link">
-                        <i class="nav-icon fas fa-cogs purple"></i>
-                        <p>
-                            Surveyor
-                        </p>
-                        </router-link>
-                        </li>
-                    </ul>
+                        
+                        @if(Gate::check('isAdmin') || Gate::check('isAuthor'))
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <router-link to="/surveyor" class="nav-link">
+                                    <i class="nav-icon fas fa-users purple"></i>
+                                    <p>
+                                        Surveyor
+                                    </p>
+                                </router-link>
+                            </li>
+                        </ul>
+
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <router-link to="/user" class="nav-link">
+                                    <i class="nav-icon fas fa-user teal"></i>
+                                     <p>
+                                        User
+                                    </p>
+                                </router-link>
+                            </li>
+                        </ul>
+                        @endif
                     </li>
+
                    
                     <li class="nav-item">
                         <router-link to="/surveyform" class="nav-link">
-                        <i class="nav-icon fas fa-user blue"></i>
+                        <i class="nav-icon fab fa-wpforms blue"></i>
                         <p>
                             Survey Form
                         </p>
@@ -256,6 +282,7 @@
             <div class="content">
             <div class="container-fluid">
                 <router-view></router-view>
+                <vue-progress-bar></vue-progress-bar>
             </div><!-- /.container-fluid -->
             </div>
             <!-- /.content -->
@@ -282,6 +309,12 @@
             <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
         </footer>
         </div>
+
+        @auth  
+            <script>
+             window.user = @json(auth()->user())
+            </script>   
+        @endauth
 
         <!-- REQUIRED SCRIPTS -->
         <script src="/js/app.js"></script>
