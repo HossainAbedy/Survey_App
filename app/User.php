@@ -37,4 +37,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function survey_form()
+    {
+        return $this->hasMany('App\SurveyForm');
+    }
 }

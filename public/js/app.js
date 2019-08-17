@@ -2558,57 +2558,59 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      form: new Form({
-        org_name: '',
-        owner_name: '',
-        present_address: '',
-        permanent_address: '',
-        cell_no: '',
-        concern_person: '',
-        org_cell_no: '',
-        bussiness_type: '',
-        bussiness_year: '',
-        one: '',
-        two: {
-          data: '',
-          extra: ''
-        },
-        three: '',
-        four: {
-          data: '',
-          extra: ''
-        },
-        five: '',
-        six: {
-          data: '',
-          extra: ''
-        },
-        seven: '',
-        eight: '',
-        nine: '',
-        ten: {
-          data: '',
-          extra: ''
-        },
-        eleven: '',
-        twelve: {
-          data: '',
-          extra: ''
-        },
-        thirteen: {
-          data: '',
-          extra: ''
-        },
-        forteen: {
-          data: '',
-          extra: ''
-        },
-        fifteen: '',
-        sixteen: {
-          data: '',
-          extra: ''
-        }
-      }),
+      data: {
+        form: new Form({
+          org_name: '',
+          owner_name: '',
+          present_address: '',
+          permanent_address: '',
+          cell_no: '',
+          concern_person: '',
+          org_cell_no: '',
+          bussiness_type: '',
+          bussiness_year: '',
+          one: '',
+          two: {
+            data: '',
+            extra: ''
+          },
+          three: '',
+          four: {
+            data: '',
+            extra: ''
+          },
+          five: '',
+          six: {
+            data: '',
+            extra: ''
+          },
+          seven: '',
+          eight: '',
+          nine: '',
+          ten: {
+            data: '',
+            extra: ''
+          },
+          eleven: '',
+          twelve: {
+            data: '',
+            extra: ''
+          },
+          thirteen: {
+            data: '',
+            extra: ''
+          },
+          forteen: {
+            data: '',
+            extra: ''
+          },
+          fifteen: '',
+          sixteen: {
+            data: '',
+            extra: ''
+          }
+        })
+      },
       errors: {},
       nullify: false
     };
@@ -2617,32 +2619,32 @@ __webpack_require__.r(__webpack_exports__);
     //setNull
     setNullTwo: function setNullTwo($values) {
       if ($values != null) {
-        this.form.two.extra = null;
+        this.data.form.two.extra = null;
       }
     },
     setNullFour: function setNullFour($values) {
       if ($values != null) {
-        this.form.four.extra = null;
+        this.data.form.four.extra = null;
       }
     },
     setNullTen: function setNullTen($values) {
       if ($values != null) {
-        this.form.ten.extra = null;
+        this.data.form.ten.extra = null;
       }
     },
     setNullTwelve: function setNullTwelve($values) {
       if ($values != null) {
-        this.form.twelve.extra = null;
+        this.data.form.twelve.extra = null;
       }
     },
     setNullThirteen: function setNullThirteen($values) {
       if ($values != null) {
-        this.form.thirteen.extra = null;
+        this.data.form.thirteen.extra = null;
       }
     },
     setNullSixteen: function setNullSixteen($values) {
       if ($values != null) {
-        this.form.sixteen.extra = null;
+        this.data.form.sixteen.extra = null;
       }
     },
     //formCreate
@@ -2650,8 +2652,8 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       this.$Progress.start();
-      console.log(this.form);
-      this.form.post('api/form-one', this.form).then(function () {
+      console.log(this.data);
+      axios.post('api/form-one', this.data).then(function () {
         $('#addNew').modal('hide');
         toast.fire({
           type: 'success',
@@ -63199,46 +63201,50 @@ var render = function() {
               _c("div", { staticClass: "card-body" }, [
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-md-4" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _vm._m(1),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.form.org_name,
-                            expression: "form.org_name"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          type: "text",
-                          placeholder: "Organization Name"
-                        },
-                        domProps: { value: _vm.form.org_name },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _vm._m(1),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.data.form.org_name,
+                              expression: "data.form.org_name"
                             }
-                            _vm.$set(_vm.form, "org_name", $event.target.value)
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _vm.errors.hasOwnProperty("org_name")
-                        ? _c("div", { staticClass: "requiredField" }, [
-                            _vm._v(
-                              _vm._s(
-                                _vm.errors.hasOwnProperty("org_name")
-                                  ? _vm.errors.jobno_id[0]
-                                  : ""
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            "is-invalid": _vm.data.form.errors.has("org_name")
+                          },
+                          attrs: {
+                            type: "text",
+                            placeholder: "Organization Name"
+                          },
+                          domProps: { value: _vm.data.form.org_name },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.data.form,
+                                "org_name",
+                                $event.target.value
                               )
-                            )
-                          ])
-                        : _vm._e()
-                    ])
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.data.form, field: "org_name" }
+                        })
+                      ],
+                      1
+                    )
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "col-md-4" }, [
@@ -63250,20 +63256,20 @@ var render = function() {
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.form.owner_name,
-                            expression: "form.owner_name"
+                            value: _vm.data.form.owner_name,
+                            expression: "data.form.owner_name"
                           }
                         ],
                         staticClass: "form-control",
                         attrs: { type: "text", placeholder: "Owner Name" },
-                        domProps: { value: _vm.form.owner_name },
+                        domProps: { value: _vm.data.form.owner_name },
                         on: {
                           input: function($event) {
                             if ($event.target.composing) {
                               return
                             }
                             _vm.$set(
-                              _vm.form,
+                              _vm.data.form,
                               "owner_name",
                               $event.target.value
                             )
@@ -63294,20 +63300,20 @@ var render = function() {
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.form.present_address,
-                            expression: "form.present_address"
+                            value: _vm.data.form.present_address,
+                            expression: "data.form.present_address"
                           }
                         ],
                         staticClass: "form-control",
                         attrs: { type: "text", placeholder: "Present Address" },
-                        domProps: { value: _vm.form.present_address },
+                        domProps: { value: _vm.data.form.present_address },
                         on: {
                           input: function($event) {
                             if ($event.target.composing) {
                               return
                             }
                             _vm.$set(
-                              _vm.form,
+                              _vm.data.form,
                               "present_address",
                               $event.target.value
                             )
@@ -63340,8 +63346,8 @@ var render = function() {
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.form.permanent_address,
-                            expression: "form.permanent_address"
+                            value: _vm.data.form.permanent_address,
+                            expression: "data.form.permanent_address"
                           }
                         ],
                         staticClass: "form-control",
@@ -63349,14 +63355,14 @@ var render = function() {
                           type: "text",
                           placeholder: "Permanent Address"
                         },
-                        domProps: { value: _vm.form.permanent_address },
+                        domProps: { value: _vm.data.form.permanent_address },
                         on: {
                           input: function($event) {
                             if ($event.target.composing) {
                               return
                             }
                             _vm.$set(
-                              _vm.form,
+                              _vm.data.form,
                               "permanent_address",
                               $event.target.value
                             )
@@ -63387,19 +63393,23 @@ var render = function() {
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.form.cell_no,
-                            expression: "form.cell_no"
+                            value: _vm.data.form.cell_no,
+                            expression: "data.form.cell_no"
                           }
                         ],
                         staticClass: "form-control",
                         attrs: { type: "text", placeholder: "Cell No" },
-                        domProps: { value: _vm.form.cell_no },
+                        domProps: { value: _vm.data.form.cell_no },
                         on: {
                           input: function($event) {
                             if ($event.target.composing) {
                               return
                             }
-                            _vm.$set(_vm.form, "cell_no", $event.target.value)
+                            _vm.$set(
+                              _vm.data.form,
+                              "cell_no",
+                              $event.target.value
+                            )
                           }
                         }
                       }),
@@ -63427,20 +63437,20 @@ var render = function() {
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.form.concern_person,
-                            expression: "form.concern_person"
+                            value: _vm.data.form.concern_person,
+                            expression: "data.form.concern_person"
                           }
                         ],
                         staticClass: "form-control",
                         attrs: { type: "text", placeholder: "Concern Person" },
-                        domProps: { value: _vm.form.concern_person },
+                        domProps: { value: _vm.data.form.concern_person },
                         on: {
                           input: function($event) {
                             if ($event.target.composing) {
                               return
                             }
                             _vm.$set(
-                              _vm.form,
+                              _vm.data.form,
                               "concern_person",
                               $event.target.value
                             )
@@ -63473,8 +63483,8 @@ var render = function() {
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.form.org_cell_no,
-                            expression: "form.org_cell_no"
+                            value: _vm.data.form.org_cell_no,
+                            expression: "data.form.org_cell_no"
                           }
                         ],
                         staticClass: "form-control",
@@ -63482,14 +63492,14 @@ var render = function() {
                           type: "text",
                           placeholder: "Organization Cell No"
                         },
-                        domProps: { value: _vm.form.org_cell_no },
+                        domProps: { value: _vm.data.form.org_cell_no },
                         on: {
                           input: function($event) {
                             if ($event.target.composing) {
                               return
                             }
                             _vm.$set(
-                              _vm.form,
+                              _vm.data.form,
                               "org_cell_no",
                               $event.target.value
                             )
@@ -63520,20 +63530,20 @@ var render = function() {
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.form.bussiness_type,
-                            expression: "form.bussiness_type"
+                            value: _vm.data.form.bussiness_type,
+                            expression: "data.form.bussiness_type"
                           }
                         ],
                         staticClass: "form-control",
                         attrs: { type: "text", placeholder: "Bussiness Type" },
-                        domProps: { value: _vm.form.bussiness_type },
+                        domProps: { value: _vm.data.form.bussiness_type },
                         on: {
                           input: function($event) {
                             if ($event.target.composing) {
                               return
                             }
                             _vm.$set(
-                              _vm.form,
+                              _vm.data.form,
                               "bussiness_type",
                               $event.target.value
                             )
@@ -63564,20 +63574,20 @@ var render = function() {
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.form.bussiness_year,
-                            expression: "form.bussiness_year"
+                            value: _vm.data.form.bussiness_year,
+                            expression: "data.form.bussiness_year"
                           }
                         ],
                         staticClass: "form-control",
                         attrs: { type: "text", placeholder: "Bussiness Year" },
-                        domProps: { value: _vm.form.bussiness_year },
+                        domProps: { value: _vm.data.form.bussiness_year },
                         on: {
                           input: function($event) {
                             if ($event.target.composing) {
                               return
                             }
                             _vm.$set(
-                              _vm.form,
+                              _vm.data.form,
                               "bussiness_year",
                               $event.target.value
                             )
@@ -63616,29 +63626,29 @@ var render = function() {
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.form.one,
-                            expression: "form.one"
+                            value: _vm.data.form.one,
+                            expression: "data.form.one"
                           }
                         ],
                         staticClass: "form-control",
                         attrs: { type: "text", placeholder: "year" },
-                        domProps: { value: _vm.form.one },
+                        domProps: { value: _vm.data.form.one },
                         on: {
                           input: function($event) {
                             if ($event.target.composing) {
                               return
                             }
-                            _vm.$set(_vm.form, "one", $event.target.value)
+                            _vm.$set(_vm.data.form, "one", $event.target.value)
                           }
                         }
                       }),
                       _vm._v(" "),
                       _c("br"),
                       _vm._v(" "),
-                      _vm.form.one
+                      _vm.data.form.one
                         ? _c("span", { staticClass: "red" }, [
                             _c("strong", [
-                              _vm._v("Picked: " + _vm._s(_vm.form.one))
+                              _vm._v("Picked: " + _vm._s(_vm.data.form.one))
                             ])
                           ])
                         : _vm._e()
@@ -63660,17 +63670,21 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.two.data,
-                                expression: "form.two.data"
+                                value: _vm.data.form.two.data,
+                                expression: "data.form.two.data"
                               }
                             ],
                             attrs: { type: "radio", id: "yes", value: "yes" },
                             domProps: {
-                              checked: _vm._q(_vm.form.two.data, "yes")
+                              checked: _vm._q(_vm.data.form.two.data, "yes")
                             },
                             on: {
                               change: function($event) {
-                                return _vm.$set(_vm.form.two, "data", "yes")
+                                return _vm.$set(
+                                  _vm.data.form.two,
+                                  "data",
+                                  "yes"
+                                )
                               }
                             }
                           }),
@@ -63679,14 +63693,14 @@ var render = function() {
                             _vm._v("Yes")
                           ]),
                           _vm._v(" "),
-                          _vm.form.two.data == "yes"
+                          _vm.data.form.two.data == "yes"
                             ? _c("input", {
                                 directives: [
                                   {
                                     name: "model",
                                     rawName: "v-model",
-                                    value: _vm.form.two.extra,
-                                    expression: "form.two.extra"
+                                    value: _vm.data.form.two.extra,
+                                    expression: "data.form.two.extra"
                                   }
                                 ],
                                 staticClass: "form-control",
@@ -63694,14 +63708,14 @@ var render = function() {
                                   type: "text",
                                   placeholder: "If yes,please specifies"
                                 },
-                                domProps: { value: _vm.form.two.extra },
+                                domProps: { value: _vm.data.form.two.extra },
                                 on: {
                                   input: function($event) {
                                     if ($event.target.composing) {
                                       return
                                     }
                                     _vm.$set(
-                                      _vm.form.two,
+                                      _vm.data.form.two,
                                       "extra",
                                       $event.target.value
                                     )
@@ -63717,20 +63731,20 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.two.data,
-                                expression: "form.two.data"
+                                value: _vm.data.form.two.data,
+                                expression: "data.form.two.data"
                               }
                             ],
                             attrs: { type: "radio", id: "no", value: "no" },
                             domProps: {
-                              checked: _vm._q(_vm.form.two.data, "no")
+                              checked: _vm._q(_vm.data.form.two.data, "no")
                             },
                             on: {
                               click: function($event) {
-                                return _vm.setNullTwo(_vm.form.two.extra)
+                                return _vm.setNullTwo(_vm.data.form.two.extra)
                               },
                               change: function($event) {
-                                return _vm.$set(_vm.form.two, "data", "no")
+                                return _vm.$set(_vm.data.form.two, "data", "no")
                               }
                             }
                           }),
@@ -63741,20 +63755,22 @@ var render = function() {
                       _vm._v(" "),
                       _c("br"),
                       _vm._v(" "),
-                      _vm.form.two.data
+                      _vm.data.form.two.data
                         ? _c("span", { staticClass: "red" }, [
                             _c("strong", [
                               _vm._v(
-                                "Picked: " + _vm._s(_vm.form.two.data) + " "
+                                "Picked: " +
+                                  _vm._s(_vm.data.form.two.data) +
+                                  " "
                               )
                             ])
                           ])
                         : _vm._e(),
                       _vm._v(" "),
-                      _vm.form.two.extra
+                      _vm.data.form.two.extra
                         ? _c("span", { staticClass: "red" }, [
                             _c("strong", [
-                              _vm._v("---> " + _vm._s(_vm.form.two.extra))
+                              _vm._v("---> " + _vm._s(_vm.data.form.two.extra))
                             ])
                           ])
                         : _vm._e()
@@ -63776,8 +63792,8 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.three,
-                                expression: "form.three"
+                                value: _vm.data.form.three,
+                                expression: "data.form.three"
                               }
                             ],
                             attrs: {
@@ -63786,11 +63802,15 @@ var render = function() {
                               value: "Very Good"
                             },
                             domProps: {
-                              checked: _vm._q(_vm.form.three, "Very Good")
+                              checked: _vm._q(_vm.data.form.three, "Very Good")
                             },
                             on: {
                               change: function($event) {
-                                return _vm.$set(_vm.form, "three", "Very Good")
+                                return _vm.$set(
+                                  _vm.data.form,
+                                  "three",
+                                  "Very Good"
+                                )
                               }
                             }
                           }),
@@ -63806,17 +63826,17 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.three,
-                                expression: "form.three"
+                                value: _vm.data.form.three,
+                                expression: "data.form.three"
                               }
                             ],
                             attrs: { type: "radio", id: "Good", value: "Good" },
                             domProps: {
-                              checked: _vm._q(_vm.form.three, "Good")
+                              checked: _vm._q(_vm.data.form.three, "Good")
                             },
                             on: {
                               change: function($event) {
-                                return _vm.$set(_vm.form, "three", "Good")
+                                return _vm.$set(_vm.data.form, "three", "Good")
                               }
                             }
                           }),
@@ -63832,8 +63852,8 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.three,
-                                expression: "form.three"
+                                value: _vm.data.form.three,
+                                expression: "data.form.three"
                               }
                             ],
                             attrs: {
@@ -63842,12 +63862,15 @@ var render = function() {
                               value: "Satisfactory"
                             },
                             domProps: {
-                              checked: _vm._q(_vm.form.three, "Satisfactory")
+                              checked: _vm._q(
+                                _vm.data.form.three,
+                                "Satisfactory"
+                              )
                             },
                             on: {
                               change: function($event) {
                                 return _vm.$set(
-                                  _vm.form,
+                                  _vm.data.form,
                                   "three",
                                   "Satisfactory"
                                 )
@@ -63866,17 +63889,17 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.three,
-                                expression: "form.three"
+                                value: _vm.data.form.three,
+                                expression: "data.form.three"
                               }
                             ],
                             attrs: { type: "radio", id: "Poor", value: "Poor" },
                             domProps: {
-                              checked: _vm._q(_vm.form.three, "Poor")
+                              checked: _vm._q(_vm.data.form.three, "Poor")
                             },
                             on: {
                               change: function($event) {
-                                return _vm.$set(_vm.form, "three", "Poor")
+                                return _vm.$set(_vm.data.form, "three", "Poor")
                               }
                             }
                           }),
@@ -63889,10 +63912,10 @@ var render = function() {
                         _c("br")
                       ]),
                       _vm._v(" "),
-                      _vm.form.three
+                      _vm.data.form.three
                         ? _c("span", { staticClass: "red" }, [
                             _c("strong", [
-                              _vm._v("Picked: " + _vm._s(_vm.form.three))
+                              _vm._v("Picked: " + _vm._s(_vm.data.form.three))
                             ])
                           ])
                         : _vm._e()
@@ -63914,8 +63937,8 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.four.data,
-                                expression: "form.four.data"
+                                value: _vm.data.form.four.data,
+                                expression: "data.form.four.data"
                               }
                             ],
                             attrs: {
@@ -63924,14 +63947,18 @@ var render = function() {
                               value: "Design"
                             },
                             domProps: {
-                              checked: _vm._q(_vm.form.four.data, "Design")
+                              checked: _vm._q(_vm.data.form.four.data, "Design")
                             },
                             on: {
                               click: function($event) {
-                                return _vm.setNullFour(_vm.form.four.extra)
+                                return _vm.setNullFour(_vm.data.form.four.extra)
                               },
                               change: function($event) {
-                                return _vm.$set(_vm.form.four, "data", "Design")
+                                return _vm.$set(
+                                  _vm.data.form.four,
+                                  "data",
+                                  "Design"
+                                )
                               }
                             }
                           }),
@@ -63947,8 +63974,8 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.four.data,
-                                expression: "form.four.data"
+                                value: _vm.data.form.four.data,
+                                expression: "data.form.four.data"
                               }
                             ],
                             attrs: {
@@ -63957,14 +63984,18 @@ var render = function() {
                               value: "Speed"
                             },
                             domProps: {
-                              checked: _vm._q(_vm.form.four.data, "Speed")
+                              checked: _vm._q(_vm.data.form.four.data, "Speed")
                             },
                             on: {
                               click: function($event) {
-                                return _vm.setNullFour(_vm.form.four.extra)
+                                return _vm.setNullFour(_vm.data.form.four.extra)
                               },
                               change: function($event) {
-                                return _vm.$set(_vm.form.four, "data", "Speed")
+                                return _vm.$set(
+                                  _vm.data.form.four,
+                                  "data",
+                                  "Speed"
+                                )
                               }
                             }
                           }),
@@ -63980,8 +64011,8 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.four.data,
-                                expression: "form.four.data"
+                                value: _vm.data.form.four.data,
+                                expression: "data.form.four.data"
                               }
                             ],
                             attrs: {
@@ -63991,17 +64022,17 @@ var render = function() {
                             },
                             domProps: {
                               checked: _vm._q(
-                                _vm.form.four.data,
+                                _vm.data.form.four.data,
                                 "Power Consumption"
                               )
                             },
                             on: {
                               click: function($event) {
-                                return _vm.setNullFour(_vm.form.four.extra)
+                                return _vm.setNullFour(_vm.data.form.four.extra)
                               },
                               change: function($event) {
                                 return _vm.$set(
-                                  _vm.form.four,
+                                  _vm.data.form.four,
                                   "data",
                                   "Power Consumption"
                                 )
@@ -64020,8 +64051,8 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.four.data,
-                                expression: "form.four.data"
+                                value: _vm.data.form.four.data,
+                                expression: "data.form.four.data"
                               }
                             ],
                             attrs: {
@@ -64030,12 +64061,15 @@ var render = function() {
                               value: "Any Other"
                             },
                             domProps: {
-                              checked: _vm._q(_vm.form.four.data, "Any Other")
+                              checked: _vm._q(
+                                _vm.data.form.four.data,
+                                "Any Other"
+                              )
                             },
                             on: {
                               change: function($event) {
                                 return _vm.$set(
-                                  _vm.form.four,
+                                  _vm.data.form.four,
                                   "data",
                                   "Any Other"
                                 )
@@ -64047,14 +64081,14 @@ var render = function() {
                             _vm._v("Any Other")
                           ]),
                           _vm._v(" "),
-                          _vm.form.four.data == "Any Other"
+                          _vm.data.form.four.data == "Any Other"
                             ? _c("input", {
                                 directives: [
                                   {
                                     name: "model",
                                     rawName: "v-model",
-                                    value: _vm.form.four.extra,
-                                    expression: "form.four.extra"
+                                    value: _vm.data.form.four.extra,
+                                    expression: "data.form.four.extra"
                                   }
                                 ],
                                 staticClass: "form-control",
@@ -64062,14 +64096,14 @@ var render = function() {
                                   type: "text",
                                   placeholder: "Anyother"
                                 },
-                                domProps: { value: _vm.form.four.extra },
+                                domProps: { value: _vm.data.form.four.extra },
                                 on: {
                                   input: function($event) {
                                     if ($event.target.composing) {
                                       return
                                     }
                                     _vm.$set(
-                                      _vm.form.four,
+                                      _vm.data.form.four,
                                       "extra",
                                       $event.target.value
                                     )
@@ -64082,17 +64116,19 @@ var render = function() {
                         _c("br")
                       ]),
                       _vm._v(" "),
-                      _vm.form.four.data
+                      _vm.data.form.four.data
                         ? _c("span", { staticClass: "red" }, [
                             _c("strong", [
-                              _vm._v("Picked: " + _vm._s(_vm.form.four.data))
+                              _vm._v(
+                                "Picked: " + _vm._s(_vm.data.form.four.data)
+                              )
                             ])
                           ])
                         : _vm._e(),
                       _vm._v(" "),
-                      _vm.form.four.extra
+                      _vm.data.form.four.extra
                         ? _c("span", { staticClass: "red" }, [
-                            _vm._v("---> " + _vm._s(_vm.form.four.extra))
+                            _vm._v("---> " + _vm._s(_vm.data.form.four.extra))
                           ])
                         : _vm._e()
                     ])
@@ -64113,8 +64149,8 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.five,
-                                expression: "form.five"
+                                value: _vm.data.form.five,
+                                expression: "data.form.five"
                               }
                             ],
                             attrs: {
@@ -64123,11 +64159,15 @@ var render = function() {
                               value: "Very Good"
                             },
                             domProps: {
-                              checked: _vm._q(_vm.form.five, "Very Good")
+                              checked: _vm._q(_vm.data.form.five, "Very Good")
                             },
                             on: {
                               change: function($event) {
-                                return _vm.$set(_vm.form, "five", "Very Good")
+                                return _vm.$set(
+                                  _vm.data.form,
+                                  "five",
+                                  "Very Good"
+                                )
                               }
                             }
                           }),
@@ -64143,17 +64183,17 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.five,
-                                expression: "form.five"
+                                value: _vm.data.form.five,
+                                expression: "data.form.five"
                               }
                             ],
                             attrs: { type: "radio", id: "Good", value: "Good" },
                             domProps: {
-                              checked: _vm._q(_vm.form.five, "Good")
+                              checked: _vm._q(_vm.data.form.five, "Good")
                             },
                             on: {
                               change: function($event) {
-                                return _vm.$set(_vm.form, "five", "Good")
+                                return _vm.$set(_vm.data.form, "five", "Good")
                               }
                             }
                           }),
@@ -64169,8 +64209,8 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.five,
-                                expression: "form.five"
+                                value: _vm.data.form.five,
+                                expression: "data.form.five"
                               }
                             ],
                             attrs: {
@@ -64179,12 +64219,15 @@ var render = function() {
                               value: "Satisfactory"
                             },
                             domProps: {
-                              checked: _vm._q(_vm.form.five, "Satisfactory")
+                              checked: _vm._q(
+                                _vm.data.form.five,
+                                "Satisfactory"
+                              )
                             },
                             on: {
                               change: function($event) {
                                 return _vm.$set(
-                                  _vm.form,
+                                  _vm.data.form,
                                   "five",
                                   "Satisfactory"
                                 )
@@ -64203,17 +64246,17 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.five,
-                                expression: "form.five"
+                                value: _vm.data.form.five,
+                                expression: "data.form.five"
                               }
                             ],
                             attrs: { type: "radio", id: "Poor", value: "Poor" },
                             domProps: {
-                              checked: _vm._q(_vm.form.five, "Poor")
+                              checked: _vm._q(_vm.data.form.five, "Poor")
                             },
                             on: {
                               change: function($event) {
-                                return _vm.$set(_vm.form, "five", "Poor")
+                                return _vm.$set(_vm.data.form, "five", "Poor")
                               }
                             }
                           }),
@@ -64226,10 +64269,10 @@ var render = function() {
                         _c("br")
                       ]),
                       _vm._v(" "),
-                      _vm.form.five
+                      _vm.data.form.five
                         ? _c("span", { staticClass: "red" }, [
                             _c("strong", [
-                              _vm._v("Picked: " + _vm._s(_vm.form.five))
+                              _vm._v("Picked: " + _vm._s(_vm.data.form.five))
                             ])
                           ])
                         : _vm._e()
@@ -64251,8 +64294,8 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.six.data,
-                                expression: "form.six.data"
+                                value: _vm.data.form.six.data,
+                                expression: "data.form.six.data"
                               }
                             ],
                             attrs: {
@@ -64261,12 +64304,15 @@ var render = function() {
                               value: "Discount"
                             },
                             domProps: {
-                              checked: _vm._q(_vm.form.six.data, "Discount")
+                              checked: _vm._q(
+                                _vm.data.form.six.data,
+                                "Discount"
+                              )
                             },
                             on: {
                               change: function($event) {
                                 return _vm.$set(
-                                  _vm.form.six,
+                                  _vm.data.form.six,
                                   "data",
                                   "Discount"
                                 )
@@ -64285,17 +64331,21 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.six.data,
-                                expression: "form.six.data"
+                                value: _vm.data.form.six.data,
+                                expression: "data.form.six.data"
                               }
                             ],
                             attrs: { type: "radio", id: "Gift", value: "Gift" },
                             domProps: {
-                              checked: _vm._q(_vm.form.six.data, "Gift")
+                              checked: _vm._q(_vm.data.form.six.data, "Gift")
                             },
                             on: {
                               change: function($event) {
-                                return _vm.$set(_vm.form.six, "data", "Gift")
+                                return _vm.$set(
+                                  _vm.data.form.six,
+                                  "data",
+                                  "Gift"
+                                )
                               }
                             }
                           }),
@@ -64311,8 +64361,8 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.six.data,
-                                expression: "form.six.data"
+                                value: _vm.data.form.six.data,
+                                expression: "data.form.six.data"
                               }
                             ],
                             attrs: {
@@ -64321,12 +64371,15 @@ var render = function() {
                               value: "Price offer"
                             },
                             domProps: {
-                              checked: _vm._q(_vm.form.six.data, "Price offer")
+                              checked: _vm._q(
+                                _vm.data.form.six.data,
+                                "Price offer"
+                              )
                             },
                             on: {
                               change: function($event) {
                                 return _vm.$set(
-                                  _vm.form.six,
+                                  _vm.data.form.six,
                                   "data",
                                   "Price offer"
                                 )
@@ -64345,8 +64398,8 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.six.data,
-                                expression: "form.six.data"
+                                value: _vm.data.form.six.data,
+                                expression: "data.form.six.data"
                               }
                             ],
                             attrs: {
@@ -64355,11 +64408,15 @@ var render = function() {
                               value: "Others"
                             },
                             domProps: {
-                              checked: _vm._q(_vm.form.six.data, "Others")
+                              checked: _vm._q(_vm.data.form.six.data, "Others")
                             },
                             on: {
                               change: function($event) {
-                                return _vm.$set(_vm.form.six, "data", "Others")
+                                return _vm.$set(
+                                  _vm.data.form.six,
+                                  "data",
+                                  "Others"
+                                )
                               }
                             }
                           }),
@@ -64368,26 +64425,26 @@ var render = function() {
                             _vm._v("Others")
                           ]),
                           _vm._v(" "),
-                          _vm.form.six.data == "Others"
+                          _vm.data.form.six.data == "Others"
                             ? _c("input", {
                                 directives: [
                                   {
                                     name: "model",
                                     rawName: "v-model",
-                                    value: _vm.form.six.extra,
-                                    expression: "form.six.extra"
+                                    value: _vm.data.form.six.extra,
+                                    expression: "data.form.six.extra"
                                   }
                                 ],
                                 staticClass: "form-control",
                                 attrs: { type: "text", placeholder: "Others" },
-                                domProps: { value: _vm.form.six.extra },
+                                domProps: { value: _vm.data.form.six.extra },
                                 on: {
                                   input: function($event) {
                                     if ($event.target.composing) {
                                       return
                                     }
                                     _vm.$set(
-                                      _vm.form.six,
+                                      _vm.data.form.six,
                                       "extra",
                                       $event.target.value
                                     )
@@ -64400,17 +64457,19 @@ var render = function() {
                         _c("br")
                       ]),
                       _vm._v(" "),
-                      _vm.form.six.data
+                      _vm.data.form.six.data
                         ? _c("span", { staticClass: "red" }, [
                             _c("strong", [
-                              _vm._v("Picked: " + _vm._s(_vm.form.six.data))
+                              _vm._v(
+                                "Picked: " + _vm._s(_vm.data.form.six.data)
+                              )
                             ])
                           ])
                         : _vm._e(),
                       _vm._v(" "),
-                      _vm.form.six.extra
+                      _vm.data.form.six.extra
                         ? _c("span", { staticClass: "red" }, [
-                            _vm._v("---> " + _vm._s(_vm.form.six.extra))
+                            _vm._v("---> " + _vm._s(_vm.data.form.six.extra))
                           ])
                         : _vm._e()
                     ])
@@ -64431,17 +64490,17 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.seven,
-                                expression: "form.seven"
+                                value: _vm.data.form.seven,
+                                expression: "data.form.seven"
                               }
                             ],
                             attrs: { type: "radio", id: "yes", value: "yes" },
                             domProps: {
-                              checked: _vm._q(_vm.form.seven, "yes")
+                              checked: _vm._q(_vm.data.form.seven, "yes")
                             },
                             on: {
                               change: function($event) {
-                                return _vm.$set(_vm.form, "seven", "yes")
+                                return _vm.$set(_vm.data.form, "seven", "yes")
                               }
                             }
                           }),
@@ -64457,15 +64516,17 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.seven,
-                                expression: "form.seven"
+                                value: _vm.data.form.seven,
+                                expression: "data.form.seven"
                               }
                             ],
                             attrs: { type: "radio", id: "no", value: "no" },
-                            domProps: { checked: _vm._q(_vm.form.seven, "no") },
+                            domProps: {
+                              checked: _vm._q(_vm.data.form.seven, "no")
+                            },
                             on: {
                               change: function($event) {
-                                return _vm.$set(_vm.form, "seven", "no")
+                                return _vm.$set(_vm.data.form, "seven", "no")
                               }
                             }
                           }),
@@ -64474,10 +64535,12 @@ var render = function() {
                         ])
                       ]),
                       _vm._v(" "),
-                      _vm.form.seven
+                      _vm.data.form.seven
                         ? _c("span", { staticClass: "red" }, [
                             _c("strong", [
-                              _vm._v("Picked: " + _vm._s(_vm.form.seven) + " ")
+                              _vm._v(
+                                "Picked: " + _vm._s(_vm.data.form.seven) + " "
+                              )
                             ])
                           ])
                         : _vm._e()
@@ -64499,8 +64562,8 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.eight,
-                                expression: "form.eight"
+                                value: _vm.data.form.eight,
+                                expression: "data.form.eight"
                               }
                             ],
                             attrs: {
@@ -64509,11 +64572,15 @@ var render = function() {
                               value: "Very Good"
                             },
                             domProps: {
-                              checked: _vm._q(_vm.form.eight, "Very Good")
+                              checked: _vm._q(_vm.data.form.eight, "Very Good")
                             },
                             on: {
                               change: function($event) {
-                                return _vm.$set(_vm.form, "eight", "Very Good")
+                                return _vm.$set(
+                                  _vm.data.form,
+                                  "eight",
+                                  "Very Good"
+                                )
                               }
                             }
                           }),
@@ -64529,17 +64596,17 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.eight,
-                                expression: "form.eight"
+                                value: _vm.data.form.eight,
+                                expression: "data.form.eight"
                               }
                             ],
                             attrs: { type: "radio", id: "Good", value: "Good" },
                             domProps: {
-                              checked: _vm._q(_vm.form.eight, "Good")
+                              checked: _vm._q(_vm.data.form.eight, "Good")
                             },
                             on: {
                               change: function($event) {
-                                return _vm.$set(_vm.form, "eight", "Good")
+                                return _vm.$set(_vm.data.form, "eight", "Good")
                               }
                             }
                           }),
@@ -64555,8 +64622,8 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.eight,
-                                expression: "form.eight"
+                                value: _vm.data.form.eight,
+                                expression: "data.form.eight"
                               }
                             ],
                             attrs: {
@@ -64565,12 +64632,15 @@ var render = function() {
                               value: "Satisfactory"
                             },
                             domProps: {
-                              checked: _vm._q(_vm.form.eight, "Satisfactory")
+                              checked: _vm._q(
+                                _vm.data.form.eight,
+                                "Satisfactory"
+                              )
                             },
                             on: {
                               change: function($event) {
                                 return _vm.$set(
-                                  _vm.form,
+                                  _vm.data.form,
                                   "eight",
                                   "Satisfactory"
                                 )
@@ -64589,17 +64659,17 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.eight,
-                                expression: "form.eight"
+                                value: _vm.data.form.eight,
+                                expression: "data.form.eight"
                               }
                             ],
                             attrs: { type: "radio", id: "Poor", value: "Poor" },
                             domProps: {
-                              checked: _vm._q(_vm.form.eight, "Poor")
+                              checked: _vm._q(_vm.data.form.eight, "Poor")
                             },
                             on: {
                               change: function($event) {
-                                return _vm.$set(_vm.form, "eight", "Poor")
+                                return _vm.$set(_vm.data.form, "eight", "Poor")
                               }
                             }
                           }),
@@ -64612,10 +64682,10 @@ var render = function() {
                         _c("br")
                       ]),
                       _vm._v(" "),
-                      _vm.form.eight
+                      _vm.data.form.eight
                         ? _c("span", { staticClass: "red" }, [
                             _c("strong", [
-                              _vm._v("Picked: " + _vm._s(_vm.form.eight))
+                              _vm._v("Picked: " + _vm._s(_vm.data.form.eight))
                             ])
                           ])
                         : _vm._e()
@@ -64637,8 +64707,8 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.nine,
-                                expression: "form.nine"
+                                value: _vm.data.form.nine,
+                                expression: "data.form.nine"
                               }
                             ],
                             attrs: {
@@ -64647,12 +64717,15 @@ var render = function() {
                               value: "Highly Satisfied"
                             },
                             domProps: {
-                              checked: _vm._q(_vm.form.nine, "Highly Satisfied")
+                              checked: _vm._q(
+                                _vm.data.form.nine,
+                                "Highly Satisfied"
+                              )
                             },
                             on: {
                               change: function($event) {
                                 return _vm.$set(
-                                  _vm.form,
+                                  _vm.data.form,
                                   "nine",
                                   "Highly Satisfied"
                                 )
@@ -64671,8 +64744,8 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.nine,
-                                expression: "form.nine"
+                                value: _vm.data.form.nine,
+                                expression: "data.form.nine"
                               }
                             ],
                             attrs: {
@@ -64681,11 +64754,15 @@ var render = function() {
                               value: "Satisfied"
                             },
                             domProps: {
-                              checked: _vm._q(_vm.form.nine, "Satisfied")
+                              checked: _vm._q(_vm.data.form.nine, "Satisfied")
                             },
                             on: {
                               change: function($event) {
-                                return _vm.$set(_vm.form, "nine", "Satisfied")
+                                return _vm.$set(
+                                  _vm.data.form,
+                                  "nine",
+                                  "Satisfied"
+                                )
                               }
                             }
                           }),
@@ -64701,8 +64778,8 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.nine,
-                                expression: "form.nine"
+                                value: _vm.data.form.nine,
+                                expression: "data.form.nine"
                               }
                             ],
                             attrs: {
@@ -64711,11 +64788,15 @@ var render = function() {
                               value: "Average"
                             },
                             domProps: {
-                              checked: _vm._q(_vm.form.nine, "Average")
+                              checked: _vm._q(_vm.data.form.nine, "Average")
                             },
                             on: {
                               change: function($event) {
-                                return _vm.$set(_vm.form, "nine", "Average")
+                                return _vm.$set(
+                                  _vm.data.form,
+                                  "nine",
+                                  "Average"
+                                )
                               }
                             }
                           }),
@@ -64731,8 +64812,8 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.nine,
-                                expression: "form.nine"
+                                value: _vm.data.form.nine,
+                                expression: "data.form.nine"
                               }
                             ],
                             attrs: {
@@ -64741,12 +64822,15 @@ var render = function() {
                               value: "Dissatisfied"
                             },
                             domProps: {
-                              checked: _vm._q(_vm.form.nine, "Dissatisfied")
+                              checked: _vm._q(
+                                _vm.data.form.nine,
+                                "Dissatisfied"
+                              )
                             },
                             on: {
                               change: function($event) {
                                 return _vm.$set(
-                                  _vm.form,
+                                  _vm.data.form,
                                   "nine",
                                   "Dissatisfied"
                                 )
@@ -64762,10 +64846,10 @@ var render = function() {
                         _c("br")
                       ]),
                       _vm._v(" "),
-                      _vm.form.nine
+                      _vm.data.form.nine
                         ? _c("span", { staticClass: "red" }, [
                             _c("strong", [
-                              _vm._v("Picked: " + _vm._s(_vm.form.nine))
+                              _vm._v("Picked: " + _vm._s(_vm.data.form.nine))
                             ])
                           ])
                         : _vm._e()
@@ -64787,8 +64871,8 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.ten.data,
-                                expression: "form.ten.data"
+                                value: _vm.data.form.ten.data,
+                                expression: "data.form.ten.data"
                               }
                             ],
                             attrs: {
@@ -64798,17 +64882,17 @@ var render = function() {
                             },
                             domProps: {
                               checked: _vm._q(
-                                _vm.form.ten.data,
+                                _vm.data.form.ten.data,
                                 "Promotional Sale"
                               )
                             },
                             on: {
                               click: function($event) {
-                                return _vm.setNullTen(_vm.form.ten.extra)
+                                return _vm.setNullTen(_vm.data.form.ten.extra)
                               },
                               change: function($event) {
                                 return _vm.$set(
-                                  _vm.form.ten,
+                                  _vm.data.form.ten,
                                   "data",
                                   "Promotional Sale"
                                 )
@@ -64827,8 +64911,8 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.ten.data,
-                                expression: "form.ten.data"
+                                value: _vm.data.form.ten.data,
+                                expression: "data.form.ten.data"
                               }
                             ],
                             attrs: {
@@ -64837,15 +64921,18 @@ var render = function() {
                               value: "Follow-Up"
                             },
                             domProps: {
-                              checked: _vm._q(_vm.form.ten.data, "Follow-Up")
+                              checked: _vm._q(
+                                _vm.data.form.ten.data,
+                                "Follow-Up"
+                              )
                             },
                             on: {
                               click: function($event) {
-                                return _vm.setNullTen(_vm.form.ten.extra)
+                                return _vm.setNullTen(_vm.data.form.ten.extra)
                               },
                               change: function($event) {
                                 return _vm.$set(
-                                  _vm.form.ten,
+                                  _vm.data.form.ten,
                                   "data",
                                   "Follow-Up"
                                 )
@@ -64864,8 +64951,8 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.ten.data,
-                                expression: "form.ten.data"
+                                value: _vm.data.form.ten.data,
+                                expression: "data.form.ten.data"
                               }
                             ],
                             attrs: {
@@ -64874,14 +64961,18 @@ var render = function() {
                               value: "Schele"
                             },
                             domProps: {
-                              checked: _vm._q(_vm.form.ten.data, "Schele")
+                              checked: _vm._q(_vm.data.form.ten.data, "Schele")
                             },
                             on: {
                               click: function($event) {
-                                return _vm.setNullTen(_vm.form.ten.extra)
+                                return _vm.setNullTen(_vm.data.form.ten.extra)
                               },
                               change: function($event) {
-                                return _vm.$set(_vm.form.ten, "data", "Schele")
+                                return _vm.$set(
+                                  _vm.data.form.ten,
+                                  "data",
+                                  "Schele"
+                                )
                               }
                             }
                           }),
@@ -64897,8 +64988,8 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.ten.data,
-                                expression: "form.ten.data"
+                                value: _vm.data.form.ten.data,
+                                expression: "data.form.ten.data"
                               }
                             ],
                             attrs: {
@@ -64907,11 +64998,15 @@ var render = function() {
                               value: "Service"
                             },
                             domProps: {
-                              checked: _vm._q(_vm.form.ten.data, "Service")
+                              checked: _vm._q(_vm.data.form.ten.data, "Service")
                             },
                             on: {
                               change: function($event) {
-                                return _vm.$set(_vm.form.ten, "data", "Service")
+                                return _vm.$set(
+                                  _vm.data.form.ten,
+                                  "data",
+                                  "Service"
+                                )
                               }
                             }
                           }),
@@ -64920,26 +65015,26 @@ var render = function() {
                             _vm._v("Service")
                           ]),
                           _vm._v(" "),
-                          _vm.form.ten.data == "Service"
+                          _vm.data.form.ten.data == "Service"
                             ? _c("input", {
                                 directives: [
                                   {
                                     name: "model",
                                     rawName: "v-model",
-                                    value: _vm.form.ten.extra,
-                                    expression: "form.ten.extra"
+                                    value: _vm.data.form.ten.extra,
+                                    expression: "data.form.ten.extra"
                                   }
                                 ],
                                 staticClass: "form-control",
                                 attrs: { type: "text", placeholder: "Service" },
-                                domProps: { value: _vm.form.ten.extra },
+                                domProps: { value: _vm.data.form.ten.extra },
                                 on: {
                                   input: function($event) {
                                     if ($event.target.composing) {
                                       return
                                     }
                                     _vm.$set(
-                                      _vm.form.ten,
+                                      _vm.data.form.ten,
                                       "extra",
                                       $event.target.value
                                     )
@@ -64952,17 +65047,19 @@ var render = function() {
                         _c("br")
                       ]),
                       _vm._v(" "),
-                      _vm.form.ten.data
+                      _vm.data.form.ten.data
                         ? _c("span", { staticClass: "red" }, [
                             _c("strong", [
-                              _vm._v("Picked: " + _vm._s(_vm.form.ten.data))
+                              _vm._v(
+                                "Picked: " + _vm._s(_vm.data.form.ten.data)
+                              )
                             ])
                           ])
                         : _vm._e(),
                       _vm._v(" "),
-                      _vm.form.ten.extra
+                      _vm.data.form.ten.extra
                         ? _c("span", { staticClass: "red" }, [
-                            _vm._v("---> " + _vm._s(_vm.form.ten.extra))
+                            _vm._v("---> " + _vm._s(_vm.data.form.ten.extra))
                           ])
                         : _vm._e()
                     ])
@@ -64979,19 +65076,23 @@ var render = function() {
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.form.eleven,
-                            expression: "form.eleven"
+                            value: _vm.data.form.eleven,
+                            expression: "data.form.eleven"
                           }
                         ],
                         staticClass: "form-control",
                         attrs: { type: "text", placeholder: "spending" },
-                        domProps: { value: _vm.form.eleven },
+                        domProps: { value: _vm.data.form.eleven },
                         on: {
                           input: function($event) {
                             if ($event.target.composing) {
                               return
                             }
-                            _vm.$set(_vm.form, "eleven", $event.target.value)
+                            _vm.$set(
+                              _vm.data.form,
+                              "eleven",
+                              $event.target.value
+                            )
                           }
                         }
                       })
@@ -65013,17 +65114,21 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.twelve.data,
-                                expression: "form.twelve.data"
+                                value: _vm.data.form.twelve.data,
+                                expression: "data.form.twelve.data"
                               }
                             ],
                             attrs: { type: "radio", id: "yes", value: "yes" },
                             domProps: {
-                              checked: _vm._q(_vm.form.twelve.data, "yes")
+                              checked: _vm._q(_vm.data.form.twelve.data, "yes")
                             },
                             on: {
                               change: function($event) {
-                                return _vm.$set(_vm.form.twelve, "data", "yes")
+                                return _vm.$set(
+                                  _vm.data.form.twelve,
+                                  "data",
+                                  "yes"
+                                )
                               }
                             }
                           }),
@@ -65039,20 +65144,26 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.twelve.data,
-                                expression: "form.twelve.data"
+                                value: _vm.data.form.twelve.data,
+                                expression: "data.form.twelve.data"
                               }
                             ],
                             attrs: { type: "radio", id: "no", value: "no" },
                             domProps: {
-                              checked: _vm._q(_vm.form.twelve.data, "no")
+                              checked: _vm._q(_vm.data.form.twelve.data, "no")
                             },
                             on: {
                               click: function($event) {
-                                return _vm.setNullTwelve(_vm.form.twelve.extra)
+                                return _vm.setNullTwelve(
+                                  _vm.data.form.twelve.extra
+                                )
                               },
                               change: function($event) {
-                                return _vm.$set(_vm.form.twelve, "data", "no")
+                                return _vm.$set(
+                                  _vm.data.form.twelve,
+                                  "data",
+                                  "no"
+                                )
                               }
                             }
                           }),
@@ -65061,7 +65172,7 @@ var render = function() {
                         ])
                       ]),
                       _vm._v(" "),
-                      _vm.form.twelve.data == "yes"
+                      _vm.data.form.twelve.data == "yes"
                         ? _c("div", { staticClass: "col-md-12" }, [
                             _c("div", { staticClass: "form-group" }, [
                               _c("div", { staticClass: "row" }, [
@@ -65071,8 +65182,8 @@ var render = function() {
                                       {
                                         name: "model",
                                         rawName: "v-model",
-                                        value: _vm.form.twelve.extra,
-                                        expression: "form.twelve.extra"
+                                        value: _vm.data.form.twelve.extra,
+                                        expression: "data.form.twelve.extra"
                                       }
                                     ],
                                     attrs: {
@@ -65082,14 +65193,14 @@ var render = function() {
                                     },
                                     domProps: {
                                       checked: _vm._q(
-                                        _vm.form.twelve.extra,
+                                        _vm.data.form.twelve.extra,
                                         "Delivery Goods"
                                       )
                                     },
                                     on: {
                                       change: function($event) {
                                         return _vm.$set(
-                                          _vm.form.twelve,
+                                          _vm.data.form.twelve,
                                           "extra",
                                           "Delivery Goods"
                                         )
@@ -65110,8 +65221,8 @@ var render = function() {
                                       {
                                         name: "model",
                                         rawName: "v-model",
-                                        value: _vm.form.twelve.extra,
-                                        expression: "form.twelve.extra"
+                                        value: _vm.data.form.twelve.extra,
+                                        expression: "data.form.twelve.extra"
                                       }
                                     ],
                                     attrs: {
@@ -65121,14 +65232,14 @@ var render = function() {
                                     },
                                     domProps: {
                                       checked: _vm._q(
-                                        _vm.form.twelve.extra,
+                                        _vm.data.form.twelve.extra,
                                         "Quality Product"
                                       )
                                     },
                                     on: {
                                       change: function($event) {
                                         return _vm.$set(
-                                          _vm.form.twelve,
+                                          _vm.data.form.twelve,
                                           "extra",
                                           "Quality Product"
                                         )
@@ -65149,8 +65260,8 @@ var render = function() {
                                       {
                                         name: "model",
                                         rawName: "v-model",
-                                        value: _vm.form.twelve.extra,
-                                        expression: "form.twelve.extra"
+                                        value: _vm.data.form.twelve.extra,
+                                        expression: "data.form.twelve.extra"
                                       }
                                     ],
                                     attrs: {
@@ -65160,14 +65271,14 @@ var render = function() {
                                     },
                                     domProps: {
                                       checked: _vm._q(
-                                        _vm.form.twelve.extra,
+                                        _vm.data.form.twelve.extra,
                                         "After Sales Service"
                                       )
                                     },
                                     on: {
                                       change: function($event) {
                                         return _vm.$set(
-                                          _vm.form.twelve,
+                                          _vm.data.form.twelve,
                                           "extra",
                                           "After Sales Service"
                                         )
@@ -65188,8 +65299,8 @@ var render = function() {
                                       {
                                         name: "model",
                                         rawName: "v-model",
-                                        value: _vm.form.twelve.extra,
-                                        expression: "form.twelve.extra"
+                                        value: _vm.data.form.twelve.extra,
+                                        expression: "data.form.twelve.extra"
                                       }
                                     ],
                                     attrs: {
@@ -65199,14 +65310,14 @@ var render = function() {
                                     },
                                     domProps: {
                                       checked: _vm._q(
-                                        _vm.form.twelve.extra,
+                                        _vm.data.form.twelve.extra,
                                         "Pricing"
                                       )
                                     },
                                     on: {
                                       change: function($event) {
                                         return _vm.$set(
-                                          _vm.form.twelve,
+                                          _vm.data.form.twelve,
                                           "extra",
                                           "Pricing"
                                         )
@@ -65225,17 +65336,19 @@ var render = function() {
                       _vm._v(" "),
                       _c("br"),
                       _vm._v(" "),
-                      _vm.form.twelve.data
+                      _vm.data.form.twelve.data
                         ? _c("span", { staticClass: "red" }, [
                             _c("strong", [
-                              _vm._v("Picked: " + _vm._s(_vm.form.twelve.data))
+                              _vm._v(
+                                "Picked: " + _vm._s(_vm.data.form.twelve.data)
+                              )
                             ])
                           ])
                         : _vm._e(),
                       _vm._v(" "),
-                      _vm.form.twelve.extra
+                      _vm.data.form.twelve.extra
                         ? _c("span", { staticClass: "red" }, [
-                            _vm._v("---> " + _vm._s(_vm.form.twelve.extra))
+                            _vm._v("---> " + _vm._s(_vm.data.form.twelve.extra))
                           ])
                         : _vm._e()
                     ])
@@ -65256,23 +65369,26 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.thirteen.data,
-                                expression: "form.thirteen.data"
+                                value: _vm.data.form.thirteen.data,
+                                expression: "data.form.thirteen.data"
                               }
                             ],
                             attrs: { type: "radio", id: "yes", value: "yes" },
                             domProps: {
-                              checked: _vm._q(_vm.form.thirteen.data, "yes")
+                              checked: _vm._q(
+                                _vm.data.form.thirteen.data,
+                                "yes"
+                              )
                             },
                             on: {
                               click: function($event) {
                                 return _vm.setNullThirteen(
-                                  _vm.form.thirteen.extra
+                                  _vm.data.form.thirteen.extra
                                 )
                               },
                               change: function($event) {
                                 return _vm.$set(
-                                  _vm.form.thirteen,
+                                  _vm.data.form.thirteen,
                                   "data",
                                   "yes"
                                 )
@@ -65291,31 +65407,35 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.thirteen.data,
-                                expression: "form.thirteen.data"
+                                value: _vm.data.form.thirteen.data,
+                                expression: "data.form.thirteen.data"
                               }
                             ],
                             attrs: { type: "radio", id: "no", value: "no" },
                             domProps: {
-                              checked: _vm._q(_vm.form.thirteen.data, "no")
+                              checked: _vm._q(_vm.data.form.thirteen.data, "no")
                             },
                             on: {
                               change: function($event) {
-                                return _vm.$set(_vm.form.thirteen, "data", "no")
+                                return _vm.$set(
+                                  _vm.data.form.thirteen,
+                                  "data",
+                                  "no"
+                                )
                               }
                             }
                           }),
                           _vm._v(" "),
                           _c("label", { attrs: { for: "no" } }, [_vm._v("No")]),
                           _vm._v(" "),
-                          _vm.form.thirteen.data == "no"
+                          _vm.data.form.thirteen.data == "no"
                             ? _c("input", {
                                 directives: [
                                   {
                                     name: "model",
                                     rawName: "v-model",
-                                    value: _vm.form.thirteen.extra,
-                                    expression: "form.thirteen.extra"
+                                    value: _vm.data.form.thirteen.extra,
+                                    expression: "data.form.thirteen.extra"
                                   }
                                 ],
                                 staticClass: "form-control",
@@ -65323,14 +65443,16 @@ var render = function() {
                                   type: "text",
                                   placeholder: "If No,please specifies"
                                 },
-                                domProps: { value: _vm.form.thirteen.extra },
+                                domProps: {
+                                  value: _vm.data.form.thirteen.extra
+                                },
                                 on: {
                                   input: function($event) {
                                     if ($event.target.composing) {
                                       return
                                     }
                                     _vm.$set(
-                                      _vm.form.thirteen,
+                                      _vm.data.form.thirteen,
                                       "extra",
                                       $event.target.value
                                     )
@@ -65343,23 +65465,24 @@ var render = function() {
                       _vm._v(" "),
                       _c("br"),
                       _vm._v(" "),
-                      _vm.form.thirteen.data
+                      _vm.data.form.thirteen.data
                         ? _c("span", { staticClass: "red" }, [
                             _c("strong", [
                               _vm._v(
                                 "Picked: " +
-                                  _vm._s(_vm.form.thirteen.data) +
+                                  _vm._s(_vm.data.form.thirteen.data) +
                                   " "
                               )
                             ])
                           ])
                         : _vm._e(),
                       _vm._v(" "),
-                      _vm.form.thirteen.extra
+                      _vm.data.form.thirteen.extra
                         ? _c("span", { staticClass: "red" }, [
                             _c("strong", [
                               _vm._v(
-                                " Specifies " + _vm._s(_vm.form.thirteen.extra)
+                                " Specifies " +
+                                  _vm._s(_vm.data.form.thirteen.extra)
                               )
                             ])
                           ])
@@ -65382,8 +65505,8 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.forteen.data,
-                                expression: "form.forteen.data"
+                                value: _vm.data.form.forteen.data,
+                                expression: "data.form.forteen.data"
                               }
                             ],
                             attrs: {
@@ -65393,14 +65516,14 @@ var render = function() {
                             },
                             domProps: {
                               checked: _vm._q(
-                                _vm.form.forteen.data,
+                                _vm.data.form.forteen.data,
                                 "Highly Satisfied"
                               )
                             },
                             on: {
                               change: function($event) {
                                 return _vm.$set(
-                                  _vm.form.forteen,
+                                  _vm.data.form.forteen,
                                   "data",
                                   "Highly Satisfied"
                                 )
@@ -65419,8 +65542,8 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.forteen.data,
-                                expression: "form.forteen.data"
+                                value: _vm.data.form.forteen.data,
+                                expression: "data.form.forteen.data"
                               }
                             ],
                             attrs: {
@@ -65430,14 +65553,14 @@ var render = function() {
                             },
                             domProps: {
                               checked: _vm._q(
-                                _vm.form.forteen.data,
+                                _vm.data.form.forteen.data,
                                 "Satisfied"
                               )
                             },
                             on: {
                               change: function($event) {
                                 return _vm.$set(
-                                  _vm.form.forteen,
+                                  _vm.data.form.forteen,
                                   "data",
                                   "Satisfied"
                                 )
@@ -65456,8 +65579,8 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.forteen.data,
-                                expression: "form.forteen.data"
+                                value: _vm.data.form.forteen.data,
+                                expression: "data.form.forteen.data"
                               }
                             ],
                             attrs: {
@@ -65466,12 +65589,15 @@ var render = function() {
                               value: "Moderate"
                             },
                             domProps: {
-                              checked: _vm._q(_vm.form.forteen.data, "Moderate")
+                              checked: _vm._q(
+                                _vm.data.form.forteen.data,
+                                "Moderate"
+                              )
                             },
                             on: {
                               change: function($event) {
                                 return _vm.$set(
-                                  _vm.form.forteen,
+                                  _vm.data.form.forteen,
                                   "data",
                                   "Moderate"
                                 )
@@ -65490,8 +65616,8 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.forteen.data,
-                                expression: "form.forteen.data"
+                                value: _vm.data.form.forteen.data,
+                                expression: "data.form.forteen.data"
                               }
                             ],
                             attrs: {
@@ -65501,14 +65627,14 @@ var render = function() {
                             },
                             domProps: {
                               checked: _vm._q(
-                                _vm.form.forteen.data,
+                                _vm.data.form.forteen.data,
                                 "Dissatisfies"
                               )
                             },
                             on: {
                               change: function($event) {
                                 return _vm.$set(
-                                  _vm.form.forteen,
+                                  _vm.data.form.forteen,
                                   "data",
                                   "Dissatisfies"
                                 )
@@ -65520,26 +65646,28 @@ var render = function() {
                             _vm._v("Dissatisfies")
                           ]),
                           _vm._v(" "),
-                          _vm.form.forteen.data == "Service"
+                          _vm.data.form.forteen.data == "Service"
                             ? _c("input", {
                                 directives: [
                                   {
                                     name: "model",
                                     rawName: "v-model",
-                                    value: _vm.form.forteen.extra,
-                                    expression: "form.forteen.extra"
+                                    value: _vm.data.form.forteen.extra,
+                                    expression: "data.form.forteen.extra"
                                   }
                                 ],
                                 staticClass: "form-control",
                                 attrs: { type: "text", placeholder: "Service" },
-                                domProps: { value: _vm.form.forteen.extra },
+                                domProps: {
+                                  value: _vm.data.form.forteen.extra
+                                },
                                 on: {
                                   input: function($event) {
                                     if ($event.target.composing) {
                                       return
                                     }
                                     _vm.$set(
-                                      _vm.form.forteen,
+                                      _vm.data.form.forteen,
                                       "extra",
                                       $event.target.value
                                     )
@@ -65552,17 +65680,21 @@ var render = function() {
                         _c("br")
                       ]),
                       _vm._v(" "),
-                      _vm.form.forteen.data
+                      _vm.data.form.forteen.data
                         ? _c("span", { staticClass: "red" }, [
                             _c("strong", [
-                              _vm._v("Picked: " + _vm._s(_vm.form.forteen.data))
+                              _vm._v(
+                                "Picked: " + _vm._s(_vm.data.form.forteen.data)
+                              )
                             ])
                           ])
                         : _vm._e(),
                       _vm._v(" "),
-                      _vm.form.forteen.extra
+                      _vm.data.form.forteen.extra
                         ? _c("span", { staticClass: "red" }, [
-                            _vm._v("---> " + _vm._s(_vm.form.forteen.extra))
+                            _vm._v(
+                              "---> " + _vm._s(_vm.data.form.forteen.extra)
+                            )
                           ])
                         : _vm._e()
                     ])
@@ -65581,29 +65713,33 @@ var render = function() {
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.form.fifteen,
-                            expression: "form.fifteen"
+                            value: _vm.data.form.fifteen,
+                            expression: "data.form.fifteen"
                           }
                         ],
                         staticClass: "form-control",
                         attrs: { type: "text", placeholder: "Last Balance" },
-                        domProps: { value: _vm.form.fifteen },
+                        domProps: { value: _vm.data.form.fifteen },
                         on: {
                           input: function($event) {
                             if ($event.target.composing) {
                               return
                             }
-                            _vm.$set(_vm.form, "fifteen", $event.target.value)
+                            _vm.$set(
+                              _vm.data.form,
+                              "fifteen",
+                              $event.target.value
+                            )
                           }
                         }
                       }),
                       _vm._v(" "),
                       _c("br"),
                       _vm._v(" "),
-                      _vm.form.fifteen
+                      _vm.data.form.fifteen
                         ? _c("span", { staticClass: "red" }, [
                             _c("strong", [
-                              _vm._v("Picked: " + _vm._s(_vm.form.fifteen))
+                              _vm._v("Picked: " + _vm._s(_vm.data.form.fifteen))
                             ])
                           ])
                         : _vm._e()
@@ -65625,17 +65761,21 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.sixteen.data,
-                                expression: "form.sixteen.data"
+                                value: _vm.data.form.sixteen.data,
+                                expression: "data.form.sixteen.data"
                               }
                             ],
                             attrs: { type: "radio", id: "yes", value: "yes" },
                             domProps: {
-                              checked: _vm._q(_vm.form.sixteen.data, "yes")
+                              checked: _vm._q(_vm.data.form.sixteen.data, "yes")
                             },
                             on: {
                               change: function($event) {
-                                return _vm.$set(_vm.form.sixteen, "data", "yes")
+                                return _vm.$set(
+                                  _vm.data.form.sixteen,
+                                  "data",
+                                  "yes"
+                                )
                               }
                             }
                           }),
@@ -65644,14 +65784,14 @@ var render = function() {
                             _vm._v("Yes")
                           ]),
                           _vm._v(" "),
-                          _vm.form.sixteen.data == "yes"
+                          _vm.data.form.sixteen.data == "yes"
                             ? _c("input", {
                                 directives: [
                                   {
                                     name: "model",
                                     rawName: "v-model",
-                                    value: _vm.form.sixteen.extra,
-                                    expression: "form.sixteen.extra"
+                                    value: _vm.data.form.sixteen.extra,
+                                    expression: "data.form.sixteen.extra"
                                   }
                                 ],
                                 staticClass: "form-control",
@@ -65659,14 +65799,16 @@ var render = function() {
                                   type: "text",
                                   placeholder: "If yes,please specifies"
                                 },
-                                domProps: { value: _vm.form.sixteen.extra },
+                                domProps: {
+                                  value: _vm.data.form.sixteen.extra
+                                },
                                 on: {
                                   input: function($event) {
                                     if ($event.target.composing) {
                                       return
                                     }
                                     _vm.$set(
-                                      _vm.form.sixteen,
+                                      _vm.data.form.sixteen,
                                       "extra",
                                       $event.target.value
                                     )
@@ -65682,22 +65824,26 @@ var render = function() {
                               {
                                 name: "model",
                                 rawName: "v-model",
-                                value: _vm.form.sixteen.data,
-                                expression: "form.sixteen.data"
+                                value: _vm.data.form.sixteen.data,
+                                expression: "data.form.sixteen.data"
                               }
                             ],
                             attrs: { type: "radio", id: "no", value: "no" },
                             domProps: {
-                              checked: _vm._q(_vm.form.sixteen.data, "no")
+                              checked: _vm._q(_vm.data.form.sixteen.data, "no")
                             },
                             on: {
                               click: function($event) {
                                 return _vm.setNullSixteen(
-                                  _vm.form.sixteen.extra
+                                  _vm.data.form.sixteen.extra
                                 )
                               },
                               change: function($event) {
-                                return _vm.$set(_vm.form.sixteen, "data", "no")
+                                return _vm.$set(
+                                  _vm.data.form.sixteen,
+                                  "data",
+                                  "no"
+                                )
                               }
                             }
                           }),
@@ -65708,20 +65854,24 @@ var render = function() {
                       _vm._v(" "),
                       _c("br"),
                       _vm._v(" "),
-                      _vm.form.sixteen.data
+                      _vm.data.form.sixteen.data
                         ? _c("span", { staticClass: "red" }, [
                             _c("strong", [
                               _vm._v(
-                                "Picked: " + _vm._s(_vm.form.sixteen.data) + " "
+                                "Picked: " +
+                                  _vm._s(_vm.data.form.sixteen.data) +
+                                  " "
                               )
                             ])
                           ])
                         : _vm._e(),
                       _vm._v(" "),
-                      _vm.form.sixteen.extra
+                      _vm.data.form.sixteen.extra
                         ? _c("span", { staticClass: "red" }, [
                             _c("strong", [
-                              _vm._v("---> " + _vm._s(_vm.form.sixteen.extra))
+                              _vm._v(
+                                "---> " + _vm._s(_vm.data.form.sixteen.extra)
+                              )
                             ])
                           ])
                         : _vm._e()

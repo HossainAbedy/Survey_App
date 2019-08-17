@@ -18,4 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::apiResources(['user' => 'API\UserController']);
-Route::apiResources(['form-one' => 'API\SurveyFormOneController']);
+Route::apiResources(['form-one' => 'API\SurveyFormController']);
