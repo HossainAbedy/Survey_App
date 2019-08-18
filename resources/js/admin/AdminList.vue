@@ -40,8 +40,8 @@
               </div>
             </div>
 
-            
-        
+
+
 
         <!-- Modal -->
             <div class="modal fade" id="addNew" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -90,6 +90,7 @@
 
                     <div class="form-group">
                         <input v-model="form.password" type="password" name="password" id="password"
+                         placeholder="Password"
                         class="form-control" :class="{ 'is-invalid': form.errors.has('password') }">
                         <has-error :form="form" field="password"></has-error>
                     </div>
@@ -104,7 +105,7 @@
               </form>
            </div>
          </div>
-      </div>  
+      </div>
     </div>
 </template>
 
@@ -149,7 +150,7 @@
                 })
                 .catch(() => {
                     this.$Progress.fail();
-                });  
+                });
             },
             editUser(user){
                 this.editmode = true;
@@ -172,10 +173,10 @@
                     cancelButtonColor: '#d33',
                     confirmButtonText: 'Yes, delete it!'
                     }).then((result) => {
-                    // send request to the server 
+                    // send request to the server
                     if (result.value){
                         this.form.delete('api/user/'+id)
-                    .then( () => {    
+                    .then( () => {
                             swal.fire(
                             'Deleted!',
                             'Your file has been deleted.',
