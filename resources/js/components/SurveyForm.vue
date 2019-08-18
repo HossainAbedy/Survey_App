@@ -6,7 +6,7 @@
 		<div class="card-content collapse show">
 			<div class="card-body">
 <!--form start-->
-				<form @submit.prevent="store()" id="addComponent"  @keydown="form.onKeydown($event)">
+				<form @submit.prevent="checkForm" id="addComponent"  @keydown="form.onKeydown($event)">
 					<div class="form-body">
                         <div class="card-body">
                             <div class="row">
@@ -124,7 +124,10 @@
                                     <div class="form-group">
                                         <label>2.Are you dealing with other company<span class="requiredField red">*</span></label>
                                         <br>
-                                        <div class="row">
+                                        <div class="row" v-if="errors.length">
+                                           
+                                                    <p v-for="error in errors" :key="error.id">Fix This</p>
+                                              
                                             <div class="col-md-6">
                                                 <input type="radio" id="yes" value="yes" v-model="form.two.data"
                                                  name="two.data" :class="{ 'is-invalid': form.errors.has('two.data') }">
@@ -153,25 +156,26 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>3.How do you feel about Quality of Hi-vallay fan?<span class="requiredField red">*</span></label>
-                                        <div class="row">
+                                        <div class="row"  name="three" :class="{ 'is-invalid': form.errors.has('three') }">
                                             <br>
                                             <div class="col-md-3">
-                                                <input type="radio" id="Very Good" value="Very Good" v-model="form.three">
+                                                <input type="radio" id="Very Good" value="Very Good" name="three" v-model="form.three">
                                                 <label for="Very Good">Very Good</label>
                                             </div>
                                             <div class="col-md-3">
-                                                <input type="radio" id="Good" value="Good" v-model="form.three">
+                                                <input type="radio" id="Good" value="Good" name="three" v-model="form.three">
                                                 <label for="Good">Good</label>
                                             </div>
                                             <div class="col-md-3">
-                                                <input type="radio" id="Satisfactory" value="Satisfactory" v-model="form.three">
+                                                <input type="radio" id="Satisfactory" value="Satisfactory" name="three" v-model="form.three">
                                                 <label for="Satisfactory">Satisfactory</label>
                                             </div>
                                             <div class="col-md-3">
-                                                <input type="radio" id="Poor" value="Poor" v-model="form.three">
+                                                <input type="radio" id="Poor" value="Poor" name="three" v-model="form.three">
                                                 <label for="Poor">Poor</label>
                                             </div>
                                             <br>
+                                            <has-error :form="form" field="three"></has-error>
                                         </div>
                                         <span v-if="form.three" class="red"><strong>Picked: {{ form.three }}</strong></span>
                                     </div>
@@ -608,10 +612,31 @@
                             extra:''
                         },
                     }),
+                    errors:[],
             }
         },
 
         methods:{
+            //validation
+           checkForm: function (e){
+                    this.errors = [];
+
+                    if (!this.form.two.data) {
+                        this.errors.push("Two required.");
+                    }
+                    if (this.form.two.data=='yes') {
+                        this.errors.push('Two required.');
+                    }
+                    if (!this.form.three) {
+                        this.errors.push("Three required.");
+                    } 
+                    if (!this.errors.length) {
+                        return true;
+                    }
+
+                    e.preventDefault();
+                    this,store();
+            },
             //setNull
             setNullTwo($values){
                  if($values != null){

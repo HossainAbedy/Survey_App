@@ -56,47 +56,75 @@ class SurveyFormController extends Controller
             'forteen.data' => 'required|string|max:191',
             'fifteen' => 'required|string|max:191',
             'sixteen.data' => 'required|string|max:191',
+        ],[
+            'org_name.required' => 'Please Provide The Valid Organizataion Name',
+            'owner_name.required' => 'Please Provide The Valid Owner Name',
+            'present_address.required' => 'Please Provide The Valid Present Address',
+            'permanent_address.required' => 'Please Provide The Valid Permanent Address',
+            'cell_no.required' => 'Please Provide The Valid Cell No',
+            'concern_person.required' => 'Please Provide The Valid Concern Person',
+            'org_cell_no.required' => 'Please Provide The Valid Organization Cell No',
+            'bussiness_type.required' => 'Please Provide The Valid bussiness type',
+            'bussiness_year.required' => 'Please Provide The Valid bussiness year',
+            'one.required' => 'Please Provide The Valid Answer',
+            'two.data.required' => 'Please Provide The Valid Input For Two Data',
+            'required' => 'Please Provide The Valid',
+            'required' => 'Please Provide The Valid',
+            'required' => 'Please Provide The Valid',
+            'required' => 'Please Provide The Valid',
+            'required' => 'Please Provide The Valid',
+            'required' => 'Please Provide The Valid',
+            'required' => 'Please Provide The Valid',
+            'required' => 'Please Provide The Valid',
+            'required' => 'Please Provide The Valid',
+            'required' => 'Please Provide The Valid',
+            'required' => 'Please Provide The Valid',
+            'required' => 'Please Provide The Valid',
+            'required' => 'Please Provide The Valid',
+            'required' => 'Please Provide The Valid',
         ]);
 
         if($request['two']['data'] == 'yes'){
             $this->validate($request,[
                 'two.extra' => 'required|string|max:191',
+            ],[
+                'two.extra.required' => 'Please Provide The Valid Input For Two Extra'
             ]);
         }
 
         if($request['four']['data'] == 'Any Other'){
             $this->validate($request,[
-                'four.extra' => 'required|string|max:191',
+                'four.extra' => 'Please Provide The Valid',
             ]);
         }
 
         if($request['ten']['data'] == 'Service'){
             $this->validate($request,[
-                'ten.extra' => 'required|string|max:191',
+                'ten.extra' => 'Please Provide The Valid',
             ]);
         }
 
         if($request['twelve']['data'] == 'yes'){
             $this->validate($request,[
-                'twelve.extra' => 'required|string|max:191',
+                'twelve.extra' => 'Please Provide The Valid',
             ]);
         }
 
         if($request['thirteen']['data'] == 'no'){
             $this->validate($request,[
-                'thirteen.extra' => 'required|string|max:191',
+                'thirteen.extra' => 'Please Provide The Valid',
             ]);
         }
 
         if($request['forteen']['data'] == 'Service'){
             $this->validate($request,[
-                'forteen.extra' => 'required|string|max:191',
+                'forteen.extra' => 'Please Provide The Valid',
             ]);
         }
 
         if($request['sixteen']['data'] == 'yes'){
             $this->validate($request,[
-                'sixteen.extra' => 'required|string|max:191',
+                'sixteen.extra' => 'Please Provide The Valid',
             ]);
         }
 
