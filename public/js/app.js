@@ -2578,6 +2578,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2678,6 +2689,8 @@ __webpack_require__.r(__webpack_exports__);
           type: 'success',
           title: 'Created successfully'
         });
+
+        _this.form.reset();
 
         _this.$Progress.finish();
       })["catch"](function () {});
@@ -74936,7 +74949,7 @@ var render = function() {
                                       staticClass: "col-md-6",
                                       class: {
                                         "is-invalid": _vm.form.errors.has(
-                                          "three"
+                                          "two.extra"
                                         )
                                       }
                                     },
@@ -75204,13 +75217,8 @@ var render = function() {
                               ])
                             ]),
                             _vm._v(" "),
-                            _c("br"),
-                            _vm._v(" "),
-                            _c("has-error", {
-                              attrs: { form: _vm.form, field: "three" }
-                            })
-                          ],
-                          1
+                            _c("br")
+                          ]
                         ),
                         _vm._v(" "),
                         _c("has-error", {
@@ -75232,200 +75240,255 @@ var render = function() {
                 _vm._v(" "),
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-md-12" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _vm._m(13),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "row" }, [
-                        _c("br"),
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _vm._m(13),
                         _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.four.data,
-                                expression: "form.four.data"
-                              }
-                            ],
-                            attrs: {
-                              type: "radio",
-                              id: "Design",
-                              value: "Design"
-                            },
-                            domProps: {
-                              checked: _vm._q(_vm.form.four.data, "Design")
-                            },
-                            on: {
-                              click: function($event) {
-                                return _vm.setNullFour(_vm.form.four.extra)
-                              },
-                              change: function($event) {
-                                return _vm.$set(_vm.form.four, "data", "Design")
-                              }
+                        _c(
+                          "div",
+                          {
+                            staticClass: "row",
+                            class: {
+                              "is-invalid": _vm.form.errors.has("four.data")
                             }
-                          }),
-                          _vm._v(" "),
-                          _c("label", { attrs: { for: "Design" } }, [
-                            _vm._v("Design")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.four.data,
-                                expression: "form.four.data"
-                              }
-                            ],
-                            attrs: {
-                              type: "radio",
-                              id: "Speed",
-                              value: "Speed"
-                            },
-                            domProps: {
-                              checked: _vm._q(_vm.form.four.data, "Speed")
-                            },
-                            on: {
-                              click: function($event) {
-                                return _vm.setNullFour(_vm.form.four.extra)
-                              },
-                              change: function($event) {
-                                return _vm.$set(_vm.form.four, "data", "Speed")
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("label", { attrs: { for: "Speed" } }, [
-                            _vm._v("Speed")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.four.data,
-                                expression: "form.four.data"
-                              }
-                            ],
-                            attrs: {
-                              type: "radio",
-                              id: "Power Consumption",
-                              value: "Power Consumption"
-                            },
-                            domProps: {
-                              checked: _vm._q(
-                                _vm.form.four.data,
-                                "Power Consumption"
-                              )
-                            },
-                            on: {
-                              click: function($event) {
-                                return _vm.setNullFour(_vm.form.four.extra)
-                              },
-                              change: function($event) {
-                                return _vm.$set(
-                                  _vm.form.four,
-                                  "data",
-                                  "Power Consumption"
-                                )
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("label", { attrs: { for: "Power Consumption" } }, [
-                            _vm._v("Power Consumption")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.four.data,
-                                expression: "form.four.data"
-                              }
-                            ],
-                            attrs: {
-                              type: "radio",
-                              id: "Any Other",
-                              value: "Any Other"
-                            },
-                            domProps: {
-                              checked: _vm._q(_vm.form.four.data, "Any Other")
-                            },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(
-                                  _vm.form.four,
-                                  "data",
-                                  "Any Other"
-                                )
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("label", { attrs: { for: "Any Other" } }, [
-                            _vm._v("Any Other")
-                          ]),
-                          _vm._v(" "),
-                          _vm.form.four.data == "Any Other"
-                            ? _c("input", {
+                          },
+                          [
+                            _c("br"),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col-md-3" }, [
+                              _c("input", {
                                 directives: [
                                   {
                                     name: "model",
                                     rawName: "v-model",
-                                    value: _vm.form.four.extra,
-                                    expression: "form.four.extra"
+                                    value: _vm.form.four.data,
+                                    expression: "form.four.data"
                                   }
                                 ],
-                                staticClass: "form-control",
                                 attrs: {
-                                  type: "text",
-                                  placeholder: "Anyother"
+                                  type: "radio",
+                                  id: "Design",
+                                  value: "Design"
                                 },
-                                domProps: { value: _vm.form.four.extra },
+                                domProps: {
+                                  checked: _vm._q(_vm.form.four.data, "Design")
+                                },
                                 on: {
-                                  input: function($event) {
-                                    if ($event.target.composing) {
-                                      return
-                                    }
-                                    _vm.$set(
+                                  click: function($event) {
+                                    return _vm.setNullFour(_vm.form.four.extra)
+                                  },
+                                  change: function($event) {
+                                    return _vm.$set(
                                       _vm.form.four,
-                                      "extra",
-                                      $event.target.value
+                                      "data",
+                                      "Design"
                                     )
                                   }
                                 }
-                              })
-                            : _vm._e()
-                        ]),
+                              }),
+                              _vm._v(" "),
+                              _c("label", { attrs: { for: "Design" } }, [
+                                _vm._v("Design")
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col-md-3" }, [
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.form.four.data,
+                                    expression: "form.four.data"
+                                  }
+                                ],
+                                attrs: {
+                                  type: "radio",
+                                  id: "Speed",
+                                  value: "Speed"
+                                },
+                                domProps: {
+                                  checked: _vm._q(_vm.form.four.data, "Speed")
+                                },
+                                on: {
+                                  click: function($event) {
+                                    return _vm.setNullFour(_vm.form.four.extra)
+                                  },
+                                  change: function($event) {
+                                    return _vm.$set(
+                                      _vm.form.four,
+                                      "data",
+                                      "Speed"
+                                    )
+                                  }
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("label", { attrs: { for: "Speed" } }, [
+                                _vm._v("Speed")
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col-md-3" }, [
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.form.four.data,
+                                    expression: "form.four.data"
+                                  }
+                                ],
+                                attrs: {
+                                  type: "radio",
+                                  id: "Power Consumption",
+                                  value: "Power Consumption"
+                                },
+                                domProps: {
+                                  checked: _vm._q(
+                                    _vm.form.four.data,
+                                    "Power Consumption"
+                                  )
+                                },
+                                on: {
+                                  click: function($event) {
+                                    return _vm.setNullFour(_vm.form.four.extra)
+                                  },
+                                  change: function($event) {
+                                    return _vm.$set(
+                                      _vm.form.four,
+                                      "data",
+                                      "Power Consumption"
+                                    )
+                                  }
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "label",
+                                { attrs: { for: "Power Consumption" } },
+                                [_vm._v("Power Consumption")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "col-md-3" },
+                              [
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.form.four.data,
+                                      expression: "form.four.data"
+                                    }
+                                  ],
+                                  attrs: {
+                                    type: "radio",
+                                    id: "Any Other",
+                                    value: "Any Other"
+                                  },
+                                  domProps: {
+                                    checked: _vm._q(
+                                      _vm.form.four.data,
+                                      "Any Other"
+                                    )
+                                  },
+                                  on: {
+                                    change: function($event) {
+                                      return _vm.$set(
+                                        _vm.form.four,
+                                        "data",
+                                        "Any Other"
+                                      )
+                                    }
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c("label", { attrs: { for: "Any Other" } }, [
+                                  _vm._v("Any Other")
+                                ]),
+                                _vm._v(" "),
+                                _vm.form.four.data == "Any Other"
+                                  ? _c(
+                                      "div",
+                                      {
+                                        staticClass: "col-md-3",
+                                        class: {
+                                          "is-invalid": _vm.form.errors.has(
+                                            "four.extra"
+                                          )
+                                        }
+                                      },
+                                      [
+                                        _c("input", {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value: _vm.form.four.extra,
+                                              expression: "form.four.extra"
+                                            }
+                                          ],
+                                          staticClass: "form-control",
+                                          attrs: {
+                                            type: "text",
+                                            placeholder: "Anyother"
+                                          },
+                                          domProps: {
+                                            value: _vm.form.four.extra
+                                          },
+                                          on: {
+                                            input: function($event) {
+                                              if ($event.target.composing) {
+                                                return
+                                              }
+                                              _vm.$set(
+                                                _vm.form.four,
+                                                "extra",
+                                                $event.target.value
+                                              )
+                                            }
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                _c("has-error", {
+                                  attrs: { form: _vm.form, field: "three" }
+                                })
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c("br")
+                          ]
+                        ),
                         _vm._v(" "),
-                        _c("br")
-                      ]),
-                      _vm._v(" "),
-                      _vm.form.four.data
-                        ? _c("span", { staticClass: "red" }, [
-                            _c("strong", [
-                              _vm._v("Picked: " + _vm._s(_vm.form.four.data))
+                        _c("has-error", {
+                          attrs: { form: _vm.form, field: "three" }
+                        }),
+                        _vm._v(" "),
+                        _vm.form.four.data
+                          ? _c("span", { staticClass: "red" }, [
+                              _c("strong", [
+                                _vm._v("Picked: " + _vm._s(_vm.form.four.data))
+                              ])
                             ])
-                          ])
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _vm.form.four.extra
-                        ? _c("span", { staticClass: "red" }, [
-                            _vm._v("---> " + _vm._s(_vm.form.four.extra))
-                          ])
-                        : _vm._e()
-                    ])
+                          : _vm._e(),
+                        _vm._v(" "),
+                        _vm.form.four.extra
+                          ? _c("span", { staticClass: "red" }, [
+                              _vm._v("---> " + _vm._s(_vm.form.four.extra))
+                            ])
+                          : _vm._e()
+                      ],
+                      1
+                    )
                   ])
                 ]),
                 _vm._v(" "),
@@ -75434,127 +75497,142 @@ var render = function() {
                     _c("div", { staticClass: "form-group" }, [
                       _vm._m(14),
                       _vm._v(" "),
-                      _c("div", { staticClass: "row" }, [
-                        _c("br"),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.five,
-                                expression: "form.five"
-                              }
-                            ],
-                            attrs: {
-                              type: "radio",
-                              id: "Very Good",
-                              value: "Very Good"
-                            },
-                            domProps: {
-                              checked: _vm._q(_vm.form.five, "Very Good")
-                            },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(_vm.form, "five", "Very Good")
-                              }
-                            }
-                          }),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "row",
+                          class: { "is-invalid": _vm.form.errors.has("five") }
+                        },
+                        [
+                          _c("br"),
                           _vm._v(" "),
-                          _c("label", { attrs: { for: "Very Good" } }, [
-                            _vm._v("Very Good")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.five,
-                                expression: "form.five"
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.five,
+                                  expression: "form.five"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Very Good",
+                                value: "Very Good"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.five, "Very Good")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(_vm.form, "five", "Very Good")
+                                }
                               }
-                            ],
-                            attrs: { type: "radio", id: "Good", value: "Good" },
-                            domProps: {
-                              checked: _vm._q(_vm.form.five, "Good")
-                            },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(_vm.form, "five", "Good")
-                              }
-                            }
-                          }),
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Very Good" } }, [
+                              _vm._v("Very Good")
+                            ])
+                          ]),
                           _vm._v(" "),
-                          _c("label", { attrs: { for: "Good" } }, [
-                            _vm._v("Good")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.five,
-                                expression: "form.five"
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.five,
+                                  expression: "form.five"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Good",
+                                value: "Good"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.five, "Good")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(_vm.form, "five", "Good")
+                                }
                               }
-                            ],
-                            attrs: {
-                              type: "radio",
-                              id: "Satisfactory",
-                              value: "Satisfactory"
-                            },
-                            domProps: {
-                              checked: _vm._q(_vm.form.five, "Satisfactory")
-                            },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(
-                                  _vm.form,
-                                  "five",
-                                  "Satisfactory"
-                                )
-                              }
-                            }
-                          }),
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Good" } }, [
+                              _vm._v("Good")
+                            ])
+                          ]),
                           _vm._v(" "),
-                          _c("label", { attrs: { for: "Satisfactory" } }, [
-                            _vm._v("Satisfactory")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.five,
-                                expression: "form.five"
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.five,
+                                  expression: "form.five"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Satisfactory",
+                                value: "Satisfactory"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.five, "Satisfactory")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form,
+                                    "five",
+                                    "Satisfactory"
+                                  )
+                                }
                               }
-                            ],
-                            attrs: { type: "radio", id: "Poor", value: "Poor" },
-                            domProps: {
-                              checked: _vm._q(_vm.form.five, "Poor")
-                            },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(_vm.form, "five", "Poor")
-                              }
-                            }
-                          }),
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Satisfactory" } }, [
+                              _vm._v("Satisfactory")
+                            ])
+                          ]),
                           _vm._v(" "),
-                          _c("label", { attrs: { for: "Poor" } }, [
-                            _vm._v("Poor")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("br")
-                      ]),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.five,
+                                  expression: "form.five"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Poor",
+                                value: "Poor"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.five, "Poor")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(_vm.form, "five", "Poor")
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Poor" } }, [
+                              _vm._v("Poor")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("br")
+                        ]
+                      ),
                       _vm._v(" "),
                       _vm.form.five
                         ? _c("span", { staticClass: "red" }, [
@@ -75572,163 +75650,186 @@ var render = function() {
                     _c("div", { staticClass: "form-group" }, [
                       _vm._m(15),
                       _vm._v(" "),
-                      _c("div", { staticClass: "row" }, [
-                        _c("br"),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.six.data,
-                                expression: "form.six.data"
-                              }
-                            ],
-                            attrs: {
-                              type: "radio",
-                              id: "Discount",
-                              value: "Discount"
-                            },
-                            domProps: {
-                              checked: _vm._q(_vm.form.six.data, "Discount")
-                            },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(
-                                  _vm.form.six,
-                                  "data",
-                                  "Discount"
-                                )
-                              }
-                            }
-                          }),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "row",
+                          class: {
+                            "is-invalid": _vm.form.errors.has("six.data")
+                          }
+                        },
+                        [
+                          _c("br"),
                           _vm._v(" "),
-                          _c("label", { attrs: { for: "Design" } }, [
-                            _vm._v("Discount")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.six.data,
-                                expression: "form.six.data"
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.six.data,
+                                  expression: "form.six.data"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Discount",
+                                value: "Discount"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.six.data, "Discount")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.six,
+                                    "data",
+                                    "Discount"
+                                  )
+                                }
                               }
-                            ],
-                            attrs: { type: "radio", id: "Gift", value: "Gift" },
-                            domProps: {
-                              checked: _vm._q(_vm.form.six.data, "Gift")
-                            },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(_vm.form.six, "data", "Gift")
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("label", { attrs: { for: "Speed" } }, [
-                            _vm._v("Gift")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.six.data,
-                                expression: "form.six.data"
-                              }
-                            ],
-                            attrs: {
-                              type: "radio",
-                              id: "Price offer",
-                              value: "Price offer"
-                            },
-                            domProps: {
-                              checked: _vm._q(_vm.form.six.data, "Price offer")
-                            },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(
-                                  _vm.form.six,
-                                  "data",
-                                  "Price offer"
-                                )
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("label", { attrs: { for: "Price offer" } }, [
-                            _vm._v("Price offer")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.six.data,
-                                expression: "form.six.data"
-                              }
-                            ],
-                            attrs: {
-                              type: "radio",
-                              id: "Others",
-                              value: "Others"
-                            },
-                            domProps: {
-                              checked: _vm._q(_vm.form.six.data, "Others")
-                            },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(_vm.form.six, "data", "Others")
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("label", { attrs: { for: "Others" } }, [
-                            _vm._v("Others")
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Design" } }, [
+                              _vm._v("Discount")
+                            ])
                           ]),
                           _vm._v(" "),
-                          _vm.form.six.data == "Others"
-                            ? _c("input", {
-                                directives: [
-                                  {
-                                    name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.form.six.extra,
-                                    expression: "form.six.extra"
-                                  }
-                                ],
-                                staticClass: "form-control",
-                                attrs: { type: "text", placeholder: "Others" },
-                                domProps: { value: _vm.form.six.extra },
-                                on: {
-                                  input: function($event) {
-                                    if ($event.target.composing) {
-                                      return
-                                    }
-                                    _vm.$set(
-                                      _vm.form.six,
-                                      "extra",
-                                      $event.target.value
-                                    )
-                                  }
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.six.data,
+                                  expression: "form.six.data"
                                 }
-                              })
-                            : _vm._e()
-                        ]),
-                        _vm._v(" "),
-                        _c("br")
-                      ]),
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Gift",
+                                value: "Gift"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.six.data, "Gift")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(_vm.form.six, "data", "Gift")
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Speed" } }, [
+                              _vm._v("Gift")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.six.data,
+                                  expression: "form.six.data"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Price offer",
+                                value: "Price offer"
+                              },
+                              domProps: {
+                                checked: _vm._q(
+                                  _vm.form.six.data,
+                                  "Price offer"
+                                )
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.six,
+                                    "data",
+                                    "Price offer"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Price offer" } }, [
+                              _vm._v("Price offer")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.six.data,
+                                  expression: "form.six.data"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Others",
+                                value: "Others"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.six.data, "Others")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.six,
+                                    "data",
+                                    "Others"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Others" } }, [
+                              _vm._v("Others")
+                            ]),
+                            _vm._v(" "),
+                            _vm.form.six.data == "Others"
+                              ? _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.form.six.extra,
+                                      expression: "form.six.extra"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    type: "text",
+                                    placeholder: "Others"
+                                  },
+                                  domProps: { value: _vm.form.six.extra },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.form.six,
+                                        "extra",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              : _vm._e()
+                          ]),
+                          _vm._v(" "),
+                          _c("br")
+                        ]
+                      ),
                       _vm._v(" "),
                       _vm.form.six.data
                         ? _c("span", { staticClass: "red" }, [
@@ -75754,55 +75855,66 @@ var render = function() {
                       _vm._v(" "),
                       _c("br"),
                       _vm._v(" "),
-                      _c("div", { staticClass: "row" }, [
-                        _c("div", { staticClass: "col-md-6" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.seven,
-                                expression: "form.seven"
+                      _c(
+                        "div",
+                        {
+                          staticClass: "row",
+                          class: { "is-invalid": _vm.form.errors.has("seven") }
+                        },
+                        [
+                          _c("div", { staticClass: "col-md-6" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.seven,
+                                  expression: "form.seven"
+                                }
+                              ],
+                              attrs: { type: "radio", id: "yes", value: "yes" },
+                              domProps: {
+                                checked: _vm._q(_vm.form.seven, "yes")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(_vm.form, "seven", "yes")
+                                }
                               }
-                            ],
-                            attrs: { type: "radio", id: "yes", value: "yes" },
-                            domProps: {
-                              checked: _vm._q(_vm.form.seven, "yes")
-                            },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(_vm.form, "seven", "yes")
-                              }
-                            }
-                          }),
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "yes" } }, [
+                              _vm._v("Yes")
+                            ])
+                          ]),
                           _vm._v(" "),
-                          _c("label", { attrs: { for: "yes" } }, [
-                            _vm._v("Yes")
+                          _c("div", { staticClass: "col-md-6" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.seven,
+                                  expression: "form.seven"
+                                }
+                              ],
+                              attrs: { type: "radio", id: "no", value: "no" },
+                              domProps: {
+                                checked: _vm._q(_vm.form.seven, "no")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(_vm.form, "seven", "no")
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "no" } }, [
+                              _vm._v("No")
+                            ])
                           ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-6" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.seven,
-                                expression: "form.seven"
-                              }
-                            ],
-                            attrs: { type: "radio", id: "no", value: "no" },
-                            domProps: { checked: _vm._q(_vm.form.seven, "no") },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(_vm.form, "seven", "no")
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("label", { attrs: { for: "no" } }, [_vm._v("No")])
-                        ])
-                      ]),
+                        ]
+                      ),
                       _vm._v(" "),
                       _vm.form.seven
                         ? _c("span", { staticClass: "red" }, [
@@ -75820,127 +75932,146 @@ var render = function() {
                     _c("div", { staticClass: "form-group" }, [
                       _vm._m(17),
                       _vm._v(" "),
-                      _c("div", { staticClass: "row" }, [
-                        _c("br"),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.eight,
-                                expression: "form.eight"
-                              }
-                            ],
-                            attrs: {
-                              type: "radio",
-                              id: "Very Good",
-                              value: "Very Good"
-                            },
-                            domProps: {
-                              checked: _vm._q(_vm.form.eight, "Very Good")
-                            },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(_vm.form, "eight", "Very Good")
-                              }
-                            }
-                          }),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "row",
+                          class: { "is-invalid": _vm.form.errors.has("eight") }
+                        },
+                        [
+                          _c("br"),
                           _vm._v(" "),
-                          _c("label", { attrs: { for: "Very Good" } }, [
-                            _vm._v("Very Good")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.eight,
-                                expression: "form.eight"
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.eight,
+                                  expression: "form.eight"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Very Good",
+                                value: "Very Good"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.eight, "Very Good")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form,
+                                    "eight",
+                                    "Very Good"
+                                  )
+                                }
                               }
-                            ],
-                            attrs: { type: "radio", id: "Good", value: "Good" },
-                            domProps: {
-                              checked: _vm._q(_vm.form.eight, "Good")
-                            },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(_vm.form, "eight", "Good")
-                              }
-                            }
-                          }),
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Very Good" } }, [
+                              _vm._v("Very Good")
+                            ])
+                          ]),
                           _vm._v(" "),
-                          _c("label", { attrs: { for: "Good" } }, [
-                            _vm._v("Good")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.eight,
-                                expression: "form.eight"
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.eight,
+                                  expression: "form.eight"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Good",
+                                value: "Good"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.eight, "Good")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(_vm.form, "eight", "Good")
+                                }
                               }
-                            ],
-                            attrs: {
-                              type: "radio",
-                              id: "Satisfactory",
-                              value: "Satisfactory"
-                            },
-                            domProps: {
-                              checked: _vm._q(_vm.form.eight, "Satisfactory")
-                            },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(
-                                  _vm.form,
-                                  "eight",
-                                  "Satisfactory"
-                                )
-                              }
-                            }
-                          }),
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Good" } }, [
+                              _vm._v("Good")
+                            ])
+                          ]),
                           _vm._v(" "),
-                          _c("label", { attrs: { for: "Satisfactory" } }, [
-                            _vm._v("Satisfactory")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.eight,
-                                expression: "form.eight"
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.eight,
+                                  expression: "form.eight"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Satisfactory",
+                                value: "Satisfactory"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.eight, "Satisfactory")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form,
+                                    "eight",
+                                    "Satisfactory"
+                                  )
+                                }
                               }
-                            ],
-                            attrs: { type: "radio", id: "Poor", value: "Poor" },
-                            domProps: {
-                              checked: _vm._q(_vm.form.eight, "Poor")
-                            },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(_vm.form, "eight", "Poor")
-                              }
-                            }
-                          }),
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Satisfactory" } }, [
+                              _vm._v("Satisfactory")
+                            ])
+                          ]),
                           _vm._v(" "),
-                          _c("label", { attrs: { for: "Poor" } }, [
-                            _vm._v("Poor")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("br")
-                      ]),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.eight,
+                                  expression: "form.eight"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Poor",
+                                value: "Poor"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.eight, "Poor")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(_vm.form, "eight", "Poor")
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Poor" } }, [
+                              _vm._v("Poor")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("br")
+                        ]
+                      ),
                       _vm._v(" "),
                       _vm.form.eight
                         ? _c("span", { staticClass: "red" }, [
@@ -75958,139 +76089,151 @@ var render = function() {
                     _c("div", { staticClass: "form-group" }, [
                       _vm._m(18),
                       _vm._v(" "),
-                      _c("div", { staticClass: "row" }, [
-                        _c("br"),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.nine,
-                                expression: "form.nine"
-                              }
-                            ],
-                            attrs: {
-                              type: "radio",
-                              id: "Highly Satisfied",
-                              value: "Highly Satisfied"
-                            },
-                            domProps: {
-                              checked: _vm._q(_vm.form.nine, "Highly Satisfied")
-                            },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(
-                                  _vm.form,
-                                  "nine",
+                      _c(
+                        "div",
+                        {
+                          staticClass: "row",
+                          class: { "is-invalid": _vm.form.errors.has("nine") }
+                        },
+                        [
+                          _c("br"),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.nine,
+                                  expression: "form.nine"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Highly Satisfied",
+                                value: "Highly Satisfied"
+                              },
+                              domProps: {
+                                checked: _vm._q(
+                                  _vm.form.nine,
                                   "Highly Satisfied"
                                 )
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form,
+                                    "nine",
+                                    "Highly Satisfied"
+                                  )
+                                }
                               }
-                            }
-                          }),
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "label",
+                              { attrs: { for: "Highly Satisfied" } },
+                              [_vm._v("Highly Satisfied")]
+                            )
+                          ]),
                           _vm._v(" "),
-                          _c("label", { attrs: { for: "Highly Satisfied" } }, [
-                            _vm._v("Highly Satisfied")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.nine,
-                                expression: "form.nine"
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.nine,
+                                  expression: "form.nine"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Satisfied",
+                                value: "Satisfied"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.nine, "Satisfied")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(_vm.form, "nine", "Satisfied")
+                                }
                               }
-                            ],
-                            attrs: {
-                              type: "radio",
-                              id: "Satisfied",
-                              value: "Satisfied"
-                            },
-                            domProps: {
-                              checked: _vm._q(_vm.form.nine, "Satisfied")
-                            },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(_vm.form, "nine", "Satisfied")
-                              }
-                            }
-                          }),
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Satisfied" } }, [
+                              _vm._v("Satisfied")
+                            ])
+                          ]),
                           _vm._v(" "),
-                          _c("label", { attrs: { for: "Satisfied" } }, [
-                            _vm._v("Satisfied")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.nine,
-                                expression: "form.nine"
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.nine,
+                                  expression: "form.nine"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Average",
+                                value: "Average"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.nine, "Average")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(_vm.form, "nine", "Average")
+                                }
                               }
-                            ],
-                            attrs: {
-                              type: "radio",
-                              id: "Average",
-                              value: "Average"
-                            },
-                            domProps: {
-                              checked: _vm._q(_vm.form.nine, "Average")
-                            },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(_vm.form, "nine", "Average")
-                              }
-                            }
-                          }),
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Average" } }, [
+                              _vm._v("Average")
+                            ])
+                          ]),
                           _vm._v(" "),
-                          _c("label", { attrs: { for: "Average" } }, [
-                            _vm._v("Average")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.nine,
-                                expression: "form.nine"
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.nine,
+                                  expression: "form.nine"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Dissatisfied",
+                                value: "Dissatisfied"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.nine, "Dissatisfied")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form,
+                                    "nine",
+                                    "Dissatisfied"
+                                  )
+                                }
                               }
-                            ],
-                            attrs: {
-                              type: "radio",
-                              id: "Dissatisfied",
-                              value: "Dissatisfied"
-                            },
-                            domProps: {
-                              checked: _vm._q(_vm.form.nine, "Dissatisfied")
-                            },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(
-                                  _vm.form,
-                                  "nine",
-                                  "Dissatisfied"
-                                )
-                              }
-                            }
-                          }),
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Dissatisfied" } }, [
+                              _vm._v("Dissatisfied")
+                            ])
+                          ]),
                           _vm._v(" "),
-                          _c("label", { attrs: { for: "Dissatisfied" } }, [
-                            _vm._v("Dissatisfied")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("br")
-                      ]),
+                          _c("br")
+                        ]
+                      ),
                       _vm._v(" "),
                       _vm.form.nine
                         ? _c("span", { staticClass: "red" }, [
@@ -76108,179 +76251,199 @@ var render = function() {
                     _c("div", { staticClass: "form-group" }, [
                       _vm._m(19),
                       _vm._v(" "),
-                      _c("div", { staticClass: "row" }, [
-                        _c("br"),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.ten.data,
-                                expression: "form.ten.data"
-                              }
-                            ],
-                            attrs: {
-                              type: "radio",
-                              id: "Promotional Sale",
-                              value: "Promotional Sale"
-                            },
-                            domProps: {
-                              checked: _vm._q(
-                                _vm.form.ten.data,
-                                "Promotional Sale"
-                              )
-                            },
-                            on: {
-                              click: function($event) {
-                                return _vm.setNullTen(_vm.form.ten.extra)
+                      _c(
+                        "div",
+                        {
+                          staticClass: "row",
+                          class: { "is-invalid": _vm.form.errors.has("nine") }
+                        },
+                        [
+                          _c("br"),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.ten.data,
+                                  expression: "form.ten.data"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Promotional Sale",
+                                value: "Promotional Sale"
                               },
-                              change: function($event) {
-                                return _vm.$set(
-                                  _vm.form.ten,
-                                  "data",
+                              domProps: {
+                                checked: _vm._q(
+                                  _vm.form.ten.data,
                                   "Promotional Sale"
                                 )
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("label", { attrs: { for: "Promotional Sale" } }, [
-                            _vm._v("Promotional Sale")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.ten.data,
-                                expression: "form.ten.data"
-                              }
-                            ],
-                            attrs: {
-                              type: "radio",
-                              id: "Follow-Up",
-                              value: "Follow-Up"
-                            },
-                            domProps: {
-                              checked: _vm._q(_vm.form.ten.data, "Follow-Up")
-                            },
-                            on: {
-                              click: function($event) {
-                                return _vm.setNullTen(_vm.form.ten.extra)
                               },
-                              change: function($event) {
-                                return _vm.$set(
-                                  _vm.form.ten,
-                                  "data",
-                                  "Follow-Up"
-                                )
+                              on: {
+                                click: function($event) {
+                                  return _vm.setNullTen(_vm.form.ten.extra)
+                                },
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.ten,
+                                    "data",
+                                    "Promotional Sale"
+                                  )
+                                }
                               }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("label", { attrs: { for: "Follow-Up" } }, [
-                            _vm._v("Follow-Up")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.ten.data,
-                                expression: "form.ten.data"
-                              }
-                            ],
-                            attrs: {
-                              type: "radio",
-                              id: "Schele",
-                              value: "Schele"
-                            },
-                            domProps: {
-                              checked: _vm._q(_vm.form.ten.data, "Schele")
-                            },
-                            on: {
-                              click: function($event) {
-                                return _vm.setNullTen(_vm.form.ten.extra)
-                              },
-                              change: function($event) {
-                                return _vm.$set(_vm.form.ten, "data", "Schele")
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("label", { attrs: { for: "Schele" } }, [
-                            _vm._v("Schele")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.ten.data,
-                                expression: "form.ten.data"
-                              }
-                            ],
-                            attrs: {
-                              type: "radio",
-                              id: "Service",
-                              value: "Service"
-                            },
-                            domProps: {
-                              checked: _vm._q(_vm.form.ten.data, "Service")
-                            },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(_vm.form.ten, "data", "Service")
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("label", { attrs: { for: "Service" } }, [
-                            _vm._v("Service")
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "label",
+                              { attrs: { for: "Promotional Sale" } },
+                              [_vm._v("Promotional Sale")]
+                            )
                           ]),
                           _vm._v(" "),
-                          _vm.form.ten.data == "Service"
-                            ? _c("input", {
-                                directives: [
-                                  {
-                                    name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.form.ten.extra,
-                                    expression: "form.ten.extra"
-                                  }
-                                ],
-                                staticClass: "form-control",
-                                attrs: { type: "text", placeholder: "Service" },
-                                domProps: { value: _vm.form.ten.extra },
-                                on: {
-                                  input: function($event) {
-                                    if ($event.target.composing) {
-                                      return
-                                    }
-                                    _vm.$set(
-                                      _vm.form.ten,
-                                      "extra",
-                                      $event.target.value
-                                    )
-                                  }
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.ten.data,
+                                  expression: "form.ten.data"
                                 }
-                              })
-                            : _vm._e()
-                        ]),
-                        _vm._v(" "),
-                        _c("br")
-                      ]),
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Follow-Up",
+                                value: "Follow-Up"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.ten.data, "Follow-Up")
+                              },
+                              on: {
+                                click: function($event) {
+                                  return _vm.setNullTen(_vm.form.ten.extra)
+                                },
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.ten,
+                                    "data",
+                                    "Follow-Up"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Follow-Up" } }, [
+                              _vm._v("Follow-Up")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.ten.data,
+                                  expression: "form.ten.data"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Schele",
+                                value: "Schele"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.ten.data, "Schele")
+                              },
+                              on: {
+                                click: function($event) {
+                                  return _vm.setNullTen(_vm.form.ten.extra)
+                                },
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.ten,
+                                    "data",
+                                    "Schele"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Schele" } }, [
+                              _vm._v("Schele")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.ten.data,
+                                  expression: "form.ten.data"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Service",
+                                value: "Service"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.ten.data, "Service")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.ten,
+                                    "data",
+                                    "Service"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Service" } }, [
+                              _vm._v("Service")
+                            ]),
+                            _vm._v(" "),
+                            _vm.form.ten.data == "Service"
+                              ? _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.form.ten.extra,
+                                      expression: "form.ten.extra"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    type: "text",
+                                    placeholder: "Service"
+                                  },
+                                  domProps: { value: _vm.form.ten.extra },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.form.ten,
+                                        "extra",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              : _vm._e()
+                          ]),
+                          _vm._v(" "),
+                          _c("br")
+                        ]
+                      ),
                       _vm._v(" "),
                       _vm.form.ten.data
                         ? _c("span", { staticClass: "red" }, [
@@ -76301,31 +76464,47 @@ var render = function() {
                 _vm._v(" "),
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-md-4" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _vm._m(20),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.form.eleven,
-                            expression: "form.eleven"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { type: "text", placeholder: "spending" },
-                        domProps: { value: _vm.form.eleven },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _vm._m(20),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.form.eleven,
+                              expression: "form.eleven"
                             }
-                            _vm.$set(_vm.form, "eleven", $event.target.value)
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            "is-invalid": _vm.form.errors.has("eleven")
+                          },
+                          attrs: {
+                            type: "text",
+                            placeholder: "spending",
+                            name: "eleven"
+                          },
+                          domProps: { value: _vm.form.eleven },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(_vm.form, "eleven", $event.target.value)
+                            }
                           }
-                        }
-                      })
-                    ])
+                        }),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.form, field: "eleven" }
+                        })
+                      ],
+                      1
+                    )
                   ])
                 ]),
                 _vm._v(" "),
@@ -76334,223 +76513,251 @@ var render = function() {
                     _c("div", { staticClass: "form-group" }, [
                       _vm._m(21),
                       _vm._v(" "),
-                      _c("div", { staticClass: "row" }, [
-                        _c("br"),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.twelve.data,
-                                expression: "form.twelve.data"
-                              }
-                            ],
-                            attrs: { type: "radio", id: "yes", value: "yes" },
-                            domProps: {
-                              checked: _vm._q(_vm.form.twelve.data, "yes")
-                            },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(_vm.form.twelve, "data", "yes")
-                              }
-                            }
-                          }),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "row",
+                          class: {
+                            "is-invalid": _vm.form.errors.has("twelve.data")
+                          }
+                        },
+                        [
+                          _c("br"),
                           _vm._v(" "),
-                          _c("label", { attrs: { for: "yes" } }, [
-                            _vm._v("Yes")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.twelve.data,
-                                expression: "form.twelve.data"
-                              }
-                            ],
-                            attrs: { type: "radio", id: "no", value: "no" },
-                            domProps: {
-                              checked: _vm._q(_vm.form.twelve.data, "no")
-                            },
-                            on: {
-                              click: function($event) {
-                                return _vm.setNullTwelve(_vm.form.twelve.extra)
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.twelve.data,
+                                  expression: "form.twelve.data"
+                                }
+                              ],
+                              attrs: { type: "radio", id: "yes", value: "yes" },
+                              domProps: {
+                                checked: _vm._q(_vm.form.twelve.data, "yes")
                               },
-                              change: function($event) {
-                                return _vm.$set(_vm.form.twelve, "data", "no")
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.twelve,
+                                    "data",
+                                    "yes"
+                                  )
+                                }
                               }
-                            }
-                          }),
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "yes" } }, [
+                              _vm._v("Yes")
+                            ])
+                          ]),
                           _vm._v(" "),
-                          _c("label", { attrs: { for: "no" } }, [_vm._v("No")])
-                        ])
-                      ]),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.twelve.data,
+                                  expression: "form.twelve.data"
+                                }
+                              ],
+                              attrs: { type: "radio", id: "no", value: "no" },
+                              domProps: {
+                                checked: _vm._q(_vm.form.twelve.data, "no")
+                              },
+                              on: {
+                                click: function($event) {
+                                  return _vm.setNullTwelve(
+                                    _vm.form.twelve.extra
+                                  )
+                                },
+                                change: function($event) {
+                                  return _vm.$set(_vm.form.twelve, "data", "no")
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "no" } }, [
+                              _vm._v("No")
+                            ])
+                          ])
+                        ]
+                      ),
                       _vm._v(" "),
                       _vm.form.twelve.data == "yes"
-                        ? _c("div", { staticClass: "col-md-12" }, [
-                            _c("div", { staticClass: "form-group" }, [
-                              _c("div", { staticClass: "row" }, [
-                                _c("div", { staticClass: "col-md-3" }, [
-                                  _c("input", {
-                                    directives: [
-                                      {
-                                        name: "model",
-                                        rawName: "v-model",
-                                        value: _vm.form.twelve.extra,
-                                        expression: "form.twelve.extra"
-                                      }
-                                    ],
-                                    attrs: {
-                                      type: "radio",
-                                      id: "Delivery Goods",
-                                      value: "Delivery Goods"
-                                    },
-                                    domProps: {
-                                      checked: _vm._q(
-                                        _vm.form.twelve.extra,
-                                        "Delivery Goods"
-                                      )
-                                    },
-                                    on: {
-                                      change: function($event) {
-                                        return _vm.$set(
-                                          _vm.form.twelve,
-                                          "extra",
+                        ? _c(
+                            "div",
+                            {
+                              staticClass: "col-md-12",
+                              class: {
+                                "is-invalid": _vm.form.errors.has(
+                                  "twelve.extra"
+                                )
+                              }
+                            },
+                            [
+                              _c("div", { staticClass: "form-group" }, [
+                                _c("div", { staticClass: "row" }, [
+                                  _c("div", { staticClass: "col-md-3" }, [
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.form.twelve.extra,
+                                          expression: "form.twelve.extra"
+                                        }
+                                      ],
+                                      attrs: {
+                                        type: "radio",
+                                        id: "Delivery Goods",
+                                        value: "Delivery Goods"
+                                      },
+                                      domProps: {
+                                        checked: _vm._q(
+                                          _vm.form.twelve.extra,
                                           "Delivery Goods"
                                         )
+                                      },
+                                      on: {
+                                        change: function($event) {
+                                          return _vm.$set(
+                                            _vm.form.twelve,
+                                            "extra",
+                                            "Delivery Goods"
+                                          )
+                                        }
                                       }
-                                    }
-                                  }),
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "label",
+                                      { attrs: { for: "Delivery Goods" } },
+                                      [_vm._v("Delivery Goods")]
+                                    )
+                                  ]),
                                   _vm._v(" "),
-                                  _c(
-                                    "label",
-                                    { attrs: { for: "Delivery Goods" } },
-                                    [_vm._v("Delivery Goods")]
-                                  )
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "col-md-3" }, [
-                                  _c("input", {
-                                    directives: [
-                                      {
-                                        name: "model",
-                                        rawName: "v-model",
-                                        value: _vm.form.twelve.extra,
-                                        expression: "form.twelve.extra"
-                                      }
-                                    ],
-                                    attrs: {
-                                      type: "radio",
-                                      id: "Quality Product",
-                                      value: "Quality Product"
-                                    },
-                                    domProps: {
-                                      checked: _vm._q(
-                                        _vm.form.twelve.extra,
-                                        "Quality Product"
-                                      )
-                                    },
-                                    on: {
-                                      change: function($event) {
-                                        return _vm.$set(
-                                          _vm.form.twelve,
-                                          "extra",
+                                  _c("div", { staticClass: "col-md-3" }, [
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.form.twelve.extra,
+                                          expression: "form.twelve.extra"
+                                        }
+                                      ],
+                                      attrs: {
+                                        type: "radio",
+                                        id: "Quality Product",
+                                        value: "Quality Product"
+                                      },
+                                      domProps: {
+                                        checked: _vm._q(
+                                          _vm.form.twelve.extra,
                                           "Quality Product"
                                         )
+                                      },
+                                      on: {
+                                        change: function($event) {
+                                          return _vm.$set(
+                                            _vm.form.twelve,
+                                            "extra",
+                                            "Quality Product"
+                                          )
+                                        }
                                       }
-                                    }
-                                  }),
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "label",
+                                      { attrs: { for: "Quality Product" } },
+                                      [_vm._v("Quality Product")]
+                                    )
+                                  ]),
                                   _vm._v(" "),
-                                  _c(
-                                    "label",
-                                    { attrs: { for: "Quality Product" } },
-                                    [_vm._v("Quality Product")]
-                                  )
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "col-md-3" }, [
-                                  _c("input", {
-                                    directives: [
-                                      {
-                                        name: "model",
-                                        rawName: "v-model",
-                                        value: _vm.form.twelve.extra,
-                                        expression: "form.twelve.extra"
-                                      }
-                                    ],
-                                    attrs: {
-                                      type: "radio",
-                                      id: "After Sales Service",
-                                      value: "After Sales Service"
-                                    },
-                                    domProps: {
-                                      checked: _vm._q(
-                                        _vm.form.twelve.extra,
-                                        "After Sales Service"
-                                      )
-                                    },
-                                    on: {
-                                      change: function($event) {
-                                        return _vm.$set(
-                                          _vm.form.twelve,
-                                          "extra",
+                                  _c("div", { staticClass: "col-md-3" }, [
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.form.twelve.extra,
+                                          expression: "form.twelve.extra"
+                                        }
+                                      ],
+                                      attrs: {
+                                        type: "radio",
+                                        id: "After Sales Service",
+                                        value: "After Sales Service"
+                                      },
+                                      domProps: {
+                                        checked: _vm._q(
+                                          _vm.form.twelve.extra,
                                           "After Sales Service"
                                         )
+                                      },
+                                      on: {
+                                        change: function($event) {
+                                          return _vm.$set(
+                                            _vm.form.twelve,
+                                            "extra",
+                                            "After Sales Service"
+                                          )
+                                        }
                                       }
-                                    }
-                                  }),
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "label",
+                                      { attrs: { for: "After Sales Service" } },
+                                      [_vm._v("After Sales Service")]
+                                    )
+                                  ]),
                                   _vm._v(" "),
-                                  _c(
-                                    "label",
-                                    { attrs: { for: "After Sales Service" } },
-                                    [_vm._v("After Sales Service")]
-                                  )
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "col-md-3" }, [
-                                  _c("input", {
-                                    directives: [
-                                      {
-                                        name: "model",
-                                        rawName: "v-model",
-                                        value: _vm.form.twelve.extra,
-                                        expression: "form.twelve.extra"
-                                      }
-                                    ],
-                                    attrs: {
-                                      type: "radio",
-                                      id: "Pricing",
-                                      value: "Pricing"
-                                    },
-                                    domProps: {
-                                      checked: _vm._q(
-                                        _vm.form.twelve.extra,
-                                        "Pricing"
-                                      )
-                                    },
-                                    on: {
-                                      change: function($event) {
-                                        return _vm.$set(
-                                          _vm.form.twelve,
-                                          "extra",
+                                  _c("div", { staticClass: "col-md-3" }, [
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.form.twelve.extra,
+                                          expression: "form.twelve.extra"
+                                        }
+                                      ],
+                                      attrs: {
+                                        type: "radio",
+                                        id: "Pricing",
+                                        value: "Pricing"
+                                      },
+                                      domProps: {
+                                        checked: _vm._q(
+                                          _vm.form.twelve.extra,
                                           "Pricing"
                                         )
+                                      },
+                                      on: {
+                                        change: function($event) {
+                                          return _vm.$set(
+                                            _vm.form.twelve,
+                                            "extra",
+                                            "Pricing"
+                                          )
+                                        }
                                       }
-                                    }
-                                  }),
-                                  _vm._v(" "),
-                                  _c("label", { attrs: { for: "Pricing" } }, [
-                                    _vm._v("Pricing")
+                                    }),
+                                    _vm._v(" "),
+                                    _c("label", { attrs: { for: "Pricing" } }, [
+                                      _vm._v("Pricing")
+                                    ])
                                   ])
                                 ])
                               ])
-                            ])
-                          ])
+                            ]
+                          )
                         : _vm._e(),
                       _vm._v(" "),
                       _c("br"),
@@ -76579,97 +76786,127 @@ var render = function() {
                       _vm._v(" "),
                       _c("br"),
                       _vm._v(" "),
-                      _c("div", { staticClass: "row" }, [
-                        _c("div", { staticClass: "col-md-6" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.thirteen.data,
-                                expression: "form.thirteen.data"
-                              }
-                            ],
-                            attrs: { type: "radio", id: "yes", value: "yes" },
-                            domProps: {
-                              checked: _vm._q(_vm.form.thirteen.data, "yes")
-                            },
-                            on: {
-                              click: function($event) {
-                                return _vm.setNullThirteen(
-                                  _vm.form.thirteen.extra
-                                )
-                              },
-                              change: function($event) {
-                                return _vm.$set(
-                                  _vm.form.thirteen,
-                                  "data",
-                                  "yes"
-                                )
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("label", { attrs: { for: "yes" } }, [
-                            _vm._v("Yes")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-6" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.thirteen.data,
-                                expression: "form.thirteen.data"
-                              }
-                            ],
-                            attrs: { type: "radio", id: "no", value: "no" },
-                            domProps: {
-                              checked: _vm._q(_vm.form.thirteen.data, "no")
-                            },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(_vm.form.thirteen, "data", "no")
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("label", { attrs: { for: "no" } }, [_vm._v("No")]),
-                          _vm._v(" "),
-                          _vm.form.thirteen.data == "no"
-                            ? _c("input", {
-                                directives: [
-                                  {
-                                    name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.form.thirteen.extra,
-                                    expression: "form.thirteen.extra"
-                                  }
-                                ],
-                                staticClass: "form-control",
-                                attrs: {
-                                  type: "text",
-                                  placeholder: "If No,please specifies"
-                                },
-                                domProps: { value: _vm.form.thirteen.extra },
-                                on: {
-                                  input: function($event) {
-                                    if ($event.target.composing) {
-                                      return
-                                    }
-                                    _vm.$set(
-                                      _vm.form.thirteen,
-                                      "extra",
-                                      $event.target.value
-                                    )
-                                  }
+                      _c(
+                        "div",
+                        {
+                          staticClass: "row",
+                          class: {
+                            "is-invalid": _vm.form.errors.has("thirteen.data")
+                          }
+                        },
+                        [
+                          _c("div", { staticClass: "col-md-6" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.thirteen.data,
+                                  expression: "form.thirteen.data"
                                 }
-                              })
-                            : _vm._e()
-                        ])
-                      ]),
+                              ],
+                              attrs: { type: "radio", id: "yes", value: "yes" },
+                              domProps: {
+                                checked: _vm._q(_vm.form.thirteen.data, "yes")
+                              },
+                              on: {
+                                click: function($event) {
+                                  return _vm.setNullThirteen(
+                                    _vm.form.thirteen.extra
+                                  )
+                                },
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.thirteen,
+                                    "data",
+                                    "yes"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "yes" } }, [
+                              _vm._v("Yes")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-6" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.thirteen.data,
+                                  expression: "form.thirteen.data"
+                                }
+                              ],
+                              attrs: { type: "radio", id: "no", value: "no" },
+                              domProps: {
+                                checked: _vm._q(_vm.form.thirteen.data, "no")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.thirteen,
+                                    "data",
+                                    "no"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "no" } }, [
+                              _vm._v("No")
+                            ]),
+                            _vm._v(" "),
+                            _vm.form.thirteen.data == "no"
+                              ? _c(
+                                  "div",
+                                  {
+                                    staticClass: "col-md-6",
+                                    class: {
+                                      "is-invalid": _vm.form.errors.has(
+                                        "thirteen.extra"
+                                      )
+                                    }
+                                  },
+                                  [
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.form.thirteen.extra,
+                                          expression: "form.thirteen.extra"
+                                        }
+                                      ],
+                                      staticClass: "form-control",
+                                      attrs: {
+                                        type: "text",
+                                        placeholder: "If No,please specifies"
+                                      },
+                                      domProps: {
+                                        value: _vm.form.thirteen.extra
+                                      },
+                                      on: {
+                                        input: function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.$set(
+                                            _vm.form.thirteen,
+                                            "extra",
+                                            $event.target.value
+                                          )
+                                        }
+                                      }
+                                    })
+                                  ]
+                                )
+                              : _vm._e()
+                          ])
+                        ]
+                      ),
                       _vm._v(" "),
                       _c("br"),
                       _vm._v(" "),
@@ -76703,184 +76940,201 @@ var render = function() {
                     _c("div", { staticClass: "form-group" }, [
                       _vm._m(23),
                       _vm._v(" "),
-                      _c("div", { staticClass: "row" }, [
-                        _c("br"),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.forteen.data,
-                                expression: "form.forteen.data"
-                              }
-                            ],
-                            attrs: {
-                              type: "radio",
-                              id: "Highly Satisfied",
-                              value: "Highly Satisfied"
-                            },
-                            domProps: {
-                              checked: _vm._q(
-                                _vm.form.forteen.data,
-                                "Highly Satisfied"
-                              )
-                            },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(
-                                  _vm.form.forteen,
-                                  "data",
+                      _c(
+                        "div",
+                        {
+                          staticClass: "row",
+                          class: {
+                            "is-invalid": _vm.form.errors.has("forteen.data")
+                          }
+                        },
+                        [
+                          _c("br"),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.forteen.data,
+                                  expression: "form.forteen.data"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Highly Satisfied",
+                                value: "Highly Satisfied"
+                              },
+                              domProps: {
+                                checked: _vm._q(
+                                  _vm.form.forteen.data,
                                   "Highly Satisfied"
                                 )
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.forteen,
+                                    "data",
+                                    "Highly Satisfied"
+                                  )
+                                }
                               }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("label", { attrs: { for: "Highly Satisfied" } }, [
-                            _vm._v("Highly Satisfied")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.forteen.data,
-                                expression: "form.forteen.data"
-                              }
-                            ],
-                            attrs: {
-                              type: "radio",
-                              id: "Satisfied",
-                              value: "Satisfied"
-                            },
-                            domProps: {
-                              checked: _vm._q(
-                                _vm.form.forteen.data,
-                                "Satisfied"
-                              )
-                            },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(
-                                  _vm.form.forteen,
-                                  "data",
-                                  "Satisfied"
-                                )
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("label", { attrs: { for: "Satisfied" } }, [
-                            _vm._v("Satisfied")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.forteen.data,
-                                expression: "form.forteen.data"
-                              }
-                            ],
-                            attrs: {
-                              type: "radio",
-                              id: "Moderate",
-                              value: "Moderate"
-                            },
-                            domProps: {
-                              checked: _vm._q(_vm.form.forteen.data, "Moderate")
-                            },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(
-                                  _vm.form.forteen,
-                                  "data",
-                                  "Moderate"
-                                )
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("label", { attrs: { for: "Moderate" } }, [
-                            _vm._v("Moderate")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-3" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.forteen.data,
-                                expression: "form.forteen.data"
-                              }
-                            ],
-                            attrs: {
-                              type: "radio",
-                              id: "Dissatisfies",
-                              value: "Dissatisfies"
-                            },
-                            domProps: {
-                              checked: _vm._q(
-                                _vm.form.forteen.data,
-                                "Dissatisfies"
-                              )
-                            },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(
-                                  _vm.form.forteen,
-                                  "data",
-                                  "Dissatisfies"
-                                )
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("label", { attrs: { for: "Dissatisfies" } }, [
-                            _vm._v("Dissatisfies")
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "label",
+                              { attrs: { for: "Highly Satisfied" } },
+                              [_vm._v("Highly Satisfied")]
+                            )
                           ]),
                           _vm._v(" "),
-                          _vm.form.forteen.data == "Service"
-                            ? _c("input", {
-                                directives: [
-                                  {
-                                    name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.form.forteen.extra,
-                                    expression: "form.forteen.extra"
-                                  }
-                                ],
-                                staticClass: "form-control",
-                                attrs: { type: "text", placeholder: "Service" },
-                                domProps: { value: _vm.form.forteen.extra },
-                                on: {
-                                  input: function($event) {
-                                    if ($event.target.composing) {
-                                      return
-                                    }
-                                    _vm.$set(
-                                      _vm.form.forteen,
-                                      "extra",
-                                      $event.target.value
-                                    )
-                                  }
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.forteen.data,
+                                  expression: "form.forteen.data"
                                 }
-                              })
-                            : _vm._e()
-                        ]),
-                        _vm._v(" "),
-                        _c("br")
-                      ]),
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Satisfied",
+                                value: "Satisfied"
+                              },
+                              domProps: {
+                                checked: _vm._q(
+                                  _vm.form.forteen.data,
+                                  "Satisfied"
+                                )
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.forteen,
+                                    "data",
+                                    "Satisfied"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Satisfied" } }, [
+                              _vm._v("Satisfied")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.forteen.data,
+                                  expression: "form.forteen.data"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Moderate",
+                                value: "Moderate"
+                              },
+                              domProps: {
+                                checked: _vm._q(
+                                  _vm.form.forteen.data,
+                                  "Moderate"
+                                )
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.forteen,
+                                    "data",
+                                    "Moderate"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Moderate" } }, [
+                              _vm._v("Moderate")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.forteen.data,
+                                  expression: "form.forteen.data"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Dissatisfies",
+                                value: "Dissatisfies"
+                              },
+                              domProps: {
+                                checked: _vm._q(
+                                  _vm.form.forteen.data,
+                                  "Dissatisfies"
+                                )
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.forteen,
+                                    "data",
+                                    "Dissatisfies"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Dissatisfies" } }, [
+                              _vm._v("Dissatisfies")
+                            ]),
+                            _vm._v(" "),
+                            _vm.form.forteen.data == "Service"
+                              ? _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.form.forteen.extra,
+                                      expression: "form.forteen.extra"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    type: "text",
+                                    placeholder: "Service"
+                                  },
+                                  domProps: { value: _vm.form.forteen.extra },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.form.forteen,
+                                        "extra",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              : _vm._e()
+                          ]),
+                          _vm._v(" "),
+                          _c("br")
+                        ]
+                      ),
                       _vm._v(" "),
                       _vm.form.forteen.data
                         ? _c("span", { staticClass: "red" }, [
@@ -76901,43 +77155,59 @@ var render = function() {
                 _vm._v(" "),
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-md-4" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _vm._m(24),
-                      _vm._v(" "),
-                      _c("br"),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.form.fifteen,
-                            expression: "form.fifteen"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { type: "text", placeholder: "Last Balance" },
-                        domProps: { value: _vm.form.fifteen },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _vm._m(24),
+                        _vm._v(" "),
+                        _c("br"),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.form.fifteen,
+                              expression: "form.fifteen"
                             }
-                            _vm.$set(_vm.form, "fifteen", $event.target.value)
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            "is-invalid": _vm.form.errors.has("fifteen")
+                          },
+                          attrs: {
+                            type: "text",
+                            placeholder: "Last Balance",
+                            name: "fifteen"
+                          },
+                          domProps: { value: _vm.form.fifteen },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(_vm.form, "fifteen", $event.target.value)
+                            }
                           }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("br"),
-                      _vm._v(" "),
-                      _vm.form.fifteen
-                        ? _c("span", { staticClass: "red" }, [
-                            _c("strong", [
-                              _vm._v("Picked: " + _vm._s(_vm.form.fifteen))
+                        }),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.form, field: "fifteen" }
+                        }),
+                        _vm._v(" "),
+                        _c("br"),
+                        _vm._v(" "),
+                        _vm.form.fifteen
+                          ? _c("span", { staticClass: "red" }, [
+                              _c("strong", [
+                                _vm._v("Picked: " + _vm._s(_vm.form.fifteen))
+                              ])
                             ])
-                          ])
-                        : _vm._e()
-                    ])
+                          : _vm._e()
+                      ],
+                      1
+                    )
                   ])
                 ]),
                 _vm._v(" "),
@@ -76948,93 +77218,127 @@ var render = function() {
                       _vm._v(" "),
                       _c("br"),
                       _vm._v(" "),
-                      _c("div", { staticClass: "row" }, [
-                        _c("div", { staticClass: "col-md-6" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.sixteen.data,
-                                expression: "form.sixteen.data"
+                      _c(
+                        "div",
+                        {
+                          staticClass: "row",
+                          class: {
+                            "is-invalid": _vm.form.errors.has("sixteen.data")
+                          }
+                        },
+                        [
+                          _c("div", { staticClass: "col-md-6" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.sixteen.data,
+                                  expression: "form.sixteen.data"
+                                }
+                              ],
+                              attrs: { type: "radio", id: "yes", value: "yes" },
+                              domProps: {
+                                checked: _vm._q(_vm.form.sixteen.data, "yes")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.sixteen,
+                                    "data",
+                                    "yes"
+                                  )
+                                }
                               }
-                            ],
-                            attrs: { type: "radio", id: "yes", value: "yes" },
-                            domProps: {
-                              checked: _vm._q(_vm.form.sixteen.data, "yes")
-                            },
-                            on: {
-                              change: function($event) {
-                                return _vm.$set(_vm.form.sixteen, "data", "yes")
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("label", { attrs: { for: "yes" } }, [
-                            _vm._v("Yes")
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "yes" } }, [
+                              _vm._v("Yes")
+                            ]),
+                            _vm._v(" "),
+                            _vm.form.sixteen.data == "yes"
+                              ? _c(
+                                  "div",
+                                  {
+                                    staticClass: "col-md-6",
+                                    class: {
+                                      "is-invalid": _vm.form.errors.has(
+                                        "sixteen.extra"
+                                      )
+                                    }
+                                  },
+                                  [
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.form.sixteen.extra,
+                                          expression: "form.sixteen.extra"
+                                        }
+                                      ],
+                                      staticClass: "form-control",
+                                      attrs: {
+                                        type: "text",
+                                        placeholder: "If yes,please specifies"
+                                      },
+                                      domProps: {
+                                        value: _vm.form.sixteen.extra
+                                      },
+                                      on: {
+                                        input: function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.$set(
+                                            _vm.form.sixteen,
+                                            "extra",
+                                            $event.target.value
+                                          )
+                                        }
+                                      }
+                                    })
+                                  ]
+                                )
+                              : _vm._e()
                           ]),
                           _vm._v(" "),
-                          _vm.form.sixteen.data == "yes"
-                            ? _c("input", {
-                                directives: [
-                                  {
-                                    name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.form.sixteen.extra,
-                                    expression: "form.sixteen.extra"
-                                  }
-                                ],
-                                staticClass: "form-control",
-                                attrs: {
-                                  type: "text",
-                                  placeholder: "If yes,please specifies"
-                                },
-                                domProps: { value: _vm.form.sixteen.extra },
-                                on: {
-                                  input: function($event) {
-                                    if ($event.target.composing) {
-                                      return
-                                    }
-                                    _vm.$set(
-                                      _vm.form.sixteen,
-                                      "extra",
-                                      $event.target.value
-                                    )
-                                  }
+                          _c("div", { staticClass: "col-md-6" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.sixteen.data,
+                                  expression: "form.sixteen.data"
                                 }
-                              })
-                            : _vm._e()
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-md-6" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.sixteen.data,
-                                expression: "form.sixteen.data"
-                              }
-                            ],
-                            attrs: { type: "radio", id: "no", value: "no" },
-                            domProps: {
-                              checked: _vm._q(_vm.form.sixteen.data, "no")
-                            },
-                            on: {
-                              click: function($event) {
-                                return _vm.setNullSixteen(
-                                  _vm.form.sixteen.extra
-                                )
+                              ],
+                              attrs: { type: "radio", id: "no", value: "no" },
+                              domProps: {
+                                checked: _vm._q(_vm.form.sixteen.data, "no")
                               },
-                              change: function($event) {
-                                return _vm.$set(_vm.form.sixteen, "data", "no")
+                              on: {
+                                click: function($event) {
+                                  return _vm.setNullSixteen(
+                                    _vm.form.sixteen.extra
+                                  )
+                                },
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.sixteen,
+                                    "data",
+                                    "no"
+                                  )
+                                }
                               }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("label", { attrs: { for: "no" } }, [_vm._v("No")])
-                        ])
-                      ]),
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "no" } }, [
+                              _vm._v("No")
+                            ])
+                          ])
+                        ]
+                      ),
                       _vm._v(" "),
                       _c("br"),
                       _vm._v(" "),

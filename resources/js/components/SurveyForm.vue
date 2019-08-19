@@ -128,7 +128,7 @@
                                             <div class="col-md-6">
                                                 <input type="radio" id="yes" value="yes" v-model="form.two.data" name="two.data">
                                                 <label for="yes">Yes</label>
-                                                <div class="col-md-6" v-if="form.two.data == 'yes'" :class="{ 'is-invalid': form.errors.has('three') }">
+                                                <div class="col-md-6" v-if="form.two.data == 'yes'" :class="{ 'is-invalid': form.errors.has('two.extra') }">
                                                     <input type="text" class="form-control" placeholder="If yes,please specifies" v-model="form.two.extra" name="two.extra">
                                                     <has-error :form="form" field="two.extra"></has-error>
                                                 </div>
@@ -170,7 +170,6 @@
                                                 <label for="Poor">Poor</label>
                                             </div>
                                             <br>
-                                            <has-error :form="form" field="three"></has-error>
                                         </div>
                                         <has-error :form="form" field="three"></has-error>
                                         <span v-if="form.three" class="red"><strong>Picked: {{ form.three }}</strong></span>
@@ -183,7 +182,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>4.What does the customer except from Hi-vally in term of quality  ?<span class="requiredField red">*</span></label>
-                                        <div class="row">
+                                        <div class="row" :class="{ 'is-invalid': form.errors.has('four.data') }">
                                             <br>
                                             <div class="col-md-3">
                                                 <input type="radio" id="Design" value="Design" v-model="form.four.data" @click="setNullFour(form.four.extra)">
@@ -200,10 +199,14 @@
                                             <div class="col-md-3">
                                                 <input type="radio" id="Any Other" value="Any Other" v-model="form.four.data">
                                                 <label for="Any Other">Any Other</label>
-                                                <input v-if="form.four.data == 'Any Other'" type="text" class="form-control" placeholder="Anyother" v-model="form.four.extra">
+                                                <div class="col-md-3" v-if="form.four.data == 'Any Other'"  :class="{ 'is-invalid': form.errors.has('four.extra') }">
+                                                    <input type="text" class="form-control" placeholder="Anyother" v-model="form.four.extra">
+                                                </div>
+                                                <has-error :form="form" field="three"></has-error>
                                             </div>
                                             <br>
                                         </div>
+                                        <has-error :form="form" field="three"></has-error>
                                         <span v-if="form.four.data" class="red"><strong>Picked: {{ form.four.data }}</strong></span>
                                         <span v-if="form.four.extra" class="red">---> {{ form.four.extra }}</span>
                                     </div>
@@ -215,7 +218,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>5.How do you rate the promotional activities given y Hi-vally?<span class="requiredField red">*</span></label>
-                                        <div class="row">
+                                        <div class="row" :class="{ 'is-invalid': form.errors.has('five') }">
                                             <br>
                                             <div class="col-md-3">
                                                 <input type="radio" id="Very Good" value="Very Good" v-model="form.five">
@@ -245,7 +248,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>6.What type of promotional activity do you prefer with Hi-vally product?<span class="requiredField red">*</span></label>
-                                        <div class="row">
+                                        <div class="row" :class="{ 'is-invalid': form.errors.has('six.data') }">
                                             <br>
                                             <div class="col-md-3">
                                                 <input type="radio" id="Discount" value="Discount" v-model="form.six.data">
@@ -278,7 +281,7 @@
                                     <div class="form-group">
                                         <label>7.Whether the expected Quantity of Hi-vally is is supplied to you in time?<span class="requiredField red">*</span></label>
                                         <br>
-                                        <div class="row">
+                                        <div class="row" :class="{ 'is-invalid': form.errors.has('seven') }">
                                             <div class="col-md-6">
                                                 <input type="radio" id="yes" value="yes" v-model="form.seven">
                                                 <label for="yes">Yes</label>
@@ -299,7 +302,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>8.What do you feel about credit period given by Hi-Vally?<span class="requiredField red">*</span></label>
-                                        <div class="row">
+                                        <div class="row" :class="{ 'is-invalid': form.errors.has('eight') }">
                                             <br>
                                             <div class="col-md-3">
                                                 <input type="radio" id="Very Good" value="Very Good" v-model="form.eight">
@@ -329,7 +332,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>9.What do you feel about the employee dealing with you in Hi-Vally?<span class="requiredField red">*</span></label>
-                                        <div class="row">
+                                        <div class="row" :class="{ 'is-invalid': form.errors.has('nine') }">
                                             <br>
                                             <div class="col-md-3">
                                                 <input type="radio" id="Highly Satisfied" value="Highly Satisfied" v-model="form.nine">
@@ -359,7 +362,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>10.What are the factors that you expects from Hi-Vally Products?<span class="requiredField red">*</span></label>
-                                        <div class="row">
+                                        <div class="row" :class="{ 'is-invalid': form.errors.has('nine') }">
                                             <br>
                                             <div class="col-md-3">
                                                 <input type="radio" id="Promotional Sale" value="Promotional Sale" v-model="form.ten.data" @click="setNullTen(form.ten.extra)">
@@ -391,7 +394,9 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>11.How much do you spend in winter Booking?<span class="requiredField red">*</span></label>
-                                        <input type="text" class="form-control" placeholder="spending" v-model="form.eleven">
+                                        <input type="text" class="form-control" placeholder="spending" v-model="form.eleven"
+                                         name="eleven" :class="{ 'is-invalid': form.errors.has('eleven') }">
+                                        <has-error :form="form" field="eleven"></has-error>
                                     </div>
                                 </div>
                             </div>
@@ -401,7 +406,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>12.Do you have any complains about Hi-Vallay Product?<span class="requiredField red">*</span></label>
-                                        <div class="row">
+                                        <div class="row" :class="{ 'is-invalid': form.errors.has('twelve.data') }">
                                         <br>
                                             <div class="col-md-3">
                                                 <input type="radio" id="yes" value="yes" v-model="form.twelve.data">
@@ -412,7 +417,7 @@
                                                 <label for="no">No</label>
                                             </div>
                                         </div>
-                                            <div class="col-md-12" v-if="form.twelve.data == 'yes'">
+                                            <div class="col-md-12" v-if="form.twelve.data == 'yes'" :class="{ 'is-invalid': form.errors.has('twelve.extra') }">
                                                 <div class="form-group">
                                                     <div class="row">
                                                         <div class="col-md-3">
@@ -447,7 +452,7 @@
                                     <div class="form-group">
                                         <label>13.Do you recommend your customer Hi-Vallay Product?<span class="requiredField red">*</span></label>
                                         <br>
-                                        <div class="row">
+                                        <div class="row" :class="{ 'is-invalid': form.errors.has('thirteen.data') }">
                                             <div class="col-md-6">
                                                 <input type="radio" id="yes" value="yes" v-model="form.thirteen.data" @click="setNullThirteen(form.thirteen.extra)">
                                                 <label for="yes">Yes</label>
@@ -455,7 +460,9 @@
                                             <div class="col-md-6">
                                                 <input type="radio" id="no" value="no" v-model="form.thirteen.data">
                                                 <label for="no">No</label>
-                                                <input v-if="form.thirteen.data == 'no'" type="text" class="form-control" placeholder="If No,please specifies" v-model="form.thirteen.extra">
+                                                <div class="col-md-6" v-if="form.thirteen.data == 'no'" :class="{ 'is-invalid': form.errors.has('thirteen.extra') }">
+                                                    <input type="text" class="form-control" placeholder="If No,please specifies" v-model="form.thirteen.extra">
+                                                </div>
                                             </div>
                                         </div>
                                         <br>
@@ -470,7 +477,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>14.What do you feel about after Sales Service Given y Hi-Vally?<span class="requiredField red">*</span></label>
-                                        <div class="row">
+                                        <div class="row" :class="{ 'is-invalid': form.errors.has('forteen.data') }">
                                             <br>
                                             <div class="col-md-3">
                                                 <input type="radio" id="Highly Satisfied" value="Highly Satisfied" v-model="form.forteen.data">
@@ -503,7 +510,9 @@
                                     <div class="form-group">
                                         <label>15.Last Balance<span class="requiredField red">*</span></label>
                                         <br>
-                                        <input type="text" class="form-control" placeholder="Last Balance" v-model="form.fifteen">
+                                        <input type="text" class="form-control" placeholder="Last Balance" v-model="form.fifteen"
+                                         name="fifteen" :class="{ 'is-invalid': form.errors.has('fifteen') }">
+                                        <has-error :form="form" field="fifteen"></has-error>
                                         <br>
                                         <span v-if="form.fifteen" class="red"><strong>Picked: {{ form.fifteen }}</strong></span>
                                     </div>
@@ -516,11 +525,13 @@
                                     <div class="form-group">
                                         <label>16.Do you have any suggestion in improve the quality of Hi-Vally product<span class="requiredField red">*</span></label>
                                         <br>
-                                        <div class="row">
+                                        <div class="row" :class="{ 'is-invalid': form.errors.has('sixteen.data') }">
                                             <div class="col-md-6">
                                                 <input type="radio" id="yes" value="yes" v-model="form.sixteen.data">
                                                 <label for="yes">Yes</label>
-                                                <input v-if="form.sixteen.data == 'yes'" type="text" class="form-control" placeholder="If yes,please specifies" v-model="form.sixteen.extra">
+                                                <div class="col-md-6" v-if="form.sixteen.data == 'yes'" :class="{ 'is-invalid': form.errors.has('sixteen.extra') }">
+                                                    <input type="text" class="form-control" placeholder="If yes,please specifies" v-model="form.sixteen.extra">
+                                                </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <input type="radio" id="no" value="no" v-model="form.sixteen.data" @click="setNullSixteen(form.sixteen.extra)">
@@ -655,6 +666,7 @@
                     type: 'success',
                     title: 'Created successfully'
                     });
+                  this.form.reset();
                   this.$Progress.finish();
                     }).catch(() => {
                 });

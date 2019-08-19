@@ -68,20 +68,20 @@ class SurveyFormController extends Controller
             'bussiness_year.required' => 'Please Provide The Valid bussiness year',
             'one.required' => 'Please Provide The Valid Answer',
             'two.data.required' => 'Please Provide The Valid Input For Two Data',
-            'required' => 'Please Provide The Valid',
-            'required' => 'Please Provide The Valid',
-            'required' => 'Please Provide The Valid',
-            'required' => 'Please Provide The Valid',
-            'required' => 'Please Provide The Valid',
-            'required' => 'Please Provide The Valid',
-            'required' => 'Please Provide The Valid',
-            'required' => 'Please Provide The Valid',
-            'required' => 'Please Provide The Valid',
-            'required' => 'Please Provide The Valid',
-            'required' => 'Please Provide The Valid',
-            'required' => 'Please Provide The Valid',
-            'required' => 'Please Provide The Valid',
-            'required' => 'Please Provide The Valid',
+            'three.required' => 'Please Provide The Valid',
+            'four.data.required' => 'Please Provide The Valid',
+            'five.required' => 'Please Provide The Valid',
+            'six,data.required' => 'Please Provide The Valid',
+            'seven.required' => 'Please Provide The Valid',
+            'eight.required' => 'Please Provide The Valid',
+            'nine.required' => 'Please Provide The Valid',
+            'ten.data.required' => 'Please Provide The Valid',
+            'eleven.required' => 'Please Provide The Valid Answer',
+            'twelve.data.required' => 'Please Provide The Valid',
+            'thirteen.data.required' => 'Please Provide The Valid',
+            'forteen.data.required' => 'Please Provide The Valid',
+            'fifteen.required' => 'Please Provide The Valid Answer',
+            'sixteen.data.required' => 'Please Provide The Valid',
         ]);
 
         if($request['two']['data'] == 'yes'){
@@ -94,37 +94,49 @@ class SurveyFormController extends Controller
 
         if($request['four']['data'] == 'Any Other'){
             $this->validate($request,[
-                'four.extra' => 'Please Provide The Valid',
+                'four.extra' => 'required|string|max:191',
+            ],[
+                'four.extra.required' => 'Please Provide The Valid Input For Two Extra'
             ]);
         }
 
         if($request['ten']['data'] == 'Service'){
             $this->validate($request,[
-                'ten.extra' => 'Please Provide The Valid',
+                'ten.extra' => 'required|string|max:191',
+            ],[
+                'ten.extra.required' => 'Please Provide The Valid Input For Two Extra'
             ]);
         }
 
         if($request['twelve']['data'] == 'yes'){
             $this->validate($request,[
-                'twelve.extra' => 'Please Provide The Valid',
+                'twelve.extra' => 'required|string|max:191',
+            ],[
+                'twelve.extra.required' => 'Please Provide The Valid Input For Two Extra'
             ]);
         }
 
         if($request['thirteen']['data'] == 'no'){
             $this->validate($request,[
-                'thirteen.extra' => 'Please Provide The Valid',
+                'thirteen.extra' => 'required|string|max:191',
+            ],[
+                'thirteen.extra.required' => 'Please Provide The Valid Input For Two Extra'
             ]);
         }
 
         if($request['forteen']['data'] == 'Service'){
             $this->validate($request,[
-                'forteen.extra' => 'Please Provide The Valid',
+                'forteen.extra' => 'required|string|max:191',
+            ],[
+                'forteen.extra.required' => 'Please Provide The Valid Input For Two Extra'
             ]);
         }
 
         if($request['sixteen']['data'] == 'yes'){
             $this->validate($request,[
-                'sixteen.extra' => 'Please Provide The Valid',
+                'sixteen.extra' => 'required|string|max:191',
+            ],[
+                'sixteen.extra.required' => 'Please Provide The Valid Input For Two Extra'
             ]);
         }
 
