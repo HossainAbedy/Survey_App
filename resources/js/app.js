@@ -17,7 +17,7 @@ const toast = swal.mixin({  //toaster
   position: 'top-end',
   showConfirmButton: false,
   timer: 3000
-});  
+});
 window.toast = toast;//toaster
 
 //sweetalert
@@ -46,7 +46,7 @@ Vue.use(Toaster, {timeout:5000})
 //toaster
 
 //vue-router
-import VueRouter from 'vue-router' 
+import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 let routes = [
@@ -61,23 +61,30 @@ let routes = [
 const router = new VueRouter({
     mode: 'history',
     routes // short for `routes: routes`
-}) 
+})
 //vue-router
 
 //vform
-import { 
-  Form,  
+import {
+  Form,
   HasError,
   AlertError,
-  AlertErrors, 
-  AlertSuccess } 
-  from 'vform' 
+  AlertErrors,
+  AlertSuccess }
+  from 'vform'
 window.Form=Form;
 Vue.component(HasError.name, HasError)
 Vue.component(AlertError.name, AlertError)
 Vue.component(AlertErrors.name, AlertErrors)
 Vue.component(AlertSuccess.name, AlertSuccess)
 //vform
+
+//vee validator
+import VeeValidate from 'vee-validate';
+Vue.use(VeeValidate);
+import { ValidationProvider } from 'vee-validate';
+Vue.component('ValidationProvider', ValidationProvider);
+//vee validator
 
 //laravel passport
 Vue.component(

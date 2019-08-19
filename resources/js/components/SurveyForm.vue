@@ -6,7 +6,7 @@
 		<div class="card-content collapse show">
 			<div class="card-body">
 <!--form start-->
-				<form @submit.prevent="checkForm" id="addComponent"  @keydown="form.onKeydown($event)">
+				<form @submit.prevent="store()" id="addComponent"  @keydown="form.onKeydown($event)">
 					<div class="form-body">
                         <div class="card-body">
                             <div class="row">
@@ -124,27 +124,22 @@
                                     <div class="form-group">
                                         <label>2.Are you dealing with other company<span class="requiredField red">*</span></label>
                                         <br>
-                                        <div class="row" v-if="errors.length">
-                                           
-                                                    <p v-for="error in errors" :key="error.id">Fix This</p>
-                                              
+                                        <div class="row" :class="{ 'is-invalid': form.errors.has('two.data') }">
                                             <div class="col-md-6">
-                                                <input type="radio" id="yes" value="yes" v-model="form.two.data"
-                                                 name="two.data" :class="{ 'is-invalid': form.errors.has('two.data') }">
-                                                <has-error :form="form" field="two.data"></has-error>
+                                                <input type="radio" id="yes" value="yes" v-model="form.two.data" name="two.data">
                                                 <label for="yes">Yes</label>
-                                                <input v-if="form.two.data == 'yes'" type="text" class="form-control" placeholder="If yes,please specifies" v-model="form.two.extra"
-                                                 name="two.extra" :class="{ 'is-invalid': form.errors.has('two.extra') }">
-                                                <has-error :form="form" field="two.extra"></has-error>
+                                                <div class="col-md-6" v-if="form.two.data == 'yes'" :class="{ 'is-invalid': form.errors.has('three') }">
+                                                    <input type="text" class="form-control" placeholder="If yes,please specifies" v-model="form.two.extra" name="two.extra">
+                                                    <has-error :form="form" field="two.extra"></has-error>
+                                                </div>
                                             </div>
                                             <div class="col-md-6">
-                                                <input type="radio" id="no" value="no" v-model="form.two.data" @click="setNullTwo(form.two.extra)"
-                                                 name="two.data" :class="{ 'is-invalid': form.errors.has('two.data') }">
-                                                <has-error :form="form" field="two.data"></has-error>
-                                                <label for="no">No</label>
+                                                <input type="radio" id="no" value="no" v-model="form.two.data" @click="setNullTwo(form.two.extra)" name="two.data">
+                                                <label for="yes">No</label>
                                             </div>
                                         </div>
                                         <br>
+                                        <has-error :form="form" field="two.data"></has-error>
                                         <span v-if="form.two.data" class="red"><strong>Picked: {{ form.two.data }} </strong></span>
                                         <span v-if="form.two.extra" class="red"><strong>---> {{ form.two.extra }}</strong></span>
                                     </div>
@@ -177,6 +172,7 @@
                                             <br>
                                             <has-error :form="form" field="three"></has-error>
                                         </div>
+                                        <has-error :form="form" field="three"></has-error>
                                         <span v-if="form.three" class="red"><strong>Picked: {{ form.three }}</strong></span>
                                     </div>
                                 </div>
@@ -558,6 +554,7 @@
 </template>
 
 <script>
+
     export default {
         data(){
             return{
@@ -612,31 +609,11 @@
                             extra:''
                         },
                     }),
-                    errors:[],
+                    // errors: new Errors(),
             }
         },
 
         methods:{
-            //validation
-           checkForm: function (e){
-                    this.errors = [];
-
-                    if (!this.form.two.data) {
-                        this.errors.push("Two required.");
-                    }
-                    if (this.form.two.data=='yes') {
-                        this.errors.push('Two required.');
-                    }
-                    if (!this.form.three) {
-                        this.errors.push("Three required.");
-                    } 
-                    if (!this.errors.length) {
-                        return true;
-                    }
-
-                    e.preventDefault();
-                    this,store();
-            },
             //setNull
             setNullTwo($values){
                  if($values != null){
@@ -671,18 +648,16 @@
             //formCreate
             store(){
                 this.$Progress.start();
-                 console.log(this.form);
+                 //console.log(this.form);
                  this.form.post('api/form-one')
                  .then(() => {
-                  $('#addNew').modal('hide')
                   toast.fire({
                     type: 'success',
                     title: 'Created successfully'
                     });
                   this.$Progress.finish();
-                //  .then(({ data }) => { console.log(data) });
-                }).catch( () => {
-                })
+                    }).catch(() => {
+                });
             },
         },
 
@@ -690,4 +665,12 @@
             console.log('Component mounted.')
         }
     }
+
 </script>
+
+<style scoped>
+.is-invalid {
+      border-color: #E84444;
+      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(232,68,68,.6);
+    }
+</style>
