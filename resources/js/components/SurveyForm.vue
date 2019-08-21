@@ -362,7 +362,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>10.What are the factors that you expects from Hi-Vally Products?<span class="requiredField red">*</span></label>
-                                        <div class="row" :class="{ 'is-invalid': form.errors.has('nine') }">
+                                        <div class="row" :class="{ 'is-invalid': form.errors.has('ten.data') }">
                                             <br>
                                             <div class="col-md-3">
                                                 <input type="radio" id="Promotional Sale" value="Promotional Sale" v-model="form.ten.data" @click="setNullTen(form.ten.extra)">

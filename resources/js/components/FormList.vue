@@ -38,7 +38,9 @@
                             <td>{{list.bussiness_year}}</td>
                             <td>
                                 <a href="#" @click=deleteList(list.id) class="fa fa-trash red"></a>
-                                <router-link to="/viewform"> <i class="fa fa-eye green"></i></router-link>
+                                <router-link :to="{ name: 'viewForm', 
+                                params: { id: list.id }}"> 
+                                <i class="fa fa-eye green"></i></router-link>
                                 <a href="#" @click=editList(list) class="fa fa-edit orange"></a>
                                 <a href="#" @click=deleteList(list.id) class="fab fa-google-plus-g"></a>
                             </td>

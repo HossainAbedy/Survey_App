@@ -2079,6 +2079,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2947,8 +2949,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
+  name: "viewForm",
+  props: {
+    id: ''
+  },
   data: function data() {
     return {
+      form_id: this.id,
       lists: {}
     };
   },
@@ -2961,11 +2968,11 @@ __webpack_require__.r(__webpack_exports__);
         _this.lists = response.data;
       });
     },
-    loadLists: function loadLists() {
+    loadView: function loadView() {
       var _this2 = this;
 
       this.$Progress.start();
-      axios.get('api/form-one').then(function (_ref) {
+      axios.get("/api/form-one/".concat(this.form_id)).then(function (_ref) {
         var data = _ref.data;
         return _this2.lists = data;
       });
@@ -2981,9 +2988,9 @@ __webpack_require__.r(__webpack_exports__);
         _this3.lists = data.data;
       })["catch"](function () {});
     });
-    this.loadLists();
+    this.loadView();
     Fire.$on('afterCreate', function () {
-      _this3.loadLists();
+      _this3.loadView();
     });
   },
   mounted: function mounted() {
@@ -8337,7 +8344,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.is-invalid[data-v-0ff09826] {\n      border-color: #E84444;\n      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(232,68,68,.6);\n}\n", ""]);
+exports.push([module.i, "\n.is-invalid[data-v-0ff09826] {\r\n      border-color: #E84444;\r\n      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(232,68,68,.6);\n}\r\n", ""]);
 
 // exports
 
@@ -8356,7 +8363,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.is-invalid[data-v-afd86e2e] {\n      border-color: #E84444;\n      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(232,68,68,.6);\n}\n", ""]);
+exports.push([module.i, "\n.is-invalid[data-v-afd86e2e] {\r\n      border-color: #E84444;\r\n      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(232,68,68,.6);\n}\r\n", ""]);
 
 // exports
 
@@ -8375,7 +8382,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.is-invalid[data-v-24be49f4] {\n      border-color: #E84444;\n      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(232,68,68,.6);\n}\n", ""]);
+exports.push([module.i, "\n.is-invalid[data-v-24be49f4] {\r\n      border-color: #E84444;\r\n      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(232,68,68,.6);\n}\r\n", ""]);
 
 // exports
 
@@ -74786,9 +74793,15 @@ var render = function() {
                         }
                       }),
                       _vm._v(" "),
-                      _c("router-link", { attrs: { to: "/viewform" } }, [
-                        _c("i", { staticClass: "fa fa-eye green" })
-                      ]),
+                      _c(
+                        "router-link",
+                        {
+                          attrs: {
+                            to: { name: "viewForm", params: { id: list.id } }
+                          }
+                        },
+                        [_c("i", { staticClass: "fa fa-eye green" })]
+                      ),
                       _vm._v(" "),
                       _c("a", {
                         staticClass: "fa fa-edit orange",
@@ -76777,7 +76790,9 @@ var render = function() {
                         "div",
                         {
                           staticClass: "row",
-                          class: { "is-invalid": _vm.form.errors.has("nine") }
+                          class: {
+                            "is-invalid": _vm.form.errors.has("ten.data")
+                          }
                         },
                         [
                           _c("br"),
@@ -78238,140 +78253,138 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "card" }, [
-    _vm._m(0),
+    _c("div", { staticClass: "card-header" }, [
+      _c(
+        "h4",
+        { staticClass: "card-title", attrs: { id: "basic-layout-form" } },
+        [
+          _vm._v("Surveyor "),
+          _c("h4", { staticClass: "red" }, [
+            _vm._v(
+              _vm._s(_vm.lists.user.first_name) +
+                " " +
+                _vm._s(_vm.lists.user.last_name)
+            )
+          ])
+        ]
+      )
+    ]),
     _vm._v(" "),
     _c("div", { staticClass: "card-content collapse show" }, [
-      _c(
-        "div",
-        { staticClass: "card-body" },
-        _vm._l(_vm.lists.data, function(list) {
-          return _c("div", { key: list.id, staticClass: "form-body" }, [
-            _c("div", { staticClass: "card-body" }, [
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-md-4" }, [
-                  _c("div", { staticClass: "form-group" }, [
-                    _vm._m(1, true),
-                    _vm._v(
-                      "\n                                        " +
-                        _vm._s(list.org_name) +
-                        "\n                                    "
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-md-4" }, [
-                  _c("div", { staticClass: "form-group" }, [
-                    _vm._m(2, true),
-                    _vm._v(
-                      "\n                                        " +
-                        _vm._s(list.owner_name) +
-                        "\n                                    "
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-md-4" }, [
-                  _c("div", { staticClass: "form-group" }, [
-                    _vm._m(3, true),
-                    _vm._v(
-                      "\n                                        " +
-                        _vm._s(list.present_address) +
-                        "\n                                    "
-                    )
-                  ])
+      _c("div", { staticClass: "card-body" }, [
+        _c("div", { staticClass: "form-body" }, [
+          _c("div", { staticClass: "card-body" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-4" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _vm._m(0),
+                  _vm._v(
+                    "\n                                        " +
+                      _vm._s(_vm.lists.org_name) +
+                      "\n                                    "
+                  )
                 ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-md-4" }, [
-                  _c("div", { staticClass: "form-group" }, [
-                    _vm._m(4, true),
-                    _vm._v(
-                      "\n                                        " +
-                        _vm._s(list.permanent_address) +
-                        "\n                                    "
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-md-4" }, [
-                  _c("div", { staticClass: "form-group" }, [
-                    _vm._m(5, true),
-                    _vm._v(
-                      "\n                                        " +
-                        _vm._s(list.cell_no) +
-                        "\n                                    "
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-md-4" }, [
-                  _c("div", { staticClass: "form-group" }, [
-                    _vm._m(6, true),
-                    _vm._v(
-                      "\n                                        " +
-                        _vm._s(list.concern_person) +
-                        "\n                                    "
-                    )
-                  ])
+              _c("div", { staticClass: "col-md-4" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _vm._m(1),
+                  _vm._v(
+                    "\n                                        " +
+                      _vm._s(_vm.lists.owner_name) +
+                      "\n                                    "
+                  )
                 ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-md-4" }, [
-                  _c("div", { staticClass: "form-group" }, [
-                    _vm._m(7, true),
-                    _vm._v(
-                      "\n                                        " +
-                        _vm._s(list.org_cell_no) +
-                        "\n                                    "
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-md-4" }, [
-                  _c("div", { staticClass: "form-group" }, [
-                    _vm._m(8, true),
-                    _vm._v(
-                      "\n                                       " +
-                        _vm._s(list.bussiness_type) +
-                        "\n                                    "
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-md-4" }, [
-                  _c("div", { staticClass: "form-group" }, [
-                    _vm._m(9, true),
-                    _vm._v(
-                      "\n                                        " +
-                        _vm._s(list.bussiness_year) +
-                        "\n                                    "
-                    )
-                  ])
+              _c("div", { staticClass: "col-md-4" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _vm._m(2),
+                  _vm._v(
+                    "\n                                        " +
+                      _vm._s(_vm.lists.present_address) +
+                      "\n                                    "
+                  )
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-4" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _vm._m(3),
+                  _vm._v(
+                    "\n                                        " +
+                      _vm._s(_vm.lists.permanent_address) +
+                      "\n                                    "
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _vm._m(4),
+                  _vm._v(
+                    "\n                                        " +
+                      _vm._s(_vm.lists.cell_no) +
+                      "\n                                    "
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _vm._m(5),
+                  _vm._v(
+                    "\n                                        " +
+                      _vm._s(_vm.lists.concern_person) +
+                      "\n                                    "
+                  )
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-4" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _vm._m(6),
+                  _vm._v(
+                    "\n                                        " +
+                      _vm._s(_vm.lists.org_cell_no) +
+                      "\n                                    "
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _vm._m(7),
+                  _vm._v(
+                    "\n                                       " +
+                      _vm._s(_vm.lists.bussiness_type) +
+                      "\n                                    "
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _vm._m(8),
+                  _vm._v(
+                    "\n                                        " +
+                      _vm._s(_vm.lists.bussiness_year) +
+                      "\n                                    "
+                  )
                 ])
               ])
             ])
           ])
-        }),
-        0
-      )
+        ])
+      ])
     ])
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-header" }, [
-      _c(
-        "h4",
-        { staticClass: "card-title", attrs: { id: "basic-layout-form" } },
-        [_vm._v("Survey From ")]
-      )
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -95076,6 +95089,8 @@ var routes = [{
   component: __webpack_require__(/*! ./components/FormList.vue */ "./resources/js/components/FormList.vue")["default"]
 }, {
   path: '/viewform',
+  name: 'viewForm',
+  props: true,
   component: __webpack_require__(/*! ./components/ViewForm.vue */ "./resources/js/components/ViewForm.vue")["default"]
 }, {
   path: '/user',
@@ -95922,8 +95937,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\xampp\htdocs\Survey_App\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\xampp\htdocs\Survey_App\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\Survey_App\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\Survey_App\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

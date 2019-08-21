@@ -181,55 +181,7 @@ class SurveyFormController extends Controller
 
     public function show($id)
     {
-        // org_name:'',
-        // owner_name:'',
-        // present_address:'',
-        // permanent_address:'',
-        // cell_no:'',
-        // concern_person:'',
-        // org_cell_no:'',
-        // bussiness_type:'',
-        // bussiness_year:'',
-        // one:'',
-        // two:{
-        //     data:'',
-        //     extra:''
-        // },
-        // three:'',
-        // four:{
-        //     data:'',
-        //     extra:''
-        // },
-        // five:'',
-        // six:{
-        //     data:'',
-        //     extra:''
-        // },
-        // seven:'',
-        // eight:'',
-        // nine:'',
-        // ten:{
-        //     data:'',
-        //     extra:''
-        // },
-        // eleven:'',
-        // twelve:{
-        //     data:'',
-        //     extra:''
-        // },
-        // thirteen:{
-        //     data:'',
-        //     extra:''
-        // },
-        // forteen:{
-        //     data:'',
-        //     extra:''
-        // },
-        // fifteen:'',
-        // sixteen:{
-        //     data:'',
-        //     extra:''
-        // },
+        return SurveyForm::with('user')->find($id);
     }
 
 
