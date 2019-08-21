@@ -9,7 +9,7 @@
 
         <title>Survey App</title>
 
-        <link rel="stylesheet" href="/css/app.css"> 
+        <link rel="stylesheet" href="/css/app.css">
     </head>
     <body class="hold-transition sidebar-mini">
         <div class="wrapper" id="app">
@@ -171,7 +171,7 @@
                             </p>
                         </router-link>
                     </li>
-                   
+
                     <li class="nav-item has-treeview menu-open">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-cog green"></i>
@@ -188,7 +188,7 @@
                                     <i class="nav-icon fas fa-cogs red"></i>
                                         <p>
                                             Developer
-        
+
                                         </p>
                                     </router-link>
                             </li>
@@ -203,7 +203,7 @@
                             </li>
                         </ul>
                         @endcan
-                        
+
                         @if(Gate::check('isAdmin') || Gate::check('isAuthor'))
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
@@ -229,7 +229,7 @@
                         @endif
                     </li>
 
-                   
+
                     <li class="nav-item">
                         <router-link to="/surveyform" class="nav-link">
                         <i class="nav-icon fab fa-wpforms blue"></i>
@@ -238,7 +238,16 @@
                         </p>
                         </router-link>
                     </li>
-                    
+
+                    <li class="nav-item">
+                        <router-link to="/formlist" class="nav-link">
+                        <i class="nav-icon fab fa-wpforms green"></i>
+                        <p>
+                            Form List
+                        </p>
+                        </router-link>
+                    </li>
+
                     <li class="nav-item">
                     <a class="nav-link" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
@@ -246,7 +255,7 @@
                                         <i class="nav-icon fa fa-power-off red"></i>
                             <p> {{ __('Logout') }} </p>
                         </a>
-            
+
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
@@ -310,10 +319,10 @@
         </footer>
         </div>
 
-        @auth  
+        @auth
             <script>
              window.user = @json(auth()->user())
-            </script>   
+            </script>
         @endauth
 
         <!-- REQUIRED SCRIPTS -->

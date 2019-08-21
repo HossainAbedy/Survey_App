@@ -17,7 +17,7 @@ class SurveyFormController extends Controller
 
     public function index()
     {
-        //
+        return SurveyForm::with('user')->latest()->paginate(5);
     }
 
 

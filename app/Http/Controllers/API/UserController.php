@@ -6,19 +6,19 @@ use App\User;
 use Illuminate\Support\Facades\Hash;
 class UserController extends Controller
 {
-    
+
     public function __construct()
     {
         $this->middleware('auth:api');
     }
-   
+
     public function index()
     {
         $this->authorize('isAdmin');
         return User::latest()->paginate(5);
 
     }
-   
+
     public function store(Request $request)
     {
         $this->validate($request,[
@@ -35,12 +35,12 @@ class UserController extends Controller
             'password' => Hash::make($request['password']),
         ]);
     }
-   
+
     public function show($id)
     {
         //
     }
-   
+
     public function update(Request $request, $id)
     {
         $user = User::findOrFail($id);
@@ -53,7 +53,7 @@ class UserController extends Controller
         $user->update($request->all());
         return ['message' => 'Updated the user info'];
     }
-  
+
     public function destroy($id)
     {
         $this->authorize('isAdmin');

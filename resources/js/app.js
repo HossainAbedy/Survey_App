@@ -55,6 +55,8 @@ let routes = [
     { path: '/admin', component: require('./admin/AdminList.vue').default},
     { path: '/surveyor', component: require('./surveyor/Surveyor.vue').default},
     { path: '/surveyform', component: require('./components/SurveyForm.vue').default},
+    { path: '/formlist', component: require('./components/FormList.vue').default},
+    { path: '/viewform', component: require('./components/ViewForm.vue').default},
     { path: '/user', component: require('./components/User.vue').default}
   ]
 
