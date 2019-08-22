@@ -14,11 +14,11 @@
                             <th>Surveyor Type</th>
                             <th>Organization Name</th>
                             <th>Owner Name</th>
-                            <th>Present Address</th>
+                            <!-- <th>Present Address</th>
                             <th>Permanent Address</th>
                             <th>Cell No</th>
                             <th>Concern Person</th>
-                            <th>Organization Cell No</th>
+                            <th>Organization Cell No</th> -->
                             <th>Bussiness Type</th>
                             <th>Bussiness Year</th>
                             <th>Action</th>
@@ -29,11 +29,11 @@
                             <td>{{list.user.user_type}}</td>
                             <td>{{list.org_name}}</td>
                             <td>{{list.owner_name}}</td>
-                            <td>{{list.present_address}}</td>
+                            <!-- <td>{{list.present_address}}</td>
                             <td>{{list.permanent_address}}</td>
                             <td>{{list.cell_no}}</td>
                             <td>{{list.concern_person}}</td>
-                            <td>{{list.org_cell_no}}</td>
+                            <td>{{list.org_cell_no}}</td> -->
                             <td>{{list.bussiness_type}}</td>
                             <td>{{list.bussiness_year}}</td>
                             <td>
