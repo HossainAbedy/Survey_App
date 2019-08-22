@@ -2948,6 +2948,199 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "viewForm",
   props: {
@@ -2956,7 +3149,9 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       form_id: this.id,
-      lists: {}
+      lists: {
+        user: {}
+      }
     };
   },
   methods: {
@@ -8382,7 +8577,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.is-invalid[data-v-24be49f4] {\r\n      border-color: #E84444;\r\n      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(232,68,68,.6);\n}\r\n", ""]);
+exports.push([module.i, "\n.is-invalid[data-v-24be49f4] {\n      border-color: #E84444;\n      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(232,68,68,.6);\n}\n", ""]);
 
 // exports
 
@@ -78275,107 +78470,442 @@ var render = function() {
         _c("div", { staticClass: "form-body" }, [
           _c("div", { staticClass: "card-body" }, [
             _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-md-4" }, [
+              _c("div", { staticClass: "col-md-8" }, [
                 _c("div", { staticClass: "form-group" }, [
-                  _vm._m(0),
-                  _vm._v(
-                    "\n                                        " +
-                      _vm._s(_vm.lists.org_name) +
-                      "\n                                    "
-                  )
+                  _c("label", [_vm._v("Organization Name: ")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.org_name))
+                  ])
                 ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-md-4" }, [
+              _c("div", { staticClass: "col-md-8" }, [
                 _c("div", { staticClass: "form-group" }, [
-                  _vm._m(1),
-                  _vm._v(
-                    "\n                                        " +
-                      _vm._s(_vm.lists.owner_name) +
-                      "\n                                    "
-                  )
+                  _c("label", [_vm._v("Owner Name: ")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.owner_name))
+                  ])
                 ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-md-4" }, [
+              _c("div", { staticClass: "col-md-8" }, [
                 _c("div", { staticClass: "form-group" }, [
-                  _vm._m(2),
-                  _vm._v(
-                    "\n                                        " +
-                      _vm._s(_vm.lists.present_address) +
-                      "\n                                    "
-                  )
+                  _c("label", [_vm._v("Present Address: ")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.present_address))
+                  ])
                 ])
               ])
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-md-4" }, [
+              _c("div", { staticClass: "col-md-8" }, [
                 _c("div", { staticClass: "form-group" }, [
-                  _vm._m(3),
-                  _vm._v(
-                    "\n                                        " +
-                      _vm._s(_vm.lists.permanent_address) +
-                      "\n                                    "
-                  )
+                  _c("label", [_vm._v("Permanent Address: ")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.permanent_address))
+                  ])
                 ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-md-4" }, [
+              _c("div", { staticClass: "col-md-8" }, [
                 _c("div", { staticClass: "form-group" }, [
-                  _vm._m(4),
-                  _vm._v(
-                    "\n                                        " +
-                      _vm._s(_vm.lists.cell_no) +
-                      "\n                                    "
-                  )
+                  _c("label", [_vm._v("Cell No: ")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.cell_no))
+                  ])
                 ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-md-4" }, [
+              _c("div", { staticClass: "col-md-8" }, [
                 _c("div", { staticClass: "form-group" }, [
-                  _vm._m(5),
-                  _vm._v(
-                    "\n                                        " +
-                      _vm._s(_vm.lists.concern_person) +
-                      "\n                                    "
-                  )
+                  _c("label", [_vm._v("Concern Person: ")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.concern_person))
+                  ])
                 ])
               ])
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-md-4" }, [
+              _c("div", { staticClass: "col-md-8" }, [
                 _c("div", { staticClass: "form-group" }, [
-                  _vm._m(6),
-                  _vm._v(
-                    "\n                                        " +
-                      _vm._s(_vm.lists.org_cell_no) +
-                      "\n                                    "
-                  )
+                  _c("label", [_vm._v("Organization Cell No: ")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.org_cell_no))
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [_vm._v("Bussiness Type: ")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.bussiness_type))
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [_vm._v("Bussiness Year: ")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.bussiness_year))
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "1.How long you are dealing with Hi-vallay product? = "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.one))
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v("2.Are you dealing with other company? =")
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.two_data))
+                  ])
                 ])
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "col-md-4" }, [
+                _vm.lists.two_extra
+                  ? _c("div", { staticClass: "form-group" }, [
+                      _c("label", [_vm._v("Specified Answer If Yes: ")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "text blue" }, [
+                        _vm._v(_vm._s(_vm.lists.two_extra))
+                      ])
+                    ])
+                  : _vm._e()
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
                 _c("div", { staticClass: "form-group" }, [
-                  _vm._m(7),
-                  _vm._v(
-                    "\n                                       " +
-                      _vm._s(_vm.lists.bussiness_type) +
-                      "\n                                    "
-                  )
+                  _c("label", [
+                    _vm._v(
+                      "3.How do you feel about Quality of Hi-vallay fan? ="
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.three))
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "4.What does the customer except from Hi-vally in term of quality? ="
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.four_data))
+                  ])
                 ])
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "col-md-4" }, [
+                _vm.lists.four_extra
+                  ? _c("div", { staticClass: "form-group" }, [
+                      _c("label", [_vm._v("Any other: ")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "text blue" }, [
+                        _vm._v(_vm._s(_vm.lists.four_extra))
+                      ])
+                    ])
+                  : _vm._e()
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
                 _c("div", { staticClass: "form-group" }, [
-                  _vm._m(8),
-                  _vm._v(
-                    "\n                                        " +
-                      _vm._s(_vm.lists.bussiness_year) +
-                      "\n                                    "
-                  )
+                  _c("label", [
+                    _vm._v(
+                      "5.How do you rate the promotional activities given y Hi-vally? ="
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.five))
+                  ])
                 ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "6.What type of promotional activity do you prefer with Hi-vally product? ="
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.six_data))
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-8" }, [
+                _vm.lists.six_extra
+                  ? _c("div", { staticClass: "form-group" }, [
+                      _c("label", [_vm._v("Others: ")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "text blue" }, [
+                        _vm._v(_vm._s(_vm.lists.six_extra))
+                      ])
+                    ])
+                  : _vm._e()
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "7.Whether the expected Quantity of Hi-vally is is supplied to you in time? ="
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.seven))
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "8.What do you feel about credit period given by Hi-Vally? ="
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.eight))
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "9.What do you feel about the employee dealing with you in Hi-Vally? ="
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.nine))
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "10.What are the factors that you expects from Hi-Vally Products? ="
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.ten_data))
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4" }, [
+                _vm.lists.ten_extra
+                  ? _c("div", { staticClass: "form-group" }, [
+                      _c("label", [_vm._v("Serivices: ")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "text blue" }, [
+                        _vm._v(_vm._s(_vm.lists.ten_extra))
+                      ])
+                    ])
+                  : _vm._e()
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v("11.How much do you spend in winter Booking? =")
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.eleven))
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "12.Do you have any complains about Hi-Vallay Product? ="
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.twelve_data))
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4" }, [
+                _vm.lists.twelve_extra
+                  ? _c("div", { staticClass: "form-group" }, [
+                      _c("label", [_vm._v("Complains: ")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "text blue" }, [
+                        _vm._v(_vm._s(_vm.lists.twelve_extra))
+                      ])
+                    ])
+                  : _vm._e()
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "13.Do you recommend your customer Hi-Vallay Product? ="
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.thirteen_data))
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4" }, [
+                _vm.lists.thirteen_extra
+                  ? _c("div", { staticClass: "form-group" }, [
+                      _c("label", [_vm._v("Specified Answer: ")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "text blue" }, [
+                        _vm._v(_vm._s(_vm.lists.thirteen_extra))
+                      ])
+                    ])
+                  : _vm._e()
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "14.What do you feel about after Sales Service Given y Hi-Vally? ="
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.forteen_data))
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4" }, [
+                _vm.lists.forteen_extra
+                  ? _c("div", { staticClass: "form-group" }, [
+                      _c("label", [_vm._v("Serivices: ")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "text blue" }, [
+                        _vm._v(_vm._s(_vm.lists.forteen_extra))
+                      ])
+                    ])
+                  : _vm._e()
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [_vm._v("15.Last Balance =")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.fifteen))
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "16.Do you have any suggestion in improve the quality of Hi-Vally product ="
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.sixteen_data))
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4" }, [
+                _vm.lists.sixteen_extra
+                  ? _c("div", { staticClass: "form-group" }, [
+                      _c("label", [_vm._v("Specified Andwer: ")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "text blue" }, [
+                        _vm._v(_vm._s(_vm.lists.sixteen_extra))
+                      ])
+                    ])
+                  : _vm._e()
               ])
             ])
           ])
@@ -78384,89 +78914,7 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { staticClass: "text" }, [
-      _vm._v("Organization Name"),
-      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", [
-      _vm._v("Owner Name"),
-      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", [
-      _vm._v("Present Address"),
-      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", [
-      _vm._v("Permanent Address"),
-      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", [
-      _vm._v("Cell No"),
-      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", [
-      _vm._v("Concern Person"),
-      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", [
-      _vm._v("Organization Cell No"),
-      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", [
-      _vm._v("Bussiness Type"),
-      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", [
-      _vm._v("Bussiness Year"),
-      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -95937,8 +96385,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\Survey_App\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\Survey_App\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\xampp\htdocs\Survey_App\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\xampp\htdocs\Survey_App\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
