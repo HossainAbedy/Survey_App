@@ -193,7 +193,9 @@ class SurveyFormController extends Controller
 
     public function update(Request $request, $id)
     {
+        //dd($request);
         $surveyform = SurveyForm::findOrFail($id);
+        //dd($surveyform);
         $this->validate($request,[
             'org_name' => 'required|string|max:191',
             'owner_name' => 'required|string|max:191',
@@ -303,13 +305,52 @@ class SurveyFormController extends Controller
                 'sixteen.extra.required' => 'Please Provide The Valid Input For Two Extra'
             ]);
         }
-        $surveyform->update($request->all());
+
+        $surveyform->org_name = $request->org_name;
+        $surveyform->owner_name = $request->owner_name;
+        $surveyform->present_address = $request->present_address;
+        $surveyform->permanent_address = $request->permanent_address;
+        $surveyform->cell_no = $request->cell_no;
+        $surveyform->concern_person = $request->concern_person;
+        $surveyform->org_cell_no = $request->org_cell_no;
+        $surveyform->bussiness_type = $request->bussiness_type;
+        $surveyform->bussiness_year = $request->bussiness_year;
+        $surveyform->one = $request->one;
+        $surveyform->two_data = $request->two['data'];
+        $surveyform->two_extra = $request->two['extra'];
+        $surveyform->three = $request->three;
+        $surveyform->four_data = $request->four['data'];
+        $surveyform->four_extra = $request->four['extra'];
+        $surveyform->five = $request->five;
+        $surveyform->six_data = $request->six['data'];
+        $surveyform->six_extra = $request->six['extra'];
+        $surveyform->seven = $request->seven;
+        $surveyform->eight = $request->eight;
+        $surveyform->nine = $request->nine;
+        $surveyform->ten_data = $request->ten['data'];
+        $surveyform->ten_extra = $request->ten['extra'];
+        $surveyform->eleven = $request->eleven;
+        $surveyform->twelve_data = $request->twelve['data'];
+        $surveyform->twelve_extra = $request->twelve['extra'];
+        $surveyform->thirteen_data = $request->thirteen['data'];
+        $surveyform->thirteen_extra = $request->thirteen['extra'];
+        $surveyform->forteen_data = $request->forteen['data'];
+        $surveyform->forteen_extra = $request->forteen['extra'];
+        $surveyform->fifteen = $request->fifteen;
+        $surveyform->sixteen_data = $request->sixteen['data'];
+        $surveyform->sixteen_extra = $request->sixteen['extra'];
+
+        $surveyform->save();
+
         return ['message' => 'Updated the user info'];
     }
 
 
     public function destroy($id)
     {
-        //
+        $surveyform = SurveyForm::findOrFail($id);
+        // delete the surveyform
+        $surveyform->delete();
+        return ['message' => 'User Deleted'];
     }
 }

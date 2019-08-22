@@ -141,7 +141,7 @@
                                         <br>
                                         <has-error :form="form" field="two.data"></has-error>
                                         <span v-if="form.two.data" class="red"><strong>Picked: {{ form.two.data }} </strong></span>
-                                        <span v-if="form.two.extra" class="red"><strong>---> {{ form.two.extra }}</strong></span>
+                                        <span v-if="form.two.extra" class="red">---> {{ form.two.extra }}</span>
                                     </div>
                                 </div>
                             </div>
@@ -467,7 +467,7 @@
                                         </div>
                                         <br>
                                         <span v-if="form.thirteen.data" class="red"><strong>Picked: {{ form.thirteen.data }} </strong></span>
-                                        <span v-if="form.thirteen.extra" class="red"><strong> Specifies {{ form.thirteen.extra }}</strong></span>
+                                        <span v-if="form.thirteen.extra" class="red">---> Specifies {{ form.thirteen.extra }}</span>
                                     </div>
                                 </div>
                             </div>
@@ -540,7 +540,7 @@
                                         </div>
                                         <br>
                                         <span v-if="form.sixteen.data" class="red"><strong>Picked: {{ form.sixteen.data }} </strong></span>
-                                        <span v-if="form.sixteen.extra" class="red"><strong>---> {{ form.sixteen.extra }}</strong></span>
+                                        <span v-if="form.sixteen.extra" class="red">---> {{ form.sixteen.extra }}</span>
                                     </div>
                                 </div>
                             </div>

@@ -37,15 +37,14 @@
                             <td>{{list.bussiness_type}}</td>
                             <td>{{list.bussiness_year}}</td>
                             <td>
-                                <a href="#" @click=deleteList(list.id) class="fa fa-trash red"></a>
+                                <a href="#" @click="deleteList(list.id)" class="fa fa-trash red"></a>
                                 <router-link :to="{ name: 'viewForm', params: { id: list.id }}">
                                     <i class="fa fa-eye green"></i>
                                 </router-link>
                                 <router-link :to="{ name: 'editForm', params: { list: list }}">
                                     <i class="fa fa-edit orange"></i>
                                 </router-link>
-                                <!-- <a href="#" @click=editList(list) class="fa fa-edit orange"></a> -->
-                                <a href="#" @click=deleteList(list.id) class="fab fa-google-plus-g"></a>
+                                <a href="#" @click=send(list.id) class="fab fa-google-plus-g"></a>
                             </td>
                         </tr>
                     </tbody>
@@ -82,13 +81,40 @@
                 this.$Progress.finish();
             },
 
-            edtiList(){
-
+            deleteList(id){
+                swal.fire({
+                    title: 'Are you sure?',
+                    text: "You won't be able to revert this!",
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!'
+                    }).then((result) => {
+                    // send request to the server
+                    if (result.value){
+                        axios.delete('api/form-one/'+id)
+                    .then( () => {
+                            swal.fire(
+                            'Deleted!',
+                            'Your file has been deleted.',
+                            'success'
+                            )
+                            Fire.$emit('afterCreate');
+                        }).catch( () => {
+                            swal.fire(
+                            'Failed!',
+                            'There was somethinbg wrong',
+                            'warning'
+                            )
+                        })
+                    }
+                })
             },
 
-            deleteList(){
+            send(){
 
-            },
+            }
 
         },
 

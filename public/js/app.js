@@ -2780,7 +2780,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2806,8 +2805,28 @@ __webpack_require__.r(__webpack_exports__);
       });
       this.$Progress.finish();
     },
-    edtiList: function edtiList() {},
-    deleteList: function deleteList() {}
+    deleteList: function deleteList(id) {
+      swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then(function (result) {
+        // send request to the server
+        if (result.value) {
+          axios["delete"]('api/form-one/' + id).then(function () {
+            swal.fire('Deleted!', 'Your file has been deleted.', 'success');
+            Fire.$emit('afterCreate');
+          })["catch"](function () {
+            swal.fire('Failed!', 'There was somethinbg wrong', 'warning');
+          });
+        }
+      });
+    },
+    send: function send() {}
   },
   created: function created() {
     var _this3 = this;
@@ -9277,7 +9296,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.is-invalid[data-v-afd86e2e] {\r\n      border-color: #E84444;\r\n      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(232,68,68,.6);\n}\r\n", ""]);
+exports.push([module.i, "\n.is-invalid[data-v-afd86e2e] {\n      border-color: #E84444;\n      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(232,68,68,.6);\n}\n", ""]);
 
 // exports
 
@@ -76357,9 +76376,7 @@ var render = function() {
                         _vm._v(" "),
                         _vm.form.two.extra
                           ? _c("span", { staticClass: "red" }, [
-                              _c("strong", [
-                                _vm._v("---> " + _vm._s(_vm.form.two.extra))
-                              ])
+                              _vm._v("---> " + _vm._s(_vm.form.two.extra))
                             ])
                           : _vm._e()
                       ],
@@ -78232,11 +78249,10 @@ var render = function() {
                       _vm._v(" "),
                       _vm.form.thirteen.extra
                         ? _c("span", { staticClass: "red" }, [
-                            _c("strong", [
-                              _vm._v(
-                                " Specifies " + _vm._s(_vm.form.thirteen.extra)
-                              )
-                            ])
+                            _vm._v(
+                              "---> Specifies " +
+                                _vm._s(_vm.form.thirteen.extra)
+                            )
                           ])
                         : _vm._e()
                     ])
@@ -78662,9 +78678,7 @@ var render = function() {
                       _vm._v(" "),
                       _vm.form.sixteen.extra
                         ? _c("span", { staticClass: "red" }, [
-                            _c("strong", [
-                              _vm._v("---> " + _vm._s(_vm.form.sixteen.extra))
-                            ])
+                            _vm._v("---> " + _vm._s(_vm.form.sixteen.extra))
                           ])
                         : _vm._e()
                     ])
@@ -79057,7 +79071,7 @@ var render = function() {
                         attrs: { href: "#" },
                         on: {
                           click: function($event) {
-                            return _vm.deleteList(list.id)
+                            return _vm.send(list.id)
                           }
                         }
                       })
@@ -79825,9 +79839,7 @@ var render = function() {
                         _vm._v(" "),
                         _vm.form.two.extra
                           ? _c("span", { staticClass: "red" }, [
-                              _c("strong", [
-                                _vm._v("---> " + _vm._s(_vm.form.two.extra))
-                              ])
+                              _vm._v("---> " + _vm._s(_vm.form.two.extra))
                             ])
                           : _vm._e()
                       ],
@@ -81700,11 +81712,10 @@ var render = function() {
                       _vm._v(" "),
                       _vm.form.thirteen.extra
                         ? _c("span", { staticClass: "red" }, [
-                            _c("strong", [
-                              _vm._v(
-                                " Specifies " + _vm._s(_vm.form.thirteen.extra)
-                              )
-                            ])
+                            _vm._v(
+                              "---> Specifies " +
+                                _vm._s(_vm.form.thirteen.extra)
+                            )
                           ])
                         : _vm._e()
                     ])
@@ -82130,9 +82141,7 @@ var render = function() {
                       _vm._v(" "),
                       _vm.form.sixteen.extra
                         ? _c("span", { staticClass: "red" }, [
-                            _c("strong", [
-                              _vm._v("---> " + _vm._s(_vm.form.sixteen.extra))
-                            ])
+                            _vm._v("---> " + _vm._s(_vm.form.sixteen.extra))
                           ])
                         : _vm._e()
                     ])
