@@ -2014,6 +2014,703 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/EditForm.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/EditForm.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "editForm",
+  props: {
+    list: ''
+  },
+  data: function data() {
+    return {
+      // form : this.list,
+      form: new Form({
+        id: this.list.id,
+        org_name: this.list.org_name,
+        owner_name: this.list.owner_name,
+        present_address: this.list.present_address,
+        permanent_address: this.list.permanent_address,
+        cell_no: this.list.cell_no,
+        concern_person: this.list.concern_person,
+        org_cell_no: this.list.org_cell_no,
+        bussiness_type: this.list.bussiness_type,
+        bussiness_year: this.list.bussiness_year,
+        one: this.list.one,
+        two: {
+          data: this.list.two_data,
+          extra: this.list.two_extra
+        },
+        three: this.list.three,
+        four: {
+          data: this.list.four_data,
+          extra: this.list.four_extra
+        },
+        five: this.list.five,
+        six: {
+          data: this.list.six_data,
+          extra: this.list.six_extra
+        },
+        seven: this.list.seven,
+        eight: this.list.eight,
+        nine: this.list.nine,
+        ten: {
+          data: this.list.ten_data,
+          extra: this.list.ten_extra
+        },
+        eleven: this.list.eleven,
+        twelve: {
+          data: this.list.twelve_data,
+          extra: this.list.twelve_extra
+        },
+        thirteen: {
+          data: this.list.thirteen_data,
+          extra: this.list.thirteen_extra
+        },
+        forteen: {
+          data: this.list.forteen_data,
+          extra: this.list.forteen_extra
+        },
+        fifteen: this.list.fifteen,
+        sixteen: {
+          data: this.list.sixteen_data,
+          extra: this.list.sixteen_extra
+        }
+      })
+    };
+  },
+  methods: {
+    //setNull
+    setNullTwo: function setNullTwo($values) {
+      if ($values != null) {
+        this.form.two.extra = null;
+      }
+    },
+    setNullFour: function setNullFour($values) {
+      if ($values != null) {
+        this.form.four.extra = null;
+      }
+    },
+    setNullTen: function setNullTen($values) {
+      if ($values != null) {
+        this.form.ten.extra = null;
+      }
+    },
+    setNullTwelve: function setNullTwelve($values) {
+      if ($values != null) {
+        this.form.twelve.extra = null;
+      }
+    },
+    setNullThirteen: function setNullThirteen($values) {
+      if ($values != null) {
+        this.form.thirteen.extra = null;
+      }
+    },
+    setNullSixteen: function setNullSixteen($values) {
+      if ($values != null) {
+        this.form.sixteen.extra = null;
+      }
+    },
+    //formCreate
+    update: function update() {
+      var _this = this;
+
+      this.$Progress.start(); //console.log(this.form);
+
+      this.form.put('api/form-one/' + this.form.id).then(function () {
+        toast.fire({
+          type: 'success',
+          title: 'Updated successfully'
+        }); //this.form.reset();
+
+        _this.$Progress.finish();
+      })["catch"](function () {});
+    },
+    editform: function editform(list) {
+      //this.form.reset();
+      this.form.fill(list);
+    }
+  },
+  mounted: function mounted() {
+    // this.editform();
+    console.log('Component mounted.');
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormList.vue?vue&type=script&lang=js&":
 /*!*******************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FormList.vue?vue&type=script&lang=js& ***!
@@ -2023,6 +2720,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
 //
 //
 //
@@ -2106,8 +2805,28 @@ __webpack_require__.r(__webpack_exports__);
       });
       this.$Progress.finish();
     },
-    edtiList: function edtiList() {},
-    deleteList: function deleteList() {}
+    deleteList: function deleteList(id) {
+      swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then(function (result) {
+        // send request to the server
+        if (result.value) {
+          axios["delete"]('api/form-one/' + id).then(function () {
+            swal.fire('Deleted!', 'Your file has been deleted.', 'success');
+            Fire.$emit('afterCreate');
+          })["catch"](function () {
+            swal.fire('Failed!', 'There was somethinbg wrong', 'warning');
+          });
+        }
+      });
+    },
+    send: function send() {}
   },
   created: function created() {
     var _this3 = this;
@@ -2948,6 +3667,199 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "viewForm",
   props: {
@@ -2956,7 +3868,9 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       form_id: this.id,
-      lists: {}
+      lists: {
+        user: {}
+      }
     };
   },
   methods: {
@@ -8332,6 +9246,25 @@ exports.push([module.i, ".v-toaster{position:fixed;top:50px;right:0;z-index:1000
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/EditForm.vue?vue&type=style&index=0&id=64596f4e&scoped=true&lang=css&":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/EditForm.vue?vue&type=style&index=0&id=64596f4e&scoped=true&lang=css& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.is-invalid[data-v-64596f4e] {\n      border-color: #E84444;\n      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(232,68,68,.6);\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormList.vue?vue&type=style&index=0&id=0ff09826&scoped=true&lang=css&":
 /*!**************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FormList.vue?vue&type=style&index=0&id=0ff09826&scoped=true&lang=css& ***!
@@ -8344,7 +9277,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.is-invalid[data-v-0ff09826] {\r\n      border-color: #E84444;\r\n      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(232,68,68,.6);\n}\r\n", ""]);
+exports.push([module.i, "\n.is-invalid[data-v-0ff09826] {\n      border-color: #E84444;\n      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(232,68,68,.6);\n}\n", ""]);
 
 // exports
 
@@ -8363,7 +9296,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.is-invalid[data-v-afd86e2e] {\r\n      border-color: #E84444;\r\n      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(232,68,68,.6);\n}\r\n", ""]);
+exports.push([module.i, "\n.is-invalid[data-v-afd86e2e] {\n      border-color: #E84444;\n      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(232,68,68,.6);\n}\n", ""]);
 
 // exports
 
@@ -8382,7 +9315,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.is-invalid[data-v-24be49f4] {\r\n      border-color: #E84444;\r\n      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(232,68,68,.6);\n}\r\n", ""]);
+exports.push([module.i, "\n.is-invalid[data-v-24be49f4] {\n      border-color: #E84444;\n      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(232,68,68,.6);\n}\n", ""]);
 
 // exports
 
@@ -58271,6 +59204,36 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/EditForm.vue?vue&type=style&index=0&id=64596f4e&scoped=true&lang=css&":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/EditForm.vue?vue&type=style&index=0&id=64596f4e&scoped=true&lang=css& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./EditForm.vue?vue&type=style&index=0&id=64596f4e&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/EditForm.vue?vue&type=style&index=0&id=64596f4e&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormList.vue?vue&type=style&index=0&id=0ff09826&scoped=true&lang=css&":
 /*!******************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FormList.vue?vue&type=style&index=0&id=0ff09826&scoped=true&lang=css& ***!
@@ -74722,163 +75685,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormList.vue?vue&type=template&id=0ff09826&scoped=true&":
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/EditForm.vue?vue&type=template&id=64596f4e&scoped=true&":
 /*!***********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FormList.vue?vue&type=template&id=0ff09826&scoped=true& ***!
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/EditForm.vue?vue&type=template&id=64596f4e&scoped=true& ***!
   \***********************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "card" }, [
-      _vm._m(0),
-      _vm._v(" "),
-      _c("div", { staticClass: "card-body table-responsive p-0" }, [
-        _c("table", { staticClass: "table table-hover" }, [
-          _c(
-            "tbody",
-            [
-              _vm._m(1),
-              _vm._v(" "),
-              _vm._l(_vm.lists.data, function(list) {
-                return _c("tr", { key: list.id }, [
-                  _c("td", [_vm._v(_vm._s(list.id))]),
-                  _vm._v(" "),
-                  _c("td", [
-                    _vm._v(
-                      _vm._s(list.user.first_name) +
-                        " " +
-                        _vm._s(list.user.last_name)
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(list.user.user_type))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(list.org_name))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(list.owner_name))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(list.bussiness_type))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(list.bussiness_year))]),
-                  _vm._v(" "),
-                  _c(
-                    "td",
-                    [
-                      _c("a", {
-                        staticClass: "fa fa-trash red",
-                        attrs: { href: "#" },
-                        on: {
-                          click: function($event) {
-                            return _vm.deleteList(list.id)
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "router-link",
-                        {
-                          attrs: {
-                            to: { name: "viewForm", params: { id: list.id } }
-                          }
-                        },
-                        [_c("i", { staticClass: "fa fa-eye green" })]
-                      ),
-                      _vm._v(" "),
-                      _c("a", {
-                        staticClass: "fa fa-edit orange",
-                        attrs: { href: "#" },
-                        on: {
-                          click: function($event) {
-                            return _vm.editList(list)
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("a", {
-                        staticClass: "fab fa-google-plus-g",
-                        attrs: { href: "#" },
-                        on: {
-                          click: function($event) {
-                            return _vm.deleteList(list.id)
-                          }
-                        }
-                      })
-                    ],
-                    1
-                  )
-                ])
-              })
-            ],
-            2
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "card-footer" },
-        [
-          _c("pagination", {
-            attrs: { data: _vm.lists },
-            on: { "pagination-change-page": _vm.getResults }
-          })
-        ],
-        1
-      )
-    ])
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-header" }, [
-      _c("h3", { staticClass: "card-title" }, [_vm._v("Form List")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("tr", [
-      _c("th", [_vm._v("ID")]),
-      _vm._v(" "),
-      _c("th", [_vm._v("Surveyed By")]),
-      _vm._v(" "),
-      _c("th", [_vm._v("Surveyor Type")]),
-      _vm._v(" "),
-      _c("th", [_vm._v("Organization Name")]),
-      _vm._v(" "),
-      _c("th", [_vm._v("Owner Name")]),
-      _vm._v(" "),
-      _c("th", [_vm._v("Bussiness Type")]),
-      _vm._v(" "),
-      _c("th", [_vm._v("Bussiness Year")]),
-      _vm._v(" "),
-      _c("th", [_vm._v("Action")])
-    ])
-  }
-]
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/SurveyForm.vue?vue&type=template&id=afd86e2e&scoped=true&":
-/*!*************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/SurveyForm.vue?vue&type=template&id=afd86e2e&scoped=true& ***!
-  \*************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -74902,7 +75712,7 @@ var render = function() {
             on: {
               submit: function($event) {
                 $event.preventDefault()
-                return _vm.store()
+                return _vm.update()
               },
               keydown: function($event) {
                 return _vm.form.onKeydown($event)
@@ -75566,9 +76376,7 @@ var render = function() {
                         _vm._v(" "),
                         _vm.form.two.extra
                           ? _c("span", { staticClass: "red" }, [
-                              _c("strong", [
-                                _vm._v("---> " + _vm._s(_vm.form.two.extra))
-                              ])
+                              _vm._v("---> " + _vm._s(_vm.form.two.extra))
                             ])
                           : _vm._e()
                       ],
@@ -77441,11 +78249,10 @@ var render = function() {
                       _vm._v(" "),
                       _vm.form.thirteen.extra
                         ? _c("span", { staticClass: "red" }, [
-                            _c("strong", [
-                              _vm._v(
-                                " Specifies " + _vm._s(_vm.form.thirteen.extra)
-                              )
-                            ])
+                            _vm._v(
+                              "---> Specifies " +
+                                _vm._s(_vm.form.thirteen.extra)
+                            )
                           ])
                         : _vm._e()
                     ])
@@ -77871,9 +78678,3450 @@ var render = function() {
                       _vm._v(" "),
                       _vm.form.sixteen.extra
                         ? _c("span", { staticClass: "red" }, [
-                            _c("strong", [
-                              _vm._v("---> " + _vm._s(_vm.form.sixteen.extra))
+                            _vm._v("---> " + _vm._s(_vm.form.sixteen.extra))
+                          ])
+                        : _vm._e()
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _vm._m(26)
+              ])
+            ])
+          ]
+        )
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header" }, [
+      _c(
+        "h4",
+        { staticClass: "card-title", attrs: { id: "basic-layout-form" } },
+        [_vm._v("Edit From ")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "text" }, [
+      _vm._v("Organization Name"),
+      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", [
+      _vm._v("Owner Name"),
+      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", [
+      _vm._v("Present Address"),
+      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", [
+      _vm._v("Permanent Address"),
+      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", [
+      _vm._v("Cell No"),
+      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", [
+      _vm._v("Concern Person"),
+      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", [
+      _vm._v("Organization Cell No"),
+      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", [
+      _vm._v("Bussiness Type"),
+      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", [
+      _vm._v("Bussiness Year"),
+      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", [
+      _vm._v("1.How long you are dealing with Hi-vallay product"),
+      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", [
+      _vm._v("2.Are you dealing with other company"),
+      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", [
+      _vm._v("3.How do you feel about Quality of Hi-vallay fan?"),
+      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", [
+      _vm._v(
+        "4.What does the customer except from Hi-vally in term of quality  ?"
+      ),
+      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", [
+      _vm._v("5.How do you rate the promotional activities given y Hi-vally?"),
+      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", [
+      _vm._v(
+        "6.What type of promotional activity do you prefer with Hi-vally product?"
+      ),
+      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", [
+      _vm._v(
+        "7.Whether the expected Quantity of Hi-vally is is supplied to you in time?"
+      ),
+      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", [
+      _vm._v("8.What do you feel about credit period given by Hi-Vally?"),
+      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", [
+      _vm._v(
+        "9.What do you feel about the employee dealing with you in Hi-Vally?"
+      ),
+      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", [
+      _vm._v(
+        "10.What are the factors that you expects from Hi-Vally Products?"
+      ),
+      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", [
+      _vm._v("11.How much do you spend in winter Booking?"),
+      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", [
+      _vm._v("12.Do you have any complains about Hi-Vallay Product?"),
+      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", [
+      _vm._v("13.Do you recommend your customer Hi-Vallay Product?"),
+      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", [
+      _vm._v("14.What do you feel about after Sales Service Given y Hi-Vally?"),
+      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", [
+      _vm._v("15.Last Balance"),
+      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", [
+      _vm._v(
+        "16.Do you have any suggestion in improve the quality of Hi-Vally product"
+      ),
+      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-2" }, [
+        _c("div", { staticClass: "form-group" }, [
+          _c("div", { staticClass: "form-actions pull-right" }, [
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-success btn-min-width mr-1 mb-1",
+                attrs: { type: "submit pull-right" }
+              },
+              [
+                _c("i", { staticClass: "fa fa-check" }),
+                _vm._v(" Update\n                                            ")
+              ]
+            )
+          ])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormList.vue?vue&type=template&id=0ff09826&scoped=true&":
+/*!***********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FormList.vue?vue&type=template&id=0ff09826&scoped=true& ***!
+  \***********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "card" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "card-body table-responsive p-0" }, [
+        _c("table", { staticClass: "table table-hover" }, [
+          _c(
+            "tbody",
+            [
+              _vm._m(1),
+              _vm._v(" "),
+              _vm._l(_vm.lists.data, function(list) {
+                return _c("tr", { key: list.id }, [
+                  _c("td", [_vm._v(_vm._s(list.id))]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _vm._v(
+                      _vm._s(list.user.first_name) +
+                        " " +
+                        _vm._s(list.user.last_name)
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(list.user.user_type))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(list.org_name))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(list.owner_name))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(list.bussiness_type))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(list.bussiness_year))]),
+                  _vm._v(" "),
+                  _c(
+                    "td",
+                    [
+                      _c("a", {
+                        staticClass: "fa fa-trash red",
+                        attrs: { href: "#" },
+                        on: {
+                          click: function($event) {
+                            return _vm.deleteList(list.id)
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "router-link",
+                        {
+                          attrs: {
+                            to: { name: "viewForm", params: { id: list.id } }
+                          }
+                        },
+                        [_c("i", { staticClass: "fa fa-eye green" })]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "router-link",
+                        {
+                          attrs: {
+                            to: { name: "editForm", params: { list: list } }
+                          }
+                        },
+                        [_c("i", { staticClass: "fa fa-edit orange" })]
+                      ),
+                      _vm._v(" "),
+                      _c("a", {
+                        staticClass: "fab fa-google-plus-g",
+                        attrs: { href: "#" },
+                        on: {
+                          click: function($event) {
+                            return _vm.send(list.id)
+                          }
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ])
+              })
+            ],
+            2
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "card-footer" },
+        [
+          _c("pagination", {
+            attrs: { data: _vm.lists },
+            on: { "pagination-change-page": _vm.getResults }
+          })
+        ],
+        1
+      )
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header" }, [
+      _c("h3", { staticClass: "card-title" }, [_vm._v("Form List")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("th", [_vm._v("ID")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Surveyed By")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Surveyor Type")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Organization Name")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Owner Name")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Bussiness Type")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Bussiness Year")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Action")])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/SurveyForm.vue?vue&type=template&id=afd86e2e&scoped=true&":
+/*!*************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/SurveyForm.vue?vue&type=template&id=afd86e2e&scoped=true& ***!
+  \*************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "card" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "card-content collapse show" }, [
+      _c("div", { staticClass: "card-body" }, [
+        _c(
+          "form",
+          {
+            attrs: { id: "addComponent" },
+            on: {
+              submit: function($event) {
+                $event.preventDefault()
+                return _vm.store()
+              },
+              keydown: function($event) {
+                return _vm.form.onKeydown($event)
+              }
+            }
+          },
+          [
+            _c("div", { staticClass: "form-body" }, [
+              _c("div", { staticClass: "card-body" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _vm._m(1),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.form.org_name,
+                              expression: "form.org_name"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            "is-invalid": _vm.form.errors.has("org_name")
+                          },
+                          attrs: {
+                            type: "text",
+                            placeholder: "Organization Name",
+                            name: "org_name"
+                          },
+                          domProps: { value: _vm.form.org_name },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.form,
+                                "org_name",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.form, field: "org_name" }
+                        })
+                      ],
+                      1
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _vm._m(2),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.form.owner_name,
+                              expression: "form.owner_name"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            "is-invalid": _vm.form.errors.has("owner_name")
+                          },
+                          attrs: {
+                            type: "text",
+                            placeholder: "Owner Name",
+                            name: "owner_name"
+                          },
+                          domProps: { value: _vm.form.owner_name },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.form,
+                                "owner_name",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.form, field: "owner_name" }
+                        })
+                      ],
+                      1
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _vm._m(3),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.form.present_address,
+                              expression: "form.present_address"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            "is-invalid": _vm.form.errors.has("present_address")
+                          },
+                          attrs: {
+                            type: "text",
+                            placeholder: "Present Address",
+                            name: "present_address"
+                          },
+                          domProps: { value: _vm.form.present_address },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.form,
+                                "present_address",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.form, field: "present_address" }
+                        })
+                      ],
+                      1
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _vm._m(4),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.form.permanent_address,
+                              expression: "form.permanent_address"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            "is-invalid": _vm.form.errors.has(
+                              "permanent_address"
+                            )
+                          },
+                          attrs: {
+                            type: "text",
+                            placeholder: "Permanent Address",
+                            name: "permanent_address"
+                          },
+                          domProps: { value: _vm.form.permanent_address },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.form,
+                                "permanent_address",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.form, field: "permanent_address" }
+                        })
+                      ],
+                      1
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _vm._m(5),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.form.cell_no,
+                              expression: "form.cell_no"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            "is-invalid": _vm.form.errors.has("cell_no")
+                          },
+                          attrs: {
+                            type: "text",
+                            placeholder: "Cell No",
+                            name: "cell_no"
+                          },
+                          domProps: { value: _vm.form.cell_no },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(_vm.form, "cell_no", $event.target.value)
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.form, field: "cell_no" }
+                        })
+                      ],
+                      1
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _vm._m(6),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.form.concern_person,
+                              expression: "form.concern_person"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            "is-invalid": _vm.form.errors.has("concern_person")
+                          },
+                          attrs: {
+                            type: "text",
+                            placeholder: "Concern Person",
+                            name: "concern_person"
+                          },
+                          domProps: { value: _vm.form.concern_person },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.form,
+                                "concern_person",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.form, field: "concern_person" }
+                        })
+                      ],
+                      1
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _vm._m(7),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.form.org_cell_no,
+                              expression: "form.org_cell_no"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            "is-invalid": _vm.form.errors.has("org_cell_no")
+                          },
+                          attrs: {
+                            type: "text",
+                            placeholder: "Organization Cell No",
+                            name: "org_cell_no"
+                          },
+                          domProps: { value: _vm.form.org_cell_no },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.form,
+                                "org_cell_no",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.form, field: "org_cell_no" }
+                        })
+                      ],
+                      1
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _vm._m(8),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.form.bussiness_type,
+                              expression: "form.bussiness_type"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            "is-invalid": _vm.form.errors.has("bussiness_type")
+                          },
+                          attrs: {
+                            type: "text",
+                            placeholder: "Bussiness Type",
+                            name: "bussiness_type"
+                          },
+                          domProps: { value: _vm.form.bussiness_type },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.form,
+                                "bussiness_type",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.form, field: "bussiness_type" }
+                        })
+                      ],
+                      1
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _vm._m(9),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.form.bussiness_year,
+                              expression: "form.bussiness_year"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            "is-invalid": _vm.form.errors.has("bussiness_year")
+                          },
+                          attrs: {
+                            type: "text",
+                            placeholder: "Bussiness Year",
+                            name: "bussiness_year"
+                          },
+                          domProps: { value: _vm.form.bussiness_year },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.form,
+                                "bussiness_year",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.form, field: "bussiness_year" }
+                        })
+                      ],
+                      1
+                    )
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-body" }, [
+              _c("div", { staticClass: "card-body" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _vm._m(10),
+                        _vm._v(" "),
+                        _c("br"),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.form.one,
+                              expression: "form.one"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: { "is-invalid": _vm.form.errors.has("one") },
+                          attrs: {
+                            type: "text",
+                            placeholder: "year",
+                            name: "one"
+                          },
+                          domProps: { value: _vm.form.one },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(_vm.form, "one", $event.target.value)
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.form, field: "one" }
+                        }),
+                        _vm._v(" "),
+                        _c("br"),
+                        _vm._v(" "),
+                        _vm.form.one
+                          ? _c("span", { staticClass: "red" }, [
+                              _c("strong", [
+                                _vm._v("Picked: " + _vm._s(_vm.form.one))
+                              ])
                             ])
+                          : _vm._e()
+                      ],
+                      1
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-12" }, [
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _vm._m(11),
+                        _vm._v(" "),
+                        _c("br"),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "row",
+                            class: {
+                              "is-invalid": _vm.form.errors.has("two.data")
+                            }
+                          },
+                          [
+                            _c("div", { staticClass: "col-md-6" }, [
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.form.two.data,
+                                    expression: "form.two.data"
+                                  }
+                                ],
+                                attrs: {
+                                  type: "radio",
+                                  id: "yes",
+                                  value: "yes",
+                                  name: "two.data"
+                                },
+                                domProps: {
+                                  checked: _vm._q(_vm.form.two.data, "yes")
+                                },
+                                on: {
+                                  change: function($event) {
+                                    return _vm.$set(_vm.form.two, "data", "yes")
+                                  }
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("label", { attrs: { for: "yes" } }, [
+                                _vm._v("Yes")
+                              ]),
+                              _vm._v(" "),
+                              _vm.form.two.data == "yes"
+                                ? _c(
+                                    "div",
+                                    {
+                                      staticClass: "col-md-6",
+                                      class: {
+                                        "is-invalid": _vm.form.errors.has(
+                                          "two.extra"
+                                        )
+                                      }
+                                    },
+                                    [
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: _vm.form.two.extra,
+                                            expression: "form.two.extra"
+                                          }
+                                        ],
+                                        staticClass: "form-control",
+                                        attrs: {
+                                          type: "text",
+                                          placeholder:
+                                            "If yes,please specifies",
+                                          name: "two.extra"
+                                        },
+                                        domProps: { value: _vm.form.two.extra },
+                                        on: {
+                                          input: function($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.form.two,
+                                              "extra",
+                                              $event.target.value
+                                            )
+                                          }
+                                        }
+                                      }),
+                                      _vm._v(" "),
+                                      _c("has-error", {
+                                        attrs: {
+                                          form: _vm.form,
+                                          field: "two.extra"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  )
+                                : _vm._e()
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col-md-6" }, [
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.form.two.data,
+                                    expression: "form.two.data"
+                                  }
+                                ],
+                                attrs: {
+                                  type: "radio",
+                                  id: "no",
+                                  value: "no",
+                                  name: "two.data"
+                                },
+                                domProps: {
+                                  checked: _vm._q(_vm.form.two.data, "no")
+                                },
+                                on: {
+                                  click: function($event) {
+                                    return _vm.setNullTwo(_vm.form.two.extra)
+                                  },
+                                  change: function($event) {
+                                    return _vm.$set(_vm.form.two, "data", "no")
+                                  }
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("label", { attrs: { for: "yes" } }, [
+                                _vm._v("No")
+                              ])
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("br"),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.form, field: "two.data" }
+                        }),
+                        _vm._v(" "),
+                        _vm.form.two.data
+                          ? _c("span", { staticClass: "red" }, [
+                              _c("strong", [
+                                _vm._v(
+                                  "Picked: " + _vm._s(_vm.form.two.data) + " "
+                                )
+                              ])
+                            ])
+                          : _vm._e(),
+                        _vm._v(" "),
+                        _vm.form.two.extra
+                          ? _c("span", { staticClass: "red" }, [
+                              _vm._v("---> " + _vm._s(_vm.form.two.extra))
+                            ])
+                          : _vm._e()
+                      ],
+                      1
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-12" }, [
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _vm._m(12),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "row",
+                            class: {
+                              "is-invalid": _vm.form.errors.has("three")
+                            },
+                            attrs: { name: "three" }
+                          },
+                          [
+                            _c("br"),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col-md-3" }, [
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.form.three,
+                                    expression: "form.three"
+                                  }
+                                ],
+                                attrs: {
+                                  type: "radio",
+                                  id: "Very Good",
+                                  value: "Very Good",
+                                  name: "three"
+                                },
+                                domProps: {
+                                  checked: _vm._q(_vm.form.three, "Very Good")
+                                },
+                                on: {
+                                  change: function($event) {
+                                    return _vm.$set(
+                                      _vm.form,
+                                      "three",
+                                      "Very Good"
+                                    )
+                                  }
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("label", { attrs: { for: "Very Good" } }, [
+                                _vm._v("Very Good")
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col-md-3" }, [
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.form.three,
+                                    expression: "form.three"
+                                  }
+                                ],
+                                attrs: {
+                                  type: "radio",
+                                  id: "Good",
+                                  value: "Good",
+                                  name: "three"
+                                },
+                                domProps: {
+                                  checked: _vm._q(_vm.form.three, "Good")
+                                },
+                                on: {
+                                  change: function($event) {
+                                    return _vm.$set(_vm.form, "three", "Good")
+                                  }
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("label", { attrs: { for: "Good" } }, [
+                                _vm._v("Good")
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col-md-3" }, [
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.form.three,
+                                    expression: "form.three"
+                                  }
+                                ],
+                                attrs: {
+                                  type: "radio",
+                                  id: "Satisfactory",
+                                  value: "Satisfactory",
+                                  name: "three"
+                                },
+                                domProps: {
+                                  checked: _vm._q(
+                                    _vm.form.three,
+                                    "Satisfactory"
+                                  )
+                                },
+                                on: {
+                                  change: function($event) {
+                                    return _vm.$set(
+                                      _vm.form,
+                                      "three",
+                                      "Satisfactory"
+                                    )
+                                  }
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("label", { attrs: { for: "Satisfactory" } }, [
+                                _vm._v("Satisfactory")
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col-md-3" }, [
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.form.three,
+                                    expression: "form.three"
+                                  }
+                                ],
+                                attrs: {
+                                  type: "radio",
+                                  id: "Poor",
+                                  value: "Poor",
+                                  name: "three"
+                                },
+                                domProps: {
+                                  checked: _vm._q(_vm.form.three, "Poor")
+                                },
+                                on: {
+                                  change: function($event) {
+                                    return _vm.$set(_vm.form, "three", "Poor")
+                                  }
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("label", { attrs: { for: "Poor" } }, [
+                                _vm._v("Poor")
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("br")
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.form, field: "three" }
+                        }),
+                        _vm._v(" "),
+                        _vm.form.three
+                          ? _c("span", { staticClass: "red" }, [
+                              _c("strong", [
+                                _vm._v("Picked: " + _vm._s(_vm.form.three))
+                              ])
+                            ])
+                          : _vm._e()
+                      ],
+                      1
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-12" }, [
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _vm._m(13),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "row",
+                            class: {
+                              "is-invalid": _vm.form.errors.has("four.data")
+                            }
+                          },
+                          [
+                            _c("br"),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col-md-3" }, [
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.form.four.data,
+                                    expression: "form.four.data"
+                                  }
+                                ],
+                                attrs: {
+                                  type: "radio",
+                                  id: "Design",
+                                  value: "Design"
+                                },
+                                domProps: {
+                                  checked: _vm._q(_vm.form.four.data, "Design")
+                                },
+                                on: {
+                                  click: function($event) {
+                                    return _vm.setNullFour(_vm.form.four.extra)
+                                  },
+                                  change: function($event) {
+                                    return _vm.$set(
+                                      _vm.form.four,
+                                      "data",
+                                      "Design"
+                                    )
+                                  }
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("label", { attrs: { for: "Design" } }, [
+                                _vm._v("Design")
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col-md-3" }, [
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.form.four.data,
+                                    expression: "form.four.data"
+                                  }
+                                ],
+                                attrs: {
+                                  type: "radio",
+                                  id: "Speed",
+                                  value: "Speed"
+                                },
+                                domProps: {
+                                  checked: _vm._q(_vm.form.four.data, "Speed")
+                                },
+                                on: {
+                                  click: function($event) {
+                                    return _vm.setNullFour(_vm.form.four.extra)
+                                  },
+                                  change: function($event) {
+                                    return _vm.$set(
+                                      _vm.form.four,
+                                      "data",
+                                      "Speed"
+                                    )
+                                  }
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("label", { attrs: { for: "Speed" } }, [
+                                _vm._v("Speed")
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col-md-3" }, [
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.form.four.data,
+                                    expression: "form.four.data"
+                                  }
+                                ],
+                                attrs: {
+                                  type: "radio",
+                                  id: "Power Consumption",
+                                  value: "Power Consumption"
+                                },
+                                domProps: {
+                                  checked: _vm._q(
+                                    _vm.form.four.data,
+                                    "Power Consumption"
+                                  )
+                                },
+                                on: {
+                                  click: function($event) {
+                                    return _vm.setNullFour(_vm.form.four.extra)
+                                  },
+                                  change: function($event) {
+                                    return _vm.$set(
+                                      _vm.form.four,
+                                      "data",
+                                      "Power Consumption"
+                                    )
+                                  }
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "label",
+                                { attrs: { for: "Power Consumption" } },
+                                [_vm._v("Power Consumption")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "col-md-3" },
+                              [
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.form.four.data,
+                                      expression: "form.four.data"
+                                    }
+                                  ],
+                                  attrs: {
+                                    type: "radio",
+                                    id: "Any Other",
+                                    value: "Any Other"
+                                  },
+                                  domProps: {
+                                    checked: _vm._q(
+                                      _vm.form.four.data,
+                                      "Any Other"
+                                    )
+                                  },
+                                  on: {
+                                    change: function($event) {
+                                      return _vm.$set(
+                                        _vm.form.four,
+                                        "data",
+                                        "Any Other"
+                                      )
+                                    }
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c("label", { attrs: { for: "Any Other" } }, [
+                                  _vm._v("Any Other")
+                                ]),
+                                _vm._v(" "),
+                                _vm.form.four.data == "Any Other"
+                                  ? _c(
+                                      "div",
+                                      {
+                                        staticClass: "col-md-3",
+                                        class: {
+                                          "is-invalid": _vm.form.errors.has(
+                                            "four.extra"
+                                          )
+                                        }
+                                      },
+                                      [
+                                        _c("input", {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value: _vm.form.four.extra,
+                                              expression: "form.four.extra"
+                                            }
+                                          ],
+                                          staticClass: "form-control",
+                                          attrs: {
+                                            type: "text",
+                                            placeholder: "Anyother"
+                                          },
+                                          domProps: {
+                                            value: _vm.form.four.extra
+                                          },
+                                          on: {
+                                            input: function($event) {
+                                              if ($event.target.composing) {
+                                                return
+                                              }
+                                              _vm.$set(
+                                                _vm.form.four,
+                                                "extra",
+                                                $event.target.value
+                                              )
+                                            }
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                _c("has-error", {
+                                  attrs: { form: _vm.form, field: "three" }
+                                })
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c("br")
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.form, field: "three" }
+                        }),
+                        _vm._v(" "),
+                        _vm.form.four.data
+                          ? _c("span", { staticClass: "red" }, [
+                              _c("strong", [
+                                _vm._v("Picked: " + _vm._s(_vm.form.four.data))
+                              ])
+                            ])
+                          : _vm._e(),
+                        _vm._v(" "),
+                        _vm.form.four.extra
+                          ? _c("span", { staticClass: "red" }, [
+                              _vm._v("---> " + _vm._s(_vm.form.four.extra))
+                            ])
+                          : _vm._e()
+                      ],
+                      1
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-12" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _vm._m(14),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "row",
+                          class: { "is-invalid": _vm.form.errors.has("five") }
+                        },
+                        [
+                          _c("br"),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.five,
+                                  expression: "form.five"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Very Good",
+                                value: "Very Good"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.five, "Very Good")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(_vm.form, "five", "Very Good")
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Very Good" } }, [
+                              _vm._v("Very Good")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.five,
+                                  expression: "form.five"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Good",
+                                value: "Good"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.five, "Good")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(_vm.form, "five", "Good")
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Good" } }, [
+                              _vm._v("Good")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.five,
+                                  expression: "form.five"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Satisfactory",
+                                value: "Satisfactory"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.five, "Satisfactory")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form,
+                                    "five",
+                                    "Satisfactory"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Satisfactory" } }, [
+                              _vm._v("Satisfactory")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.five,
+                                  expression: "form.five"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Poor",
+                                value: "Poor"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.five, "Poor")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(_vm.form, "five", "Poor")
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Poor" } }, [
+                              _vm._v("Poor")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("br")
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _vm.form.five
+                        ? _c("span", { staticClass: "red" }, [
+                            _c("strong", [
+                              _vm._v("Picked: " + _vm._s(_vm.form.five))
+                            ])
+                          ])
+                        : _vm._e()
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-12" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _vm._m(15),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "row",
+                          class: {
+                            "is-invalid": _vm.form.errors.has("six.data")
+                          }
+                        },
+                        [
+                          _c("br"),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.six.data,
+                                  expression: "form.six.data"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Discount",
+                                value: "Discount"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.six.data, "Discount")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.six,
+                                    "data",
+                                    "Discount"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Design" } }, [
+                              _vm._v("Discount")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.six.data,
+                                  expression: "form.six.data"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Gift",
+                                value: "Gift"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.six.data, "Gift")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(_vm.form.six, "data", "Gift")
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Speed" } }, [
+                              _vm._v("Gift")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.six.data,
+                                  expression: "form.six.data"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Price offer",
+                                value: "Price offer"
+                              },
+                              domProps: {
+                                checked: _vm._q(
+                                  _vm.form.six.data,
+                                  "Price offer"
+                                )
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.six,
+                                    "data",
+                                    "Price offer"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Price offer" } }, [
+                              _vm._v("Price offer")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.six.data,
+                                  expression: "form.six.data"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Others",
+                                value: "Others"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.six.data, "Others")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.six,
+                                    "data",
+                                    "Others"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Others" } }, [
+                              _vm._v("Others")
+                            ]),
+                            _vm._v(" "),
+                            _vm.form.six.data == "Others"
+                              ? _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.form.six.extra,
+                                      expression: "form.six.extra"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    type: "text",
+                                    placeholder: "Others"
+                                  },
+                                  domProps: { value: _vm.form.six.extra },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.form.six,
+                                        "extra",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              : _vm._e()
+                          ]),
+                          _vm._v(" "),
+                          _c("br")
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _vm.form.six.data
+                        ? _c("span", { staticClass: "red" }, [
+                            _c("strong", [
+                              _vm._v("Picked: " + _vm._s(_vm.form.six.data))
+                            ])
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.form.six.extra
+                        ? _c("span", { staticClass: "red" }, [
+                            _vm._v("---> " + _vm._s(_vm.form.six.extra))
+                          ])
+                        : _vm._e()
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-12" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _vm._m(16),
+                      _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "row",
+                          class: { "is-invalid": _vm.form.errors.has("seven") }
+                        },
+                        [
+                          _c("div", { staticClass: "col-md-6" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.seven,
+                                  expression: "form.seven"
+                                }
+                              ],
+                              attrs: { type: "radio", id: "yes", value: "yes" },
+                              domProps: {
+                                checked: _vm._q(_vm.form.seven, "yes")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(_vm.form, "seven", "yes")
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "yes" } }, [
+                              _vm._v("Yes")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-6" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.seven,
+                                  expression: "form.seven"
+                                }
+                              ],
+                              attrs: { type: "radio", id: "no", value: "no" },
+                              domProps: {
+                                checked: _vm._q(_vm.form.seven, "no")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(_vm.form, "seven", "no")
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "no" } }, [
+                              _vm._v("No")
+                            ])
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _vm.form.seven
+                        ? _c("span", { staticClass: "red" }, [
+                            _c("strong", [
+                              _vm._v("Picked: " + _vm._s(_vm.form.seven) + " ")
+                            ])
+                          ])
+                        : _vm._e()
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-12" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _vm._m(17),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "row",
+                          class: { "is-invalid": _vm.form.errors.has("eight") }
+                        },
+                        [
+                          _c("br"),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.eight,
+                                  expression: "form.eight"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Very Good",
+                                value: "Very Good"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.eight, "Very Good")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form,
+                                    "eight",
+                                    "Very Good"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Very Good" } }, [
+                              _vm._v("Very Good")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.eight,
+                                  expression: "form.eight"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Good",
+                                value: "Good"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.eight, "Good")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(_vm.form, "eight", "Good")
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Good" } }, [
+                              _vm._v("Good")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.eight,
+                                  expression: "form.eight"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Satisfactory",
+                                value: "Satisfactory"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.eight, "Satisfactory")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form,
+                                    "eight",
+                                    "Satisfactory"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Satisfactory" } }, [
+                              _vm._v("Satisfactory")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.eight,
+                                  expression: "form.eight"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Poor",
+                                value: "Poor"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.eight, "Poor")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(_vm.form, "eight", "Poor")
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Poor" } }, [
+                              _vm._v("Poor")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("br")
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _vm.form.eight
+                        ? _c("span", { staticClass: "red" }, [
+                            _c("strong", [
+                              _vm._v("Picked: " + _vm._s(_vm.form.eight))
+                            ])
+                          ])
+                        : _vm._e()
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-12" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _vm._m(18),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "row",
+                          class: { "is-invalid": _vm.form.errors.has("nine") }
+                        },
+                        [
+                          _c("br"),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.nine,
+                                  expression: "form.nine"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Highly Satisfied",
+                                value: "Highly Satisfied"
+                              },
+                              domProps: {
+                                checked: _vm._q(
+                                  _vm.form.nine,
+                                  "Highly Satisfied"
+                                )
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form,
+                                    "nine",
+                                    "Highly Satisfied"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "label",
+                              { attrs: { for: "Highly Satisfied" } },
+                              [_vm._v("Highly Satisfied")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.nine,
+                                  expression: "form.nine"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Satisfied",
+                                value: "Satisfied"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.nine, "Satisfied")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(_vm.form, "nine", "Satisfied")
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Satisfied" } }, [
+                              _vm._v("Satisfied")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.nine,
+                                  expression: "form.nine"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Average",
+                                value: "Average"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.nine, "Average")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(_vm.form, "nine", "Average")
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Average" } }, [
+                              _vm._v("Average")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.nine,
+                                  expression: "form.nine"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Dissatisfied",
+                                value: "Dissatisfied"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.nine, "Dissatisfied")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form,
+                                    "nine",
+                                    "Dissatisfied"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Dissatisfied" } }, [
+                              _vm._v("Dissatisfied")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("br")
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _vm.form.nine
+                        ? _c("span", { staticClass: "red" }, [
+                            _c("strong", [
+                              _vm._v("Picked: " + _vm._s(_vm.form.nine))
+                            ])
+                          ])
+                        : _vm._e()
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-12" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _vm._m(19),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "row",
+                          class: {
+                            "is-invalid": _vm.form.errors.has("ten.data")
+                          }
+                        },
+                        [
+                          _c("br"),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.ten.data,
+                                  expression: "form.ten.data"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Promotional Sale",
+                                value: "Promotional Sale"
+                              },
+                              domProps: {
+                                checked: _vm._q(
+                                  _vm.form.ten.data,
+                                  "Promotional Sale"
+                                )
+                              },
+                              on: {
+                                click: function($event) {
+                                  return _vm.setNullTen(_vm.form.ten.extra)
+                                },
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.ten,
+                                    "data",
+                                    "Promotional Sale"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "label",
+                              { attrs: { for: "Promotional Sale" } },
+                              [_vm._v("Promotional Sale")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.ten.data,
+                                  expression: "form.ten.data"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Follow-Up",
+                                value: "Follow-Up"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.ten.data, "Follow-Up")
+                              },
+                              on: {
+                                click: function($event) {
+                                  return _vm.setNullTen(_vm.form.ten.extra)
+                                },
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.ten,
+                                    "data",
+                                    "Follow-Up"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Follow-Up" } }, [
+                              _vm._v("Follow-Up")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.ten.data,
+                                  expression: "form.ten.data"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Schele",
+                                value: "Schele"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.ten.data, "Schele")
+                              },
+                              on: {
+                                click: function($event) {
+                                  return _vm.setNullTen(_vm.form.ten.extra)
+                                },
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.ten,
+                                    "data",
+                                    "Schele"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Schele" } }, [
+                              _vm._v("Schele")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.ten.data,
+                                  expression: "form.ten.data"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Service",
+                                value: "Service"
+                              },
+                              domProps: {
+                                checked: _vm._q(_vm.form.ten.data, "Service")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.ten,
+                                    "data",
+                                    "Service"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Service" } }, [
+                              _vm._v("Service")
+                            ]),
+                            _vm._v(" "),
+                            _vm.form.ten.data == "Service"
+                              ? _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.form.ten.extra,
+                                      expression: "form.ten.extra"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    type: "text",
+                                    placeholder: "Service"
+                                  },
+                                  domProps: { value: _vm.form.ten.extra },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.form.ten,
+                                        "extra",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              : _vm._e()
+                          ]),
+                          _vm._v(" "),
+                          _c("br")
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _vm.form.ten.data
+                        ? _c("span", { staticClass: "red" }, [
+                            _c("strong", [
+                              _vm._v("Picked: " + _vm._s(_vm.form.ten.data))
+                            ])
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.form.ten.extra
+                        ? _c("span", { staticClass: "red" }, [
+                            _vm._v("---> " + _vm._s(_vm.form.ten.extra))
+                          ])
+                        : _vm._e()
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _vm._m(20),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.form.eleven,
+                              expression: "form.eleven"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            "is-invalid": _vm.form.errors.has("eleven")
+                          },
+                          attrs: {
+                            type: "text",
+                            placeholder: "spending",
+                            name: "eleven"
+                          },
+                          domProps: { value: _vm.form.eleven },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(_vm.form, "eleven", $event.target.value)
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.form, field: "eleven" }
+                        })
+                      ],
+                      1
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-12" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _vm._m(21),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "row",
+                          class: {
+                            "is-invalid": _vm.form.errors.has("twelve.data")
+                          }
+                        },
+                        [
+                          _c("br"),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.twelve.data,
+                                  expression: "form.twelve.data"
+                                }
+                              ],
+                              attrs: { type: "radio", id: "yes", value: "yes" },
+                              domProps: {
+                                checked: _vm._q(_vm.form.twelve.data, "yes")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.twelve,
+                                    "data",
+                                    "yes"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "yes" } }, [
+                              _vm._v("Yes")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.twelve.data,
+                                  expression: "form.twelve.data"
+                                }
+                              ],
+                              attrs: { type: "radio", id: "no", value: "no" },
+                              domProps: {
+                                checked: _vm._q(_vm.form.twelve.data, "no")
+                              },
+                              on: {
+                                click: function($event) {
+                                  return _vm.setNullTwelve(
+                                    _vm.form.twelve.extra
+                                  )
+                                },
+                                change: function($event) {
+                                  return _vm.$set(_vm.form.twelve, "data", "no")
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "no" } }, [
+                              _vm._v("No")
+                            ])
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _vm.form.twelve.data == "yes"
+                        ? _c(
+                            "div",
+                            {
+                              staticClass: "col-md-12",
+                              class: {
+                                "is-invalid": _vm.form.errors.has(
+                                  "twelve.extra"
+                                )
+                              }
+                            },
+                            [
+                              _c("div", { staticClass: "form-group" }, [
+                                _c("div", { staticClass: "row" }, [
+                                  _c("div", { staticClass: "col-md-3" }, [
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.form.twelve.extra,
+                                          expression: "form.twelve.extra"
+                                        }
+                                      ],
+                                      attrs: {
+                                        type: "radio",
+                                        id: "Delivery Goods",
+                                        value: "Delivery Goods"
+                                      },
+                                      domProps: {
+                                        checked: _vm._q(
+                                          _vm.form.twelve.extra,
+                                          "Delivery Goods"
+                                        )
+                                      },
+                                      on: {
+                                        change: function($event) {
+                                          return _vm.$set(
+                                            _vm.form.twelve,
+                                            "extra",
+                                            "Delivery Goods"
+                                          )
+                                        }
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "label",
+                                      { attrs: { for: "Delivery Goods" } },
+                                      [_vm._v("Delivery Goods")]
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "col-md-3" }, [
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.form.twelve.extra,
+                                          expression: "form.twelve.extra"
+                                        }
+                                      ],
+                                      attrs: {
+                                        type: "radio",
+                                        id: "Quality Product",
+                                        value: "Quality Product"
+                                      },
+                                      domProps: {
+                                        checked: _vm._q(
+                                          _vm.form.twelve.extra,
+                                          "Quality Product"
+                                        )
+                                      },
+                                      on: {
+                                        change: function($event) {
+                                          return _vm.$set(
+                                            _vm.form.twelve,
+                                            "extra",
+                                            "Quality Product"
+                                          )
+                                        }
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "label",
+                                      { attrs: { for: "Quality Product" } },
+                                      [_vm._v("Quality Product")]
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "col-md-3" }, [
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.form.twelve.extra,
+                                          expression: "form.twelve.extra"
+                                        }
+                                      ],
+                                      attrs: {
+                                        type: "radio",
+                                        id: "After Sales Service",
+                                        value: "After Sales Service"
+                                      },
+                                      domProps: {
+                                        checked: _vm._q(
+                                          _vm.form.twelve.extra,
+                                          "After Sales Service"
+                                        )
+                                      },
+                                      on: {
+                                        change: function($event) {
+                                          return _vm.$set(
+                                            _vm.form.twelve,
+                                            "extra",
+                                            "After Sales Service"
+                                          )
+                                        }
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "label",
+                                      { attrs: { for: "After Sales Service" } },
+                                      [_vm._v("After Sales Service")]
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "col-md-3" }, [
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.form.twelve.extra,
+                                          expression: "form.twelve.extra"
+                                        }
+                                      ],
+                                      attrs: {
+                                        type: "radio",
+                                        id: "Pricing",
+                                        value: "Pricing"
+                                      },
+                                      domProps: {
+                                        checked: _vm._q(
+                                          _vm.form.twelve.extra,
+                                          "Pricing"
+                                        )
+                                      },
+                                      on: {
+                                        change: function($event) {
+                                          return _vm.$set(
+                                            _vm.form.twelve,
+                                            "extra",
+                                            "Pricing"
+                                          )
+                                        }
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("label", { attrs: { for: "Pricing" } }, [
+                                      _vm._v("Pricing")
+                                    ])
+                                  ])
+                                ])
+                              ])
+                            ]
+                          )
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
+                      _vm.form.twelve.data
+                        ? _c("span", { staticClass: "red" }, [
+                            _c("strong", [
+                              _vm._v("Picked: " + _vm._s(_vm.form.twelve.data))
+                            ])
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.form.twelve.extra
+                        ? _c("span", { staticClass: "red" }, [
+                            _vm._v("---> " + _vm._s(_vm.form.twelve.extra))
+                          ])
+                        : _vm._e()
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-12" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _vm._m(22),
+                      _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "row",
+                          class: {
+                            "is-invalid": _vm.form.errors.has("thirteen.data")
+                          }
+                        },
+                        [
+                          _c("div", { staticClass: "col-md-6" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.thirteen.data,
+                                  expression: "form.thirteen.data"
+                                }
+                              ],
+                              attrs: { type: "radio", id: "yes", value: "yes" },
+                              domProps: {
+                                checked: _vm._q(_vm.form.thirteen.data, "yes")
+                              },
+                              on: {
+                                click: function($event) {
+                                  return _vm.setNullThirteen(
+                                    _vm.form.thirteen.extra
+                                  )
+                                },
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.thirteen,
+                                    "data",
+                                    "yes"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "yes" } }, [
+                              _vm._v("Yes")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-6" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.thirteen.data,
+                                  expression: "form.thirteen.data"
+                                }
+                              ],
+                              attrs: { type: "radio", id: "no", value: "no" },
+                              domProps: {
+                                checked: _vm._q(_vm.form.thirteen.data, "no")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.thirteen,
+                                    "data",
+                                    "no"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "no" } }, [
+                              _vm._v("No")
+                            ]),
+                            _vm._v(" "),
+                            _vm.form.thirteen.data == "no"
+                              ? _c(
+                                  "div",
+                                  {
+                                    staticClass: "col-md-6",
+                                    class: {
+                                      "is-invalid": _vm.form.errors.has(
+                                        "thirteen.extra"
+                                      )
+                                    }
+                                  },
+                                  [
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.form.thirteen.extra,
+                                          expression: "form.thirteen.extra"
+                                        }
+                                      ],
+                                      staticClass: "form-control",
+                                      attrs: {
+                                        type: "text",
+                                        placeholder: "If No,please specifies"
+                                      },
+                                      domProps: {
+                                        value: _vm.form.thirteen.extra
+                                      },
+                                      on: {
+                                        input: function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.$set(
+                                            _vm.form.thirteen,
+                                            "extra",
+                                            $event.target.value
+                                          )
+                                        }
+                                      }
+                                    })
+                                  ]
+                                )
+                              : _vm._e()
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
+                      _vm.form.thirteen.data
+                        ? _c("span", { staticClass: "red" }, [
+                            _c("strong", [
+                              _vm._v(
+                                "Picked: " +
+                                  _vm._s(_vm.form.thirteen.data) +
+                                  " "
+                              )
+                            ])
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.form.thirteen.extra
+                        ? _c("span", { staticClass: "red" }, [
+                            _vm._v(
+                              "---> Specifies " +
+                                _vm._s(_vm.form.thirteen.extra)
+                            )
+                          ])
+                        : _vm._e()
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-12" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _vm._m(23),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "row",
+                          class: {
+                            "is-invalid": _vm.form.errors.has("forteen.data")
+                          }
+                        },
+                        [
+                          _c("br"),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.forteen.data,
+                                  expression: "form.forteen.data"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Highly Satisfied",
+                                value: "Highly Satisfied"
+                              },
+                              domProps: {
+                                checked: _vm._q(
+                                  _vm.form.forteen.data,
+                                  "Highly Satisfied"
+                                )
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.forteen,
+                                    "data",
+                                    "Highly Satisfied"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "label",
+                              { attrs: { for: "Highly Satisfied" } },
+                              [_vm._v("Highly Satisfied")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.forteen.data,
+                                  expression: "form.forteen.data"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Satisfied",
+                                value: "Satisfied"
+                              },
+                              domProps: {
+                                checked: _vm._q(
+                                  _vm.form.forteen.data,
+                                  "Satisfied"
+                                )
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.forteen,
+                                    "data",
+                                    "Satisfied"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Satisfied" } }, [
+                              _vm._v("Satisfied")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.forteen.data,
+                                  expression: "form.forteen.data"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Moderate",
+                                value: "Moderate"
+                              },
+                              domProps: {
+                                checked: _vm._q(
+                                  _vm.form.forteen.data,
+                                  "Moderate"
+                                )
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.forteen,
+                                    "data",
+                                    "Moderate"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Moderate" } }, [
+                              _vm._v("Moderate")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-3" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.forteen.data,
+                                  expression: "form.forteen.data"
+                                }
+                              ],
+                              attrs: {
+                                type: "radio",
+                                id: "Dissatisfies",
+                                value: "Dissatisfies"
+                              },
+                              domProps: {
+                                checked: _vm._q(
+                                  _vm.form.forteen.data,
+                                  "Dissatisfies"
+                                )
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.forteen,
+                                    "data",
+                                    "Dissatisfies"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "Dissatisfies" } }, [
+                              _vm._v("Dissatisfies")
+                            ]),
+                            _vm._v(" "),
+                            _vm.form.forteen.data == "Service"
+                              ? _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.form.forteen.extra,
+                                      expression: "form.forteen.extra"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  attrs: {
+                                    type: "text",
+                                    placeholder: "Service"
+                                  },
+                                  domProps: { value: _vm.form.forteen.extra },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.form.forteen,
+                                        "extra",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                })
+                              : _vm._e()
+                          ]),
+                          _vm._v(" "),
+                          _c("br")
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _vm.form.forteen.data
+                        ? _c("span", { staticClass: "red" }, [
+                            _c("strong", [
+                              _vm._v("Picked: " + _vm._s(_vm.form.forteen.data))
+                            ])
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.form.forteen.extra
+                        ? _c("span", { staticClass: "red" }, [
+                            _vm._v("---> " + _vm._s(_vm.form.forteen.extra))
+                          ])
+                        : _vm._e()
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _vm._m(24),
+                        _vm._v(" "),
+                        _c("br"),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.form.fifteen,
+                              expression: "form.fifteen"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            "is-invalid": _vm.form.errors.has("fifteen")
+                          },
+                          attrs: {
+                            type: "text",
+                            placeholder: "Last Balance",
+                            name: "fifteen"
+                          },
+                          domProps: { value: _vm.form.fifteen },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(_vm.form, "fifteen", $event.target.value)
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.form, field: "fifteen" }
+                        }),
+                        _vm._v(" "),
+                        _c("br"),
+                        _vm._v(" "),
+                        _vm.form.fifteen
+                          ? _c("span", { staticClass: "red" }, [
+                              _c("strong", [
+                                _vm._v("Picked: " + _vm._s(_vm.form.fifteen))
+                              ])
+                            ])
+                          : _vm._e()
+                      ],
+                      1
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-12" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _vm._m(25),
+                      _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "row",
+                          class: {
+                            "is-invalid": _vm.form.errors.has("sixteen.data")
+                          }
+                        },
+                        [
+                          _c("div", { staticClass: "col-md-6" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.sixteen.data,
+                                  expression: "form.sixteen.data"
+                                }
+                              ],
+                              attrs: { type: "radio", id: "yes", value: "yes" },
+                              domProps: {
+                                checked: _vm._q(_vm.form.sixteen.data, "yes")
+                              },
+                              on: {
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.sixteen,
+                                    "data",
+                                    "yes"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "yes" } }, [
+                              _vm._v("Yes")
+                            ]),
+                            _vm._v(" "),
+                            _vm.form.sixteen.data == "yes"
+                              ? _c(
+                                  "div",
+                                  {
+                                    staticClass: "col-md-6",
+                                    class: {
+                                      "is-invalid": _vm.form.errors.has(
+                                        "sixteen.extra"
+                                      )
+                                    }
+                                  },
+                                  [
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.form.sixteen.extra,
+                                          expression: "form.sixteen.extra"
+                                        }
+                                      ],
+                                      staticClass: "form-control",
+                                      attrs: {
+                                        type: "text",
+                                        placeholder: "If yes,please specifies"
+                                      },
+                                      domProps: {
+                                        value: _vm.form.sixteen.extra
+                                      },
+                                      on: {
+                                        input: function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.$set(
+                                            _vm.form.sixteen,
+                                            "extra",
+                                            $event.target.value
+                                          )
+                                        }
+                                      }
+                                    })
+                                  ]
+                                )
+                              : _vm._e()
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-6" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.sixteen.data,
+                                  expression: "form.sixteen.data"
+                                }
+                              ],
+                              attrs: { type: "radio", id: "no", value: "no" },
+                              domProps: {
+                                checked: _vm._q(_vm.form.sixteen.data, "no")
+                              },
+                              on: {
+                                click: function($event) {
+                                  return _vm.setNullSixteen(
+                                    _vm.form.sixteen.extra
+                                  )
+                                },
+                                change: function($event) {
+                                  return _vm.$set(
+                                    _vm.form.sixteen,
+                                    "data",
+                                    "no"
+                                  )
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", { attrs: { for: "no" } }, [
+                              _vm._v("No")
+                            ])
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
+                      _vm.form.sixteen.data
+                        ? _c("span", { staticClass: "red" }, [
+                            _c("strong", [
+                              _vm._v(
+                                "Picked: " + _vm._s(_vm.form.sixteen.data) + " "
+                              )
+                            ])
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.form.sixteen.extra
+                        ? _c("span", { staticClass: "red" }, [
+                            _vm._v("---> " + _vm._s(_vm.form.sixteen.extra))
                           ])
                         : _vm._e()
                     ])
@@ -78255,107 +82503,442 @@ var render = function() {
         _c("div", { staticClass: "form-body" }, [
           _c("div", { staticClass: "card-body" }, [
             _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-md-4" }, [
+              _c("div", { staticClass: "col-md-8" }, [
                 _c("div", { staticClass: "form-group" }, [
-                  _vm._m(0),
-                  _vm._v(
-                    "\n                                        " +
-                      _vm._s(_vm.lists.org_name) +
-                      "\n                                    "
-                  )
+                  _c("label", [_vm._v("Organization Name: ")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.org_name))
+                  ])
                 ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-md-4" }, [
+              _c("div", { staticClass: "col-md-8" }, [
                 _c("div", { staticClass: "form-group" }, [
-                  _vm._m(1),
-                  _vm._v(
-                    "\n                                        " +
-                      _vm._s(_vm.lists.owner_name) +
-                      "\n                                    "
-                  )
+                  _c("label", [_vm._v("Owner Name: ")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.owner_name))
+                  ])
                 ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-md-4" }, [
+              _c("div", { staticClass: "col-md-8" }, [
                 _c("div", { staticClass: "form-group" }, [
-                  _vm._m(2),
-                  _vm._v(
-                    "\n                                        " +
-                      _vm._s(_vm.lists.present_address) +
-                      "\n                                    "
-                  )
+                  _c("label", [_vm._v("Present Address: ")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.present_address))
+                  ])
                 ])
               ])
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-md-4" }, [
+              _c("div", { staticClass: "col-md-8" }, [
                 _c("div", { staticClass: "form-group" }, [
-                  _vm._m(3),
-                  _vm._v(
-                    "\n                                        " +
-                      _vm._s(_vm.lists.permanent_address) +
-                      "\n                                    "
-                  )
+                  _c("label", [_vm._v("Permanent Address: ")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.permanent_address))
+                  ])
                 ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-md-4" }, [
+              _c("div", { staticClass: "col-md-8" }, [
                 _c("div", { staticClass: "form-group" }, [
-                  _vm._m(4),
-                  _vm._v(
-                    "\n                                        " +
-                      _vm._s(_vm.lists.cell_no) +
-                      "\n                                    "
-                  )
+                  _c("label", [_vm._v("Cell No: ")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.cell_no))
+                  ])
                 ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-md-4" }, [
+              _c("div", { staticClass: "col-md-8" }, [
                 _c("div", { staticClass: "form-group" }, [
-                  _vm._m(5),
-                  _vm._v(
-                    "\n                                        " +
-                      _vm._s(_vm.lists.concern_person) +
-                      "\n                                    "
-                  )
+                  _c("label", [_vm._v("Concern Person: ")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.concern_person))
+                  ])
                 ])
               ])
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-md-4" }, [
+              _c("div", { staticClass: "col-md-8" }, [
                 _c("div", { staticClass: "form-group" }, [
-                  _vm._m(6),
-                  _vm._v(
-                    "\n                                        " +
-                      _vm._s(_vm.lists.org_cell_no) +
-                      "\n                                    "
-                  )
+                  _c("label", [_vm._v("Organization Cell No: ")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.org_cell_no))
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [_vm._v("Bussiness Type: ")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.bussiness_type))
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [_vm._v("Bussiness Year: ")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.bussiness_year))
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "1.How long you are dealing with Hi-vallay product? = "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.one))
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v("2.Are you dealing with other company? =")
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.two_data))
+                  ])
                 ])
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "col-md-4" }, [
+                _vm.lists.two_extra
+                  ? _c("div", { staticClass: "form-group" }, [
+                      _c("label", [_vm._v("Specified Answer If Yes: ")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "text blue" }, [
+                        _vm._v(_vm._s(_vm.lists.two_extra))
+                      ])
+                    ])
+                  : _vm._e()
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
                 _c("div", { staticClass: "form-group" }, [
-                  _vm._m(7),
-                  _vm._v(
-                    "\n                                       " +
-                      _vm._s(_vm.lists.bussiness_type) +
-                      "\n                                    "
-                  )
+                  _c("label", [
+                    _vm._v(
+                      "3.How do you feel about Quality of Hi-vallay fan? ="
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.three))
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "4.What does the customer except from Hi-vally in term of quality? ="
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.four_data))
+                  ])
                 ])
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "col-md-4" }, [
+                _vm.lists.four_extra
+                  ? _c("div", { staticClass: "form-group" }, [
+                      _c("label", [_vm._v("Any other: ")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "text blue" }, [
+                        _vm._v(_vm._s(_vm.lists.four_extra))
+                      ])
+                    ])
+                  : _vm._e()
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
                 _c("div", { staticClass: "form-group" }, [
-                  _vm._m(8),
-                  _vm._v(
-                    "\n                                        " +
-                      _vm._s(_vm.lists.bussiness_year) +
-                      "\n                                    "
-                  )
+                  _c("label", [
+                    _vm._v(
+                      "5.How do you rate the promotional activities given y Hi-vally? ="
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.five))
+                  ])
                 ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "6.What type of promotional activity do you prefer with Hi-vally product? ="
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.six_data))
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-8" }, [
+                _vm.lists.six_extra
+                  ? _c("div", { staticClass: "form-group" }, [
+                      _c("label", [_vm._v("Others: ")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "text blue" }, [
+                        _vm._v(_vm._s(_vm.lists.six_extra))
+                      ])
+                    ])
+                  : _vm._e()
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "7.Whether the expected Quantity of Hi-vally is is supplied to you in time? ="
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.seven))
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "8.What do you feel about credit period given by Hi-Vally? ="
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.eight))
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "9.What do you feel about the employee dealing with you in Hi-Vally? ="
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.nine))
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "10.What are the factors that you expects from Hi-Vally Products? ="
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.ten_data))
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4" }, [
+                _vm.lists.ten_extra
+                  ? _c("div", { staticClass: "form-group" }, [
+                      _c("label", [_vm._v("Serivices: ")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "text blue" }, [
+                        _vm._v(_vm._s(_vm.lists.ten_extra))
+                      ])
+                    ])
+                  : _vm._e()
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v("11.How much do you spend in winter Booking? =")
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.eleven))
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "12.Do you have any complains about Hi-Vallay Product? ="
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.twelve_data))
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4" }, [
+                _vm.lists.twelve_extra
+                  ? _c("div", { staticClass: "form-group" }, [
+                      _c("label", [_vm._v("Complains: ")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "text blue" }, [
+                        _vm._v(_vm._s(_vm.lists.twelve_extra))
+                      ])
+                    ])
+                  : _vm._e()
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "13.Do you recommend your customer Hi-Vallay Product? ="
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.thirteen_data))
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4" }, [
+                _vm.lists.thirteen_extra
+                  ? _c("div", { staticClass: "form-group" }, [
+                      _c("label", [_vm._v("Specified Answer: ")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "text blue" }, [
+                        _vm._v(_vm._s(_vm.lists.thirteen_extra))
+                      ])
+                    ])
+                  : _vm._e()
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "14.What do you feel about after Sales Service Given y Hi-Vally? ="
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.forteen_data))
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4" }, [
+                _vm.lists.forteen_extra
+                  ? _c("div", { staticClass: "form-group" }, [
+                      _c("label", [_vm._v("Serivices: ")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "text blue" }, [
+                        _vm._v(_vm._s(_vm.lists.forteen_extra))
+                      ])
+                    ])
+                  : _vm._e()
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [_vm._v("15.Last Balance =")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.fifteen))
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "16.Do you have any suggestion in improve the quality of Hi-Vally product ="
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "text blue" }, [
+                    _vm._v(_vm._s(_vm.lists.sixteen_data))
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4" }, [
+                _vm.lists.sixteen_extra
+                  ? _c("div", { staticClass: "form-group" }, [
+                      _c("label", [_vm._v("Specified Andwer: ")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "text blue" }, [
+                        _vm._v(_vm._s(_vm.lists.sixteen_extra))
+                      ])
+                    ])
+                  : _vm._e()
               ])
             ])
           ])
@@ -78364,89 +82947,7 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { staticClass: "text" }, [
-      _vm._v("Organization Name"),
-      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", [
-      _vm._v("Owner Name"),
-      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", [
-      _vm._v("Present Address"),
-      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", [
-      _vm._v("Permanent Address"),
-      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", [
-      _vm._v("Cell No"),
-      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", [
-      _vm._v("Concern Person"),
-      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", [
-      _vm._v("Organization Cell No"),
-      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", [
-      _vm._v("Bussiness Type"),
-      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", [
-      _vm._v("Bussiness Year"),
-      _c("span", { staticClass: "requiredField red" }, [_vm._v("*")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -95073,6 +99574,11 @@ var routes = [{
   props: true,
   component: __webpack_require__(/*! ./components/ViewForm.vue */ "./resources/js/components/ViewForm.vue")["default"]
 }, {
+  path: '/editform',
+  name: 'editForm',
+  props: true,
+  component: __webpack_require__(/*! ./components/EditForm.vue */ "./resources/js/components/EditForm.vue")["default"]
+}, {
   path: '/user',
   component: __webpack_require__(/*! ./components/User.vue */ "./resources/js/components/User.vue")["default"]
 }];
@@ -95234,6 +99740,93 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Dashboard_vue_vue_type_template_id_040e2ab9___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Dashboard_vue_vue_type_template_id_040e2ab9___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/EditForm.vue":
+/*!**********************************************!*\
+  !*** ./resources/js/components/EditForm.vue ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _EditForm_vue_vue_type_template_id_64596f4e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EditForm.vue?vue&type=template&id=64596f4e&scoped=true& */ "./resources/js/components/EditForm.vue?vue&type=template&id=64596f4e&scoped=true&");
+/* harmony import */ var _EditForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EditForm.vue?vue&type=script&lang=js& */ "./resources/js/components/EditForm.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _EditForm_vue_vue_type_style_index_0_id_64596f4e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./EditForm.vue?vue&type=style&index=0&id=64596f4e&scoped=true&lang=css& */ "./resources/js/components/EditForm.vue?vue&type=style&index=0&id=64596f4e&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _EditForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EditForm_vue_vue_type_template_id_64596f4e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EditForm_vue_vue_type_template_id_64596f4e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "64596f4e",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/EditForm.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/EditForm.vue?vue&type=script&lang=js&":
+/*!***********************************************************************!*\
+  !*** ./resources/js/components/EditForm.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EditForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./EditForm.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/EditForm.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EditForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/EditForm.vue?vue&type=style&index=0&id=64596f4e&scoped=true&lang=css&":
+/*!*******************************************************************************************************!*\
+  !*** ./resources/js/components/EditForm.vue?vue&type=style&index=0&id=64596f4e&scoped=true&lang=css& ***!
+  \*******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_EditForm_vue_vue_type_style_index_0_id_64596f4e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./EditForm.vue?vue&type=style&index=0&id=64596f4e&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/EditForm.vue?vue&type=style&index=0&id=64596f4e&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_EditForm_vue_vue_type_style_index_0_id_64596f4e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_EditForm_vue_vue_type_style_index_0_id_64596f4e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_EditForm_vue_vue_type_style_index_0_id_64596f4e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_EditForm_vue_vue_type_style_index_0_id_64596f4e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_EditForm_vue_vue_type_style_index_0_id_64596f4e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/EditForm.vue?vue&type=template&id=64596f4e&scoped=true&":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/components/EditForm.vue?vue&type=template&id=64596f4e&scoped=true& ***!
+  \*****************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EditForm_vue_vue_type_template_id_64596f4e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./EditForm.vue?vue&type=template&id=64596f4e&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/EditForm.vue?vue&type=template&id=64596f4e&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EditForm_vue_vue_type_template_id_64596f4e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EditForm_vue_vue_type_template_id_64596f4e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -95917,8 +100510,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\Survey_App\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\Survey_App\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\xampp\htdocs\Survey_App\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\xampp\htdocs\Survey_App\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

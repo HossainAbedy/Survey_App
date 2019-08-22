@@ -10,72 +10,265 @@
 					<div class="form-body">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-8">
                                     <div class="form-group">
-                                        <label class="text">Organization Name<span class="requiredField red">*</span></label>
-                                        {{lists.org_name}}
+                                        <label>Organization Name: </label>
+                                        <span class="text blue">{{lists.org_name}}</span>
                                     </div>
                                 </div>
 
-                                <div class="col-md-4">
+                                <div class="col-md-8">
                                     <div class="form-group">
-                                        <label>Owner Name<span class="requiredField red">*</span></label>
-                                        {{lists.owner_name}}
+                                        <label>Owner Name: </label>
+                                        <span class="text blue">{{lists.owner_name}}</span>
                                     </div>
                                 </div>
 
-                                <div class="col-md-4">
+                                <div class="col-md-8">
                                     <div class="form-group">
-                                        <label>Present Address<span class="requiredField red">*</span></label>
-                                        {{lists.present_address}}
+                                        <label>Present Address: </label>
+                                        <span class="text blue">{{lists.present_address}}</span>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row">
-                                  <div class="col-md-4">
+                                  <div class="col-md-8">
                                     <div class="form-group">
-                                        <label>Permanent Address<span class="requiredField red">*</span></label>
-                                        {{lists.permanent_address}}
+                                        <label>Permanent Address: </label>
+                                        <span class="text blue">{{lists.permanent_address}}</span>
                                     </div>
                                 </div>
 
-                                <div class="col-md-4">
+                                <div class="col-md-8">
                                     <div class="form-group">
-                                        <label>Cell No<span class="requiredField red">*</span></label>
-                                        {{lists.cell_no}}
+                                        <label>Cell No: </label>
+                                        <span class="text blue">{{lists.cell_no}}</span>
                                     </div>
                                 </div>
 
-                                <div class="col-md-4">
+                                <div class="col-md-8">
                                     <div class="form-group">
-                                        <label>Concern Person<span class="requiredField red">*</span></label>
-                                        {{lists.concern_person}}
+                                        <label>Concern Person: </label>
+                                        <span class="text blue">{{lists.concern_person}}</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
+                                 <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>Organization Cell No: </label>
+                                        <span class="text blue">{{lists.org_cell_no}}</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>Bussiness Type: </label>
+                                       <span class="text blue">{{lists.bussiness_type}}</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>Bussiness Year: </label>
+                                        <span class="text blue">{{lists.bussiness_year}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--List of Question Answers -->
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>1.How long you are dealing with Hi-vallay product? = </label>
+                                        <span class="text blue">{{lists.one}}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>2.Are you dealing with other company? =</label>
+                                        <span class="text blue">{{lists.two_data}}</span>
+                                    </div>
+                                </div>
                                  <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label>Organization Cell No<span class="requiredField red">*</span></label>
-                                        {{lists.org_cell_no}}
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label>Bussiness Type<span class="requiredField red">*</span></label>
-                                       {{lists.bussiness_type}}
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label>Bussiness Year<span class="requiredField red">*</span></label>
-                                        {{lists.bussiness_year}}
+                                    <div v-if="lists.two_extra" class="form-group">
+                                        <label>Specified Answer If Yes: </label>
+                                        <span class="text blue">{{lists.two_extra}}</span>
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>3.How do you feel about Quality of Hi-vallay fan? =</label>
+                                        <span class="text blue">{{lists.three}}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>4.What does the customer except from Hi-vally in term of quality? =</label>
+                                        <span class="text blue">{{lists.four_data}}</span>
+                                    </div>
+                                </div>
+                                 <div class="col-md-4">
+                                    <div v-if="lists.four_extra" class="form-group">
+                                        <label>Any other: </label>
+                                        <span class="text blue">{{lists.four_extra}}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>5.How do you rate the promotional activities given y Hi-vally? =</label>
+                                        <span class="text blue">{{lists.five}}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>6.What type of promotional activity do you prefer with Hi-vally product? =</label>
+                                        <span class="text blue">{{lists.six_data}}</span>
+                                    </div>
+                                </div>
+                                 <div class="col-md-8">
+                                    <div v-if="lists.six_extra" class="form-group">
+                                        <label>Others: </label>
+                                        <span class="text blue">{{lists.six_extra}}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>7.Whether the expected Quantity of Hi-vally is is supplied to you in time? =</label>
+                                        <span class="text blue">{{lists.seven}}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>8.What do you feel about credit period given by Hi-Vally? =</label>
+                                        <span class="text blue">{{lists.eight}}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>9.What do you feel about the employee dealing with you in Hi-Vally? =</label>
+                                        <span class="text blue">{{lists.nine}}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>10.What are the factors that you expects from Hi-Vally Products? =</label>
+                                        <span class="text blue">{{lists.ten_data}}</span>
+                                    </div>
+                                </div>
+                                 <div class="col-md-4">
+                                    <div v-if="lists.ten_extra" class="form-group">
+                                        <label>Serivices: </label>
+                                        <span class="text blue">{{lists.ten_extra}}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>11.How much do you spend in winter Booking? =</label>
+                                        <span class="text blue">{{lists.eleven}}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>12.Do you have any complains about Hi-Vallay Product? =</label>
+                                        <span class="text blue">{{lists.twelve_data}}</span>
+                                    </div>
+                                </div>
+                                 <div class="col-md-4">
+                                    <div v-if="lists.twelve_extra" class="form-group">
+                                        <label>Complains: </label>
+                                        <span class="text blue">{{lists.twelve_extra}}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>13.Do you recommend your customer Hi-Vallay Product? =</label>
+                                        <span class="text blue">{{lists.thirteen_data}}</span>
+                                    </div>
+                                </div>
+                                 <div class="col-md-4">
+                                    <div v-if="lists.thirteen_extra" class="form-group">
+                                        <label>Specified Answer: </label>
+                                        <span class="text blue">{{lists.thirteen_extra}}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>14.What do you feel about after Sales Service Given y Hi-Vally? =</label>
+                                        <span class="text blue">{{lists.forteen_data}}</span>
+                                    </div>
+                                </div>
+                                 <div class="col-md-4">
+                                    <div v-if="lists.forteen_extra" class="form-group">
+                                        <label>Serivices: </label>
+                                        <span class="text blue">{{lists.forteen_extra}}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>15.Last Balance =</label>
+                                        <span class="text blue">{{lists.fifteen}}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>16.Do you have any suggestion in improve the quality of Hi-Vally product =</label>
+                                        <span class="text blue">{{lists.sixteen_data}}</span>
+                                    </div>
+                                </div>
+                                 <div class="col-md-4">
+                                    <div v-if="lists.sixteen_extra" class="form-group">
+                                        <label>Specified Andwer: </label>
+                                        <span class="text blue">{{lists.sixteen_extra}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--EndList of Question Answers -->
                         </div>
                     </div>
 
@@ -95,7 +288,9 @@
         data(){
             return{
                     form_id: this.id,
-                    lists: {},
+                    lists: {
+                        user:{},
+                    },
             }
         },
 

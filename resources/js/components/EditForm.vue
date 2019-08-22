@@ -1,12 +1,12 @@
 <template>
    <div class="card">
 		<div class="card-header">
-			<h4 class="card-title" id="basic-layout-form">Survey From </h4>
+			<h4 class="card-title" id="basic-layout-form">Edit From </h4>
 		</div>
 		<div class="card-content collapse show">
 			<div class="card-body">
 <!--form start-->
-				<form @submit.prevent="store()" id="addComponent"  @keydown="form.onKeydown($event)">
+				<form @submit.prevent="update()" id="addComponent"  @keydown="form.onKeydown($event)">
 					<div class="form-body">
                         <div class="card-body">
                             <div class="row">
@@ -550,7 +550,7 @@
                                     <div class="form-group">
                                         <div class="form-actions pull-right">
                                             <button type="submit pull-right" class="btn btn-success btn-min-width mr-1 mb-1">
-                                                    <i class="fa fa-check"></i> Save
+                                                    <i class="fa fa-check"></i> Update
                                             </button>
                                         </div>
                                     </div>
@@ -567,60 +567,66 @@
 <script>
 
     export default {
+        name: "editForm",
+        props: {
+            list: '',
+        },
         data(){
             return{
+                    // form : this.list,
                     form : new Form ({
-                        org_name:'',
-                        owner_name:'',
-                        present_address:'',
-                        permanent_address:'',
-                        cell_no:'',
-                        concern_person:'',
-                        org_cell_no:'',
-                        bussiness_type:'',
-                        bussiness_year:'',
-                        one:'',
+                        id:this.list.id,
+                        org_name:this.list.org_name,
+                        owner_name:this.list.owner_name,
+                        present_address:this.list.present_address,
+                        permanent_address:this.list.permanent_address,
+                        cell_no:this.list.cell_no,
+                        concern_person:this.list.concern_person,
+                        org_cell_no:this.list.org_cell_no,
+                        bussiness_type:this.list.bussiness_type,
+                        bussiness_year:this.list.bussiness_year,
+                        one:this.list.one,
                         two:{
-                            data:'',
-                            extra:''
+                            data:this.list.two_data,
+                            extra:this.list.two_extra,
                         },
-                        three:'',
+                        three:this.list.three,
                         four:{
-                            data:'',
-                            extra:''
+                            data:this.list.four_data,
+                            extra:this.list.four_extra,
                         },
-                        five:'',
+                        five:this.list.five,
                         six:{
-                            data:'',
-                            extra:''
+                            data:this.list.six_data,
+                            extra:this.list.six_extra
                         },
-                        seven:'',
-                        eight:'',
-                        nine:'',
+                        seven:this.list.seven,
+                        eight:this.list.eight,
+                        nine:this.list.nine,
                         ten:{
-                            data:'',
-                            extra:''
+                            data:this.list.ten_data,
+                            extra:this.list.ten_extra,
                         },
-                        eleven:'',
+                        eleven:this.list.eleven,
                         twelve:{
-                            data:'',
-                            extra:''
+                            data:this.list.twelve_data,
+                            extra:this.list.twelve_extra,
                         },
                         thirteen:{
-                            data:'',
-                            extra:''
+                            data:this.list.thirteen_data,
+                            extra:this.list.thirteen_extra,
                         },
                         forteen:{
-                            data:'',
-                            extra:''
+                            data:this.list.forteen_data,
+                            extra:this.list.forteen_extra,
                         },
-                        fifteen:'',
+                        fifteen:this.list.fifteen,
                         sixteen:{
-                            data:'',
-                            extra:''
+                            data:this.list.sixteen_data,
+                            extra:this.list.sixteen_extra,
                         },
                     }),
-                    // errors: new Errors(),
+
             }
         },
 
@@ -657,23 +663,28 @@
                     }
             },
             //formCreate
-            store(){
+            update(){
                 this.$Progress.start();
                  //console.log(this.form);
-                 this.form.post('api/form-one')
+                 this.form.put('api/form-one/'+this.form.id)
                  .then(() => {
                   toast.fire({
                     type: 'success',
-                    title: 'Created successfully'
+                    title: 'Updated successfully'
                     });
-                  this.form.reset();
+                  //this.form.reset();
                   this.$Progress.finish();
                     }).catch(() => {
                 });
             },
+            editform(list){
+                //this.form.reset();
+                this.form.fill(list);
+            },
         },
 
         mounted() {
+            // this.editform();
             console.log('Component mounted.')
         }
     }
