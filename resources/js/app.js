@@ -57,6 +57,7 @@ let routes = [
     { path: '/surveyform', component: require('./components/SurveyForm.vue').default},
     { path: '/formlist', component: require('./components/FormList.vue').default},
     { path: '/viewform', name: 'viewForm', props: true, component: require('./components/ViewForm.vue').default},
+    { path: '/editform', name: 'editForm', props: true, component: require('./components/EditForm.vue').default},
     { path: '/user', component: require('./components/User.vue').default}
   ]
 
