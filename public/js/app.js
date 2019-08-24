@@ -2695,16 +2695,13 @@ __webpack_require__.r(__webpack_exports__);
           title: 'Updated successfully'
         }); //this.form.reset();
 
+        _this.$route.push('formlist');
+
         _this.$Progress.finish();
       })["catch"](function () {});
-    },
-    editform: function editform(list) {
-      //this.form.reset();
-      this.form.fill(list);
     }
   },
   mounted: function mounted() {
-    // this.editform();
     console.log('Component mounted.');
   }
 });
@@ -2780,10 +2777,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      lists: {}
+      lists: {},
+      excell: {}
     };
   },
   methods: {
@@ -2826,7 +2826,14 @@ __webpack_require__.r(__webpack_exports__);
         }
       });
     },
-    send: function send() {}
+    send: function send(id) {
+      this.$Progress.start();
+      var newWindow = window.open();
+      axios.get('export' + id).then(function (response) {
+        newWindow.location = 'http://' + window.location.hostname + 'export';
+      });
+      this.$Progress.finish();
+    }
   },
   created: function created() {
     var _this3 = this;
@@ -79054,17 +79061,7 @@ var render = function() {
                           }
                         },
                         [_c("i", { staticClass: "fa fa-edit orange" })]
-                      ),
-                      _vm._v(" "),
-                      _c("a", {
-                        staticClass: "fab fa-google-plus-g",
-                        attrs: { href: "#" },
-                        on: {
-                          click: function($event) {
-                            return _vm.send(list.id)
-                          }
-                        }
-                      })
+                      )
                     ],
                     1
                   )
@@ -79096,7 +79093,25 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-header" }, [
-      _c("h3", { staticClass: "card-title" }, [_vm._v("Form List")])
+      _c("h3", { staticClass: "card-title" }, [_vm._v("Form List")]),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "btn btn-success float-right",
+          attrs: { href: "import-export" }
+        },
+        [_vm._v("Excel ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "btn btn-danger float-right",
+          attrs: { href: "import-export" }
+        },
+        [_vm._v("Google ")]
+      )
     ])
   },
   function() {
@@ -99583,7 +99598,7 @@ var routes = [{
   component: __webpack_require__(/*! ./components/User.vue */ "./resources/js/components/User.vue")["default"]
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_6__["default"]({
-  mode: 'history',
+  // mode: 'history',
   routes: routes // short for `routes: routes`
 
 }); //vue-router

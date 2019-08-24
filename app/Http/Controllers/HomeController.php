@@ -36,4 +36,5 @@ class HomeController extends Controller
         Session::flush();
         return redirect(url('/'));
     }
-}
+
+ }

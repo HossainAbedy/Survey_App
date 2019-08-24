@@ -550,7 +550,7 @@
                                     <div class="form-group">
                                         <div class="form-actions pull-right">
                                             <button type="submit pull-right" class="btn btn-success btn-min-width mr-1 mb-1">
-                                                    <i class="fa fa-check"></i> Update
+                                                <i class="fa fa-check"></i> Update
                                             </button>
                                         </div>
                                     </div>
@@ -673,18 +673,14 @@
                     title: 'Updated successfully'
                     });
                   //this.form.reset();
+                  this.$route.push('formlist');
                   this.$Progress.finish();
                     }).catch(() => {
                 });
             },
-            editform(list){
-                //this.form.reset();
-                this.form.fill(list);
-            },
         },
 
         mounted() {
-            // this.editform();
             console.log('Component mounted.')
         }
     }

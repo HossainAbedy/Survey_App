@@ -3,6 +3,8 @@
        <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Form List</h3>
+                <a href="import-export" class="btn btn-success float-right">Excel </a>
+                <a href="import-export" class="btn btn-danger float-right">Google </a>
               </div>
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0">
@@ -44,7 +46,7 @@
                                 <router-link :to="{ name: 'editForm', params: { list: list }}">
                                     <i class="fa fa-edit orange"></i>
                                 </router-link>
-                                <a href="#" @click=send(list.id) class="fab fa-google-plus-g"></a>
+                                <!-- <a href="import-export" @click="send()" class="fab fa-google-plus-g"></a> -->
                             </td>
                         </tr>
                     </tbody>
@@ -64,6 +66,7 @@
         data(){
             return{
                 lists : {},
+                excell : {},
             }
         },
 
@@ -112,10 +115,15 @@
                 })
             },
 
-            send(){
-
-            }
-
+            send(id){
+                this.$Progress.start();
+                    let newWindow = window.open();
+                    axios.get('export'+id)
+                    .then(response => {
+                        newWindow.location = 'http://' + window.location.hostname + 'export';
+                    });
+                this.$Progress.finish();
+            },
         },
 
         created() {

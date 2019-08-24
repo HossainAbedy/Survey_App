@@ -5,7 +5,10 @@ namespace App\Http\Controllers\API;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use App\Exports\SurveyFormExport;
+use Maatwebsite\Excel\Facades\Excel;
 use App\SurveyForm;
+use DB;
 use Validator;
 
 class SurveyFormController extends Controller
@@ -349,7 +352,6 @@ class SurveyFormController extends Controller
     public function destroy($id)
     {
         $surveyform = SurveyForm::findOrFail($id);
-        // delete the surveyform
         $surveyform->delete();
         return ['message' => 'User Deleted'];
     }
