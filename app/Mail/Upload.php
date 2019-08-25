@@ -32,6 +32,7 @@ class Upload extends Mailable
     {
         return $this->view('gmailview')
                 ->subject('Document Upload')
+                ->from('survey.app12345678@gmail.com','Survey App')
                 ->attach($this->data['document']->getRealPath(),
                 [
                     'as' => $this->data['document']->getClientOriginalName(),

@@ -3,8 +3,7 @@
        <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Form List</h3>
-                <a href="import-export" class="btn btn-success float-right">Excel </a>
-                <a href="import-export" class="btn btn-danger float-right">Google </a>
+                <a href="import-export" class="btn btn-success float-right">Excel <i class="far fa-file-excel"></i></a>
               </div>
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0">
@@ -41,7 +40,7 @@
                             <td>
                                 <a href="#" @click="deleteList(list.id)" class="fa fa-trash red"></a>
                                 <router-link :to="{ name: 'viewForm', params: { id: list.id }}">
-                                    <i class="fa fa-eye green"></i>
+                                    <i class="fa fa-eye blue"></i>
                                 </router-link>
                                 <router-link :to="{ name: 'editForm', params: { list: list }}">
                                     <i class="fa fa-edit orange"></i>

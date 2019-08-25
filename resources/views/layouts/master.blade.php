@@ -290,7 +290,10 @@
             <!-- Main content -->
             <div class="content">
             <div class="container-fluid">
-                <router-view></router-view>
+                @yield('content')
+                <div class="container-fluid">
+                    <router-view></router-view>
+                </div>
                 <vue-progress-bar></vue-progress-bar>
             </div><!-- /.container-fluid -->
             </div>

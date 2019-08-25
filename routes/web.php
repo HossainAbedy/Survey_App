@@ -24,6 +24,6 @@ Route::get('/logout', 'HomeController@logout')->name('logout');
 Route::get('import-export', 'ImportExportController@importExport');
 Route::post('import', 'ImportExportController@import');
 Route::get('export', 'ImportExportController@export');
-Route::get('sendgmail', 'ImportExportController@sendgmail');
+// Route::get('sendgmail', 'ImportExportController@sendgmail');
 Route::post('upload', 'ImportExportController@uploadDocument');
 

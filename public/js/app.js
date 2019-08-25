@@ -2778,7 +2778,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -9284,7 +9283,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.is-invalid[data-v-0ff09826] {\r\n      border-color: #E84444;\r\n      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(232,68,68,.6);\n}\r\n", ""]);
+exports.push([module.i, "\n.is-invalid[data-v-0ff09826] {\n      border-color: #E84444;\n      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(232,68,68,.6);\n}\n", ""]);
 
 // exports
 
@@ -79050,7 +79049,7 @@ var render = function() {
                             to: { name: "viewForm", params: { id: list.id } }
                           }
                         },
-                        [_c("i", { staticClass: "fa fa-eye green" })]
+                        [_c("i", { staticClass: "fa fa-eye blue" })]
                       ),
                       _vm._v(" "),
                       _c(
@@ -79101,16 +79100,7 @@ var staticRenderFns = [
           staticClass: "btn btn-success float-right",
           attrs: { href: "import-export" }
         },
-        [_vm._v("Excel ")]
-      ),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass: "btn btn-danger float-right",
-          attrs: { href: "import-export" }
-        },
-        [_vm._v("Google ")]
+        [_vm._v("Excel "), _c("i", { staticClass: "far fa-file-excel" })]
       )
     ])
   },
@@ -99598,7 +99588,7 @@ var routes = [{
   component: __webpack_require__(/*! ./components/User.vue */ "./resources/js/components/User.vue")["default"]
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_6__["default"]({
-  // mode: 'history',
+  //mode: 'history',
   routes: routes // short for `routes: routes`
 
 }); //vue-router
