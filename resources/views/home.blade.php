@@ -6,13 +6,18 @@
             <div class="card">
                 <div class="card-header">Home</div>
 
-                <div class="card-body text-center">
+                <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
-                    You are logged in!
+                    <div class="row">
+                        <p>You are logged in as : </p><p style="color:red">{{Auth::user()->user_type}}!!</p>
+                    </div>
+                    <div class="container-fluid">
+                        <router-view></router-view>
+                    </div>
                 </div>
             </div>
         </div>

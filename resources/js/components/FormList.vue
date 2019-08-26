@@ -21,7 +21,7 @@
                             <th>Concern Person</th>
                             <th>Organization Cell No</th> -->
                             <th>Bussiness Type</th>
-                            <th>Bussiness Year</th>
+                            <!-- <th>Bussiness Year</th> -->
                             <th>Action</th>
                         </tr>
                         <tr v-for="list in lists.data" :key="list.id">
@@ -36,7 +36,7 @@
                             <td>{{list.concern_person}}</td>
                             <td>{{list.org_cell_no}}</td> -->
                             <td>{{list.bussiness_type}}</td>
-                            <td>{{list.bussiness_year}}</td>
+                            <!-- <td>{{list.bussiness_year}}</td> -->
                             <td>
                                 <a href="#" @click="deleteList(list.id)" class="fa fa-trash red"></a>
                                 <router-link :to="{ name: 'viewForm', params: { id: list.id }}">
