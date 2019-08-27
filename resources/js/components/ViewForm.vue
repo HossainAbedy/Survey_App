@@ -2,6 +2,7 @@
    <div class="card">
 		<div class="card-header">
 			<h4 class="card-title" id="basic-layout-form">Surveyor <h4 class="red">{{lists.user.first_name}} {{lists.user.last_name}}</h4> </h4>
+            <router-link to='/formlist' class="btn btn-success float-right"> View Lists</router-link>
 		</div>
 		<div class="card-content collapse show">
 			<div class="card-body">

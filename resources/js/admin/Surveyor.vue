@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="card-header">
-                <h3 class="card-title">Form List</h3>
+                <h3 class="card-title">Form List (Under Development)</h3>
 
                 <div class="card-tools">
                     <button type="button" class="btn btn-success" @click="newModal">ADD NEW <i class="fas fa-user-plus fa-fw"></i></button>
@@ -26,11 +26,11 @@
                         <input v-model="form.row" type="text" name="line[]" id="input"
                         class="form-control" :class="{ 'is-invalid': form.errors.has('input') }">
                         <has-error :form="form" field="input"></has-error>
-                            
 
-                        <button class="btn btn-primary float-right" @click="removeRow(index)">REMOVE<i class="fas fa-plus fa-fw"></i></button>    
+
+                        <button class="btn btn-primary float-right" @click="removeRow(index)">REMOVE<i class="fas fa-plus fa-fw"></i></button>
                         <button class="btn btn-primary float-right" @click="addRow">ADD<i class="fas fa-plus fa-fw"></i></button>
-                    </div>  
+                    </div>
                 </div>
 
                 <div class="modal-footer">
@@ -41,7 +41,7 @@
               </form>
            </div>
          </div>
-      </div>  
+      </div>
     </div>
 </template>
 
@@ -61,7 +61,7 @@
             this.blockRemoval = this.rows.length <= 1
             }
         },
-       
+
         methods: {
             newModal(){
                 this.editmode = false;
@@ -83,6 +83,6 @@
         },
         mounted () {
             this.addRow()
-        }   
+        }
     }
 </script>

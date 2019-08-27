@@ -2,6 +2,7 @@
    <div class="card">
 		<div class="card-header">
 			<h4 class="card-title" id="basic-layout-form">Edit From </h4>
+            <router-link to='/formlist' class="btn btn-success float-right"> View Lists</router-link>
 		</div>
 		<div class="card-content collapse show">
 			<div class="card-body">

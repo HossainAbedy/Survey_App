@@ -6,7 +6,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Survey App</title>
-        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">.
+        {{-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">. --}}
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body class="hold-transition sidebar-mini">
@@ -56,10 +56,10 @@
                             <div class="row">
                                 <div class="col-md-4"></div>
                                 <div class="form-group col-md-2">
-                                    <a class="btn btn-info float-left" href="{{ url('export') }}">Download<i class="fas fa-download"></i></a>
+                                    <a class="btn btn-info float-left" href="{{ url('export') }}">Download <i class="fas fa-download" style="color:darkorange;font-size:20px"></i></a>
                                 </div>
                                 <div class="form-group col-md-2">
-                                    <button type="submit" class="btn btn-danger float-right">Google<i class="fab fa-google-plus"></i></button>
+                                    <button type="submit" class="btn btn-danger float-right">Google <i class="fab fa-google-plus" style="font-size:20px"></i></button>
                                 </div>
                             </div>
                         </form>

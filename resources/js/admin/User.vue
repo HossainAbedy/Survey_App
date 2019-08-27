@@ -6,7 +6,7 @@
                     <div class="card-header">User Component</div>
 
                     <div class="card-body">
-                        I'm an User component.
+                        I'm an User component.(Under Development)
                     </div>
                 </div>
             </div>
