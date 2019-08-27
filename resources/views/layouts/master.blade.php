@@ -291,6 +291,10 @@
             <div class="content">
             <div class="container-fluid">
                 @yield('content')
+<<<<<<< HEAD
+=======
+                {{-- <router-view></router-view> --}}
+>>>>>>> d94cdeb3caecdac6821722ccb93897d1797cfecc
                 <vue-progress-bar></vue-progress-bar>
             </div><!-- /.container-fluid -->
             </div>
