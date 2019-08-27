@@ -76088,12 +76088,16 @@ var render = function() {
                             "p-2 bg-gradient-x-danger white media-body"
                         },
                         [
-                          _c("h5", [_vm._v("Admins")]),
+                          _c("h5", { staticClass: "red" }, [_vm._v("Admins")]),
                           _vm._v(" "),
-                          _c("h5", { staticClass: "text-bold-400 mb-0" }, [
-                            _c("i", { staticClass: "ft-plus" }),
-                            _vm._v(_vm._s(_vm.admins))
-                          ])
+                          _c(
+                            "h5",
+                            { staticClass: "text-bold-400 mb-0 purple" },
+                            [
+                              _c("i", { staticClass: "ft-plus" }),
+                              _vm._v(_vm._s(_vm.admins))
+                            ]
+                          )
                         ]
                       )
                     ])
@@ -76114,12 +76118,18 @@ var render = function() {
                             "p-2 bg-gradient-x-primary white media-body"
                         },
                         [
-                          _c("h5", [_vm._v("Surveyors")]),
+                          _c("h5", { staticClass: "blue" }, [
+                            _vm._v("Surveyors")
+                          ]),
                           _vm._v(" "),
-                          _c("h5", { staticClass: "text-bold-400 mb-0" }, [
-                            _c("i", { staticClass: "ft-plus" }),
-                            _vm._v(" " + _vm._s(_vm.surveyors))
-                          ])
+                          _c(
+                            "h5",
+                            { staticClass: "text-bold-400 mb-0 purple" },
+                            [
+                              _c("i", { staticClass: "ft-plus" }),
+                              _vm._v(" " + _vm._s(_vm.surveyors))
+                            ]
+                          )
                         ]
                       )
                     ])
@@ -76140,12 +76150,16 @@ var render = function() {
                             "p-2 bg-gradient-x-primary white media-body"
                         },
                         [
-                          _c("h5", [_vm._v("Users")]),
+                          _c("h5", { staticClass: "green" }, [_vm._v("Users")]),
                           _vm._v(" "),
-                          _c("h5", { staticClass: "text-bold-400 mb-0" }, [
-                            _c("i", { staticClass: "ft-plus" }),
-                            _vm._v(_vm._s(_vm.standard_users))
-                          ])
+                          _c(
+                            "h5",
+                            { staticClass: "text-bold-400 mb-0 purple" },
+                            [
+                              _c("i", { staticClass: "ft-plus" }),
+                              _vm._v(_vm._s(_vm.standard_users))
+                            ]
+                          )
                         ]
                       )
                     ])
@@ -76166,12 +76180,18 @@ var render = function() {
                             "p-2 bg-gradient-x-primary white media-body"
                         },
                         [
-                          _c("h5", [_vm._v("Forms")]),
+                          _c("h5", { staticClass: "orange" }, [
+                            _vm._v("Forms")
+                          ]),
                           _vm._v(" "),
-                          _c("h5", { staticClass: "text-bold-400 mb-0" }, [
-                            _c("i", { staticClass: "ft-plus" }),
-                            _vm._v(_vm._s(_vm.forms))
-                          ])
+                          _c(
+                            "h5",
+                            { staticClass: "text-bold-400 mb-0 purple" },
+                            [
+                              _c("i", { staticClass: "ft-plus" }),
+                              _vm._v(_vm._s(_vm.forms))
+                            ]
+                          )
                         ]
                       )
                     ])

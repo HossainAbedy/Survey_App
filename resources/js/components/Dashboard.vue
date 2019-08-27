@@ -14,8 +14,8 @@
                                         <i class="fas fa-users-crown"></i>
                                         </div>
                                         <div class="p-2 bg-gradient-x-danger white media-body">
-                                        <h5>Admins</h5>
-                                        <h5 class="text-bold-400 mb-0"><i class="ft-plus"></i>{{admins}}</h5>
+                                        <h5 class="red">Admins</h5>
+                                        <h5 class="text-bold-400 mb-0 purple"><i class="ft-plus"></i>{{admins}}</h5>
                                         </div>
                                     </div>
                                     </div>
@@ -29,8 +29,8 @@
                                         <i class="fad fa-users-shield"></i>
                                         </div>
                                         <div class="p-2 bg-gradient-x-primary white media-body">
-                                        <h5>Surveyors</h5>
-                                        <h5 class="text-bold-400 mb-0"><i class="ft-plus"></i> {{surveyors}}</h5>
+                                        <h5 class="blue">Surveyors</h5>
+                                        <h5 class="text-bold-400 mb-0 purple"><i class="ft-plus"></i> {{surveyors}}</h5>
                                         </div>
                                     </div>
                                     </div>
@@ -44,8 +44,8 @@
                                         <i class="fad fa-users-plus"></i>
                                         </div>
                                         <div class="p-2 bg-gradient-x-primary white media-body">
-                                        <h5>Users</h5>
-                                        <h5 class="text-bold-400 mb-0"><i class="ft-plus"></i>{{standard_users}}</h5>
+                                        <h5 class="green">Users</h5>
+                                        <h5 class="text-bold-400 mb-0 purple"><i class="ft-plus"></i>{{standard_users}}</h5>
                                         </div>
                                     </div>
                                     </div>
@@ -59,8 +59,8 @@
                                         <i class="fa fa-users-plus"></i>
                                         </div>
                                         <div class="p-2 bg-gradient-x-primary white media-body">
-                                        <h5>Forms</h5>
-                                        <h5 class="text-bold-400 mb-0"><i class="ft-plus"></i>{{forms}}</h5>
+                                        <h5 class="orange">Forms</h5>
+                                        <h5 class="text-bold-400 mb-0 purple"><i class="ft-plus"></i>{{forms}}</h5>
                                         </div>
                                     </div>
                                     </div>
