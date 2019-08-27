@@ -6,6 +6,7 @@ use App\Exports\SurveyFormExport;
 use App\Imports\SurveyFormImport;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Http\Request;
+use Session;
 use Mail;
 
 class ImportExportController extends Controller
@@ -20,7 +21,9 @@ class ImportExportController extends Controller
     */
     public function export()
     {
+        Session::flash('message-download', 'Your document has been downloaded!');
         return Excel::download(new SurveyFormExport, 'SurveyFormExport.xlsx');
+        // return redirect()->back()->with('flash_success', 'Your document has been downloaded.');
     }
 
     /**
@@ -61,7 +64,8 @@ class ImportExportController extends Controller
         // send the email
         $to_email = 'abedy.ewu@gmail.com';
         \Mail::to($to_email)->send(new \App\Mail\Upload($data));
-        return redirect()->back()->with('flash_success', 'Your document has been uploaded.');
+        Session::flash('message-gmail', 'Your document has been sent to admin!');
+        return redirect()->back()->with('flash_success', 'Your document has been sent to admin!');
     }
 
     public function sendgmail(Request $request)

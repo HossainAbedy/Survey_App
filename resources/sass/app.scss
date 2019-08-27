@@ -20,7 +20,23 @@ $fa-font-path:'../webfonts';
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
   }
-  .router-link-exact-active{
+.router-link-exact-active{
     background-color: #ff0505;
     color: #fff !important;
   }
+.admin{
+    color:red;
+    font-weight:bold;
+    padding-left:10px;
+}
+.surveyor{
+    color:blue;
+    font-weight:bold;
+    padding-left:10px;
+}
+
+.user{
+    color:green;
+    font-weight:bold;
+    padding-left:10px;
+}
