@@ -73,13 +73,14 @@
             getResults(page = 1) {
                         axios.get('api/form-one?page=' + page)
                             .then(response => {
-                                this.lists = response.data;
+                                this.lists = response.data[1];
+                                console.log(this.lists);
                             });
             },
 
             loadLists(){
                 this.$Progress.start();
-                    axios.get('api/form-one').then(({data}) => (this.lists=data));
+                    axios.get('api/form-one').then(({data}) => (this.lists=data[1]));
                 this.$Progress.finish();
             },
 

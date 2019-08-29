@@ -1846,7 +1846,8 @@ __webpack_require__.r(__webpack_exports__);
 
       var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
       axios.get('api/user?page=' + page).then(function (response) {
-        _this.users = response.data;
+        _this.users = response.data[3];
+        console.log(_this.users);
       });
     },
     updateUser: function updateUser() {
@@ -1907,7 +1908,7 @@ __webpack_require__.r(__webpack_exports__);
         this.$Progress.start();
         axios.get('api/user').then(function (_ref) {
           var data = _ref.data;
-          return _this4.users = data;
+          return _this4.users = data[3];
         });
         this.$Progress.finish();
       }
@@ -2195,10 +2196,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      admins: 0,
-      surveyors: 0,
-      standard_users: 0,
-      forms: 0,
+      admins: '',
+      surveyors: '',
+      standard_users: '',
+      forms: '',
       lists: {},
       users: {}
     };
@@ -2211,19 +2212,26 @@ __webpack_require__.r(__webpack_exports__);
       this.$Progress.start();
       axios.get('api/user?page=' + page).then(function (response) {
         _this.users = response.data;
+        console.log(_this.users);
+        _this.admins = _this.users[0][0].admin;
+        _this.surveyors = _this.users[1][0].surveyor;
+        _this.standard_users = _this.users[2][0].normaluser; // for(let i=0; i<this.users.data.length; i++){
+        //     if (this.users.data[i].user_type == 'admin')
+        //         this.admins++;
+        //     if (this.users.data[i].user_type == 'surveyor')
+        //         this.surveyors++;
+        //     if (this.users.data[i].user_type == 'user')
+        //         this.standard_users++;
+        // }
 
-        for (var i = 0; i < _this.users.data.length; i++) {
-          if (_this.users.data[i].user_type == 'admin') _this.admins++;
-          if (_this.users.data[i].user_type == 'surveyor') _this.surveyors++;
-          if (_this.users.data[i].user_type == 'user') _this.standard_users++;
-        } // console.log(this.admins);
-        //  console.log(this.surveyors);
-        //   console.log(this.standard_users);
-
+        console.log(_this.admins);
+        console.log(_this.surveyors);
+        console.log(_this.standard_users);
       });
       axios.get('api/form-one').then(function (response) {
         _this.lists = response.data;
-        _this.forms = _this.lists.data.length; // console.log(this.lists.data.length);
+        _this.forms = _this.lists[0][0].form;
+        console.log(_this.forms);
       });
       this.$Progress.finish();
     }
@@ -3014,7 +3022,8 @@ __webpack_require__.r(__webpack_exports__);
 
       var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
       axios.get('api/form-one?page=' + page).then(function (response) {
-        _this.lists = response.data;
+        _this.lists = response.data[1];
+        console.log(_this.lists);
       });
     },
     loadLists: function loadLists() {
@@ -3023,7 +3032,7 @@ __webpack_require__.r(__webpack_exports__);
       this.$Progress.start();
       axios.get('api/form-one').then(function (_ref) {
         var data = _ref.data;
-        return _this2.lists = data;
+        return _this2.lists = data[1];
       });
       this.$Progress.finish();
     },
@@ -9381,7 +9390,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.is-invalid[data-v-0ff09826] {\r\n      border-color: #E84444;\r\n      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(232,68,68,.6);\n}\r\n", ""]);
+exports.push([module.i, "\n.is-invalid[data-v-0ff09826] {\n      border-color: #E84444;\n      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(232,68,68,.6);\n}\n", ""]);
 
 // exports
 
@@ -76083,21 +76092,14 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "div",
-                        {
-                          staticClass:
-                            "p-2 bg-gradient-x-danger white media-body"
-                        },
+                        { staticClass: "p-2 bg-gradient-x-danger  media-body" },
                         [
-                          _c("h5", { staticClass: "red" }, [_vm._v("Admins")]),
+                          _c("h5", [_vm._v("Admins")]),
                           _vm._v(" "),
-                          _c(
-                            "h5",
-                            { staticClass: "text-bold-400 mb-0 purple" },
-                            [
-                              _c("i", { staticClass: "ft-plus" }),
-                              _vm._v(_vm._s(_vm.admins))
-                            ]
-                          )
+                          _c("h5", { staticClass: "text-bold-400 mb-0" }, [
+                            _c("i", { staticClass: "ft-plus" }),
+                            _vm._v(_vm._s(_vm.admins))
+                          ])
                         ]
                       )
                     ])
@@ -76114,22 +76116,15 @@ var render = function() {
                       _c(
                         "div",
                         {
-                          staticClass:
-                            "p-2 bg-gradient-x-primary white media-body"
+                          staticClass: "p-2 bg-gradient-x-primary  media-body"
                         },
                         [
-                          _c("h5", { staticClass: "blue" }, [
-                            _vm._v("Surveyors")
-                          ]),
+                          _c("h5", [_vm._v("Surveyors")]),
                           _vm._v(" "),
-                          _c(
-                            "h5",
-                            { staticClass: "text-bold-400 mb-0 purple" },
-                            [
-                              _c("i", { staticClass: "ft-plus" }),
-                              _vm._v(" " + _vm._s(_vm.surveyors))
-                            ]
-                          )
+                          _c("h5", { staticClass: "text-bold-400 mb-0" }, [
+                            _c("i", { staticClass: "ft-plus" }),
+                            _vm._v(" " + _vm._s(_vm.surveyors))
+                          ])
                         ]
                       )
                     ])
@@ -76146,20 +76141,15 @@ var render = function() {
                       _c(
                         "div",
                         {
-                          staticClass:
-                            "p-2 bg-gradient-x-primary white media-body"
+                          staticClass: "p-2 bg-gradient-x-primary  media-body"
                         },
                         [
-                          _c("h5", { staticClass: "green" }, [_vm._v("Users")]),
+                          _c("h5", [_vm._v("Users")]),
                           _vm._v(" "),
-                          _c(
-                            "h5",
-                            { staticClass: "text-bold-400 mb-0 purple" },
-                            [
-                              _c("i", { staticClass: "ft-plus" }),
-                              _vm._v(_vm._s(_vm.standard_users))
-                            ]
-                          )
+                          _c("h5", { staticClass: "text-bold-400 mb-0" }, [
+                            _c("i", { staticClass: "ft-plus" }),
+                            _vm._v(_vm._s(_vm.standard_users))
+                          ])
                         ]
                       )
                     ])
@@ -76176,22 +76166,15 @@ var render = function() {
                       _c(
                         "div",
                         {
-                          staticClass:
-                            "p-2 bg-gradient-x-primary white media-body"
+                          staticClass: "p-2 bg-gradient-x-primary  media-body"
                         },
                         [
-                          _c("h5", { staticClass: "orange" }, [
-                            _vm._v("Forms")
-                          ]),
+                          _c("h5", [_vm._v("Forms")]),
                           _vm._v(" "),
-                          _c(
-                            "h5",
-                            { staticClass: "text-bold-400 mb-0 purple" },
-                            [
-                              _c("i", { staticClass: "ft-plus" }),
-                              _vm._v(_vm._s(_vm.forms))
-                            ]
-                          )
+                          _c("h5", { staticClass: "text-bold-400 mb-0" }, [
+                            _c("i", { staticClass: "ft-plus" }),
+                            _vm._v(_vm._s(_vm.forms))
+                          ])
                         ]
                       )
                     ])

@@ -15,8 +15,11 @@ class UserController extends Controller
     public function index()
     {
         $this->authorize('isAdmin');
-        return User::latest()->paginate(5);
-
+        $admin = User::where('user_type','admin')->selectRaw('count(user_type) as admin')->get()->toArray();
+        $surveyor = User::where('user_type','surveyor')->selectRaw('count(user_type) as surveyor')->get()->toArray();
+        $normaluser = User::where('user_type','user')->selectRaw('count(user_type) as normaluser')->get()->toArray();
+        $user = User::latest()->paginate(5);
+        return response()->json([$admin,$surveyor,$normaluser,$user]);
     }
 
     public function store(Request $request)

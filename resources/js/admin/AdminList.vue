@@ -129,7 +129,8 @@
             getResults(page = 1) {
                         axios.get('api/user?page=' + page)
                             .then(response => {
-                                this.users = response.data;
+                                this.users = response.data[3];
+                                 console.log(this.users);
                             });
             },
 
@@ -196,7 +197,7 @@
             loadUsers(){
               if(this.$gate.isAdminOrAuthor()){
                 this.$Progress.start();
-                    axios.get('api/user').then(({data}) => (this.users=data));
+                    axios.get('api/user').then(({data}) => (this.users=data[3]));
                 this.$Progress.finish();
                 }
             },
